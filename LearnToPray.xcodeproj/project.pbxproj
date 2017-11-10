@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F43ED5F11FB5719F008E6078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43ED5F01FB5719F008E6078 /* AppDelegate.swift */; };
+		F43ED5F31FB5719F008E6078 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43ED5F21FB5719F008E6078 /* ViewController.swift */; };
+		F43ED5F61FB5719F008E6078 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43ED5F41FB5719F008E6078 /* Main.storyboard */; };
+		F43ED5F81FB5719F008E6078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F43ED5F71FB5719F008E6078 /* Assets.xcassets */; };
+		F43ED5FB1FB5719F008E6078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43ED5F91FB5719F008E6078 /* LaunchScreen.storyboard */; };
+		F43ED6061FB5719F008E6078 /* LearnToPrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43ED6051FB5719F008E6078 /* LearnToPrayTests.swift */; };
+		F43ED6111FB5719F008E6078 /* LearnToPrayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43ED6101FB5719F008E6078 /* LearnToPrayUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F43ED6021FB5719F008E6078 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F43ED5E51FB5719F008E6078 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F43ED5EC1FB5719F008E6078;
+			remoteInfo = LearnToPray;
+		};
+		F43ED60D1FB5719F008E6078 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F43ED5E51FB5719F008E6078 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F43ED5EC1FB5719F008E6078;
+			remoteInfo = LearnToPray;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F43ED5ED1FB5719F008E6078 /* LearnToPray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnToPray.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43ED5F01FB5719F008E6078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F43ED5F21FB5719F008E6078 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F43ED5F51FB5719F008E6078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F43ED5F71FB5719F008E6078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F43ED5FA1FB5719F008E6078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F43ED5FC1FB5719F008E6078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F43ED6011FB5719F008E6078 /* LearnToPrayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnToPrayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43ED6051FB5719F008E6078 /* LearnToPrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnToPrayTests.swift; sourceTree = "<group>"; };
+		F43ED6071FB5719F008E6078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F43ED60C1FB5719F008E6078 /* LearnToPrayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnToPrayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43ED6101FB5719F008E6078 /* LearnToPrayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnToPrayUITests.swift; sourceTree = "<group>"; };
+		F43ED6121FB5719F008E6078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F43ED5EA1FB5719F008E6078 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43ED5FE1FB5719F008E6078 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43ED6091FB5719F008E6078 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F43ED5E41FB5719F008E6078 = {
+			isa = PBXGroup;
+			children = (
+				F43ED5EF1FB5719F008E6078 /* LearnToPray */,
+				F43ED6041FB5719F008E6078 /* LearnToPrayTests */,
+				F43ED60F1FB5719F008E6078 /* LearnToPrayUITests */,
+				F43ED5EE1FB5719F008E6078 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F43ED5EE1FB5719F008E6078 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F43ED5ED1FB5719F008E6078 /* LearnToPray.app */,
+				F43ED6011FB5719F008E6078 /* LearnToPrayTests.xctest */,
+				F43ED60C1FB5719F008E6078 /* LearnToPrayUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F43ED5EF1FB5719F008E6078 /* LearnToPray */ = {
+			isa = PBXGroup;
+			children = (
+				F43ED5F01FB5719F008E6078 /* AppDelegate.swift */,
+				F43ED5F21FB5719F008E6078 /* ViewController.swift */,
+				F43ED5F41FB5719F008E6078 /* Main.storyboard */,
+				F43ED5F71FB5719F008E6078 /* Assets.xcassets */,
+				F43ED5F91FB5719F008E6078 /* LaunchScreen.storyboard */,
+				F43ED5FC1FB5719F008E6078 /* Info.plist */,
+			);
+			path = LearnToPray;
+			sourceTree = "<group>";
+		};
+		F43ED6041FB5719F008E6078 /* LearnToPrayTests */ = {
+			isa = PBXGroup;
+			children = (
+				F43ED6051FB5719F008E6078 /* LearnToPrayTests.swift */,
+				F43ED6071FB5719F008E6078 /* Info.plist */,
+			);
+			path = LearnToPrayTests;
+			sourceTree = "<group>";
+		};
+		F43ED60F1FB5719F008E6078 /* LearnToPrayUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F43ED6101FB5719F008E6078 /* LearnToPrayUITests.swift */,
+				F43ED6121FB5719F008E6078 /* Info.plist */,
+			);
+			path = LearnToPrayUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F43ED5EC1FB5719F008E6078 /* LearnToPray */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F43ED6151FB5719F008E6078 /* Build configuration list for PBXNativeTarget "LearnToPray" */;
+			buildPhases = (
+				F43ED5E91FB5719F008E6078 /* Sources */,
+				F43ED5EA1FB5719F008E6078 /* Frameworks */,
+				F43ED5EB1FB5719F008E6078 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LearnToPray;
+			productName = LearnToPray;
+			productReference = F43ED5ED1FB5719F008E6078 /* LearnToPray.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F43ED6001FB5719F008E6078 /* LearnToPrayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F43ED6181FB5719F008E6078 /* Build configuration list for PBXNativeTarget "LearnToPrayTests" */;
+			buildPhases = (
+				F43ED5FD1FB5719F008E6078 /* Sources */,
+				F43ED5FE1FB5719F008E6078 /* Frameworks */,
+				F43ED5FF1FB5719F008E6078 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F43ED6031FB5719F008E6078 /* PBXTargetDependency */,
+			);
+			name = LearnToPrayTests;
+			productName = LearnToPrayTests;
+			productReference = F43ED6011FB5719F008E6078 /* LearnToPrayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F43ED60B1FB5719F008E6078 /* LearnToPrayUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F43ED61B1FB5719F008E6078 /* Build configuration list for PBXNativeTarget "LearnToPrayUITests" */;
+			buildPhases = (
+				F43ED6081FB5719F008E6078 /* Sources */,
+				F43ED6091FB5719F008E6078 /* Frameworks */,
+				F43ED60A1FB5719F008E6078 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F43ED60E1FB5719F008E6078 /* PBXTargetDependency */,
+			);
+			name = LearnToPrayUITests;
+			productName = LearnToPrayUITests;
+			productReference = F43ED60C1FB5719F008E6078 /* LearnToPrayUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F43ED5E51FB5719F008E6078 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Mark Tapia";
+				TargetAttributes = {
+					F43ED5EC1FB5719F008E6078 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
+					F43ED6001FB5719F008E6078 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F43ED5EC1FB5719F008E6078;
+					};
+					F43ED60B1FB5719F008E6078 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F43ED5EC1FB5719F008E6078;
+					};
+				};
+			};
+			buildConfigurationList = F43ED5E81FB5719F008E6078 /* Build configuration list for PBXProject "LearnToPray" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F43ED5E41FB5719F008E6078;
+			productRefGroup = F43ED5EE1FB5719F008E6078 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F43ED5EC1FB5719F008E6078 /* LearnToPray */,
+				F43ED6001FB5719F008E6078 /* LearnToPrayTests */,
+				F43ED60B1FB5719F008E6078 /* LearnToPrayUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F43ED5EB1FB5719F008E6078 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F43ED5FB1FB5719F008E6078 /* LaunchScreen.storyboard in Resources */,
+				F43ED5F81FB5719F008E6078 /* Assets.xcassets in Resources */,
+				F43ED5F61FB5719F008E6078 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43ED5FF1FB5719F008E6078 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43ED60A1FB5719F008E6078 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F43ED5E91FB5719F008E6078 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F43ED5F31FB5719F008E6078 /* ViewController.swift in Sources */,
+				F43ED5F11FB5719F008E6078 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43ED5FD1FB5719F008E6078 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F43ED6061FB5719F008E6078 /* LearnToPrayTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43ED6081FB5719F008E6078 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F43ED6111FB5719F008E6078 /* LearnToPrayUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F43ED6031FB5719F008E6078 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F43ED5EC1FB5719F008E6078 /* LearnToPray */;
+			targetProxy = F43ED6021FB5719F008E6078 /* PBXContainerItemProxy */;
+		};
+		F43ED60E1FB5719F008E6078 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F43ED5EC1FB5719F008E6078 /* LearnToPray */;
+			targetProxy = F43ED60D1FB5719F008E6078 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F43ED5F41FB5719F008E6078 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F43ED5F51FB5719F008E6078 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F43ED5F91FB5719F008E6078 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F43ED5FA1FB5719F008E6078 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F43ED6131FB5719F008E6078 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F43ED6141FB5719F008E6078 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F43ED6161FB5719F008E6078 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CGABW4X2P7;
+				INFOPLIST_FILE = LearnToPray/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mdtaps.LearnToPray;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F43ED6171FB5719F008E6078 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CGABW4X2P7;
+				INFOPLIST_FILE = LearnToPray/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mdtaps.LearnToPray;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F43ED6191FB5719F008E6078 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CGABW4X2P7;
+				INFOPLIST_FILE = LearnToPrayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mdtaps.LearnToPrayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LearnToPray.app/LearnToPray";
+			};
+			name = Debug;
+		};
+		F43ED61A1FB5719F008E6078 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CGABW4X2P7;
+				INFOPLIST_FILE = LearnToPrayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mdtaps.LearnToPrayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LearnToPray.app/LearnToPray";
+			};
+			name = Release;
+		};
+		F43ED61C1FB5719F008E6078 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CGABW4X2P7;
+				INFOPLIST_FILE = LearnToPrayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mdtaps.LearnToPrayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LearnToPray;
+			};
+			name = Debug;
+		};
+		F43ED61D1FB5719F008E6078 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CGABW4X2P7;
+				INFOPLIST_FILE = LearnToPrayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mdtaps.LearnToPrayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LearnToPray;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F43ED5E81FB5719F008E6078 /* Build configuration list for PBXProject "LearnToPray" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F43ED6131FB5719F008E6078 /* Debug */,
+				F43ED6141FB5719F008E6078 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F43ED6151FB5719F008E6078 /* Build configuration list for PBXNativeTarget "LearnToPray" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F43ED6161FB5719F008E6078 /* Debug */,
+				F43ED6171FB5719F008E6078 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F43ED6181FB5719F008E6078 /* Build configuration list for PBXNativeTarget "LearnToPrayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F43ED6191FB5719F008E6078 /* Debug */,
+				F43ED61A1FB5719F008E6078 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F43ED61B1FB5719F008E6078 /* Build configuration list for PBXNativeTarget "LearnToPrayUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F43ED61C1FB5719F008E6078 /* Debug */,
+				F43ED61D1FB5719F008E6078 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F43ED5E51FB5719F008E6078 /* Project object */;
+}
