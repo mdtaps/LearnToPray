@@ -14,6 +14,8 @@
 		F43ED5FB1FB5719F008E6078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43ED5F91FB5719F008E6078 /* LaunchScreen.storyboard */; };
 		F43ED6061FB5719F008E6078 /* LearnToPrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43ED6051FB5719F008E6078 /* LearnToPrayTests.swift */; };
 		F43ED6111FB5719F008E6078 /* LearnToPrayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43ED6101FB5719F008E6078 /* LearnToPrayUITests.swift */; };
+		F43ED6201FB57234008E6078 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F43ED61E1FB57234008E6078 /* CoreDataModel.xcdatamodeld */; };
+		F43ED6221FB5922C008E6078 /* GuidedPrayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43ED6211FB5922C008E6078 /* GuidedPrayerTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		F43ED60C1FB5719F008E6078 /* LearnToPrayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnToPrayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43ED6101FB5719F008E6078 /* LearnToPrayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnToPrayUITests.swift; sourceTree = "<group>"; };
 		F43ED6121FB5719F008E6078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F43ED61F1FB57234008E6078 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		F43ED6211FB5922C008E6078 /* GuidedPrayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedPrayerTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +104,11 @@
 				F43ED5F01FB5719F008E6078 /* AppDelegate.swift */,
 				F43ED5F21FB5719F008E6078 /* ViewController.swift */,
 				F43ED5F41FB5719F008E6078 /* Main.storyboard */,
+				F43ED6211FB5922C008E6078 /* GuidedPrayerTableViewController.swift */,
 				F43ED5F71FB5719F008E6078 /* Assets.xcassets */,
 				F43ED5F91FB5719F008E6078 /* LaunchScreen.storyboard */,
 				F43ED5FC1FB5719F008E6078 /* Info.plist */,
+				F43ED61E1FB57234008E6078 /* CoreDataModel.xcdatamodeld */,
 			);
 			path = LearnToPray;
 			sourceTree = "<group>";
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F43ED6221FB5922C008E6078 /* GuidedPrayerTableViewController.swift in Sources */,
 				F43ED5F31FB5719F008E6078 /* ViewController.swift in Sources */,
 				F43ED5F11FB5719F008E6078 /* AppDelegate.swift in Sources */,
+				F43ED6201FB57234008E6078 /* CoreDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,6 +566,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F43ED61E1FB57234008E6078 /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F43ED61F1FB57234008E6078 /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = F43ED61F1FB57234008E6078 /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F43ED5E51FB5719F008E6078 /* Project object */;
 }
