@@ -1,0 +1,108 @@
+{
+    "category": [
+                 {
+                 "name" : "Prayer For Yourself",
+                 "prayer" : [
+                             {
+                             "name" : "Centering Prayer",
+                             "details" : [
+                                          {
+                                          "title" : "Palms Up",
+                                          "text" : "*ADD TEXT HERE*"
+                                          },
+                                          {
+                                          "title" : "Palms Down",
+                                          "text" : "*ADD TEXT HERE*"
+                                          }
+                                          ]
+                             },
+                             {
+                             "name" : "Fruit Of The Spirit",
+                             "details" : [
+                                          {
+                                          "title" : "Love"
+                                          },
+                                          {
+                                          "title" : "Joy"
+                                          },
+                                          {
+                                          "title" : "Peace"
+                                          },
+                                          {
+                                          "title" : "Patience"
+                                          },
+                                          {
+                                          "title" : "Kindness"
+                                          },
+                                          {
+                                          "title" : "Goodness"
+                                          },
+                                          {
+                                          "title" : "Faithfulness"
+                                          },
+                                          {
+                                          "title" : "Gentleness"
+                                          },
+                                          {
+                                          "title" : "Self-Control"
+                                          }
+                                          ]
+                             },
+                             {
+                             "name" : "Gifts of the Spirit",
+                             "text" : "1 Corinthians 14:1 - Follow the way of love and eagerly desire gifts of the Spirit, especially prophecy.",
+                             "details" : [
+                                          {
+                                          "title" : "Gift of Prophecy"
+                                          },
+                                          {
+                                          "title" : "Gift of Serving"
+                                          },
+                                          {
+                                          "title" : "Gift of Teaching"
+                                          },
+                                          {
+                                          "title" : "Gift of Exhortation"
+                                          },
+                                          {
+                                          "title" : "Gift of Giving"
+                                          },
+                                          {
+                                          "title" : "Gift of Leadership"
+                                          },
+                                          {
+                                          "title" : "Gift of Mercy"
+                                          },
+                                          {
+                                          "title" : "Gift of Faith"
+                                          },
+                                          {
+                                          "title" : "Gifts of Healing"
+                                          },
+                                          {
+                                          "title" : "Gift of Distinguishing between Spirits"
+                                          },
+                                          {
+                                          "title" : "Gift of Tongues"
+                                          },
+                                          {
+                                          "title" : "Gift of Interpretation of Tongues"
+                                          },
+                                          {
+                                          "title" : "Gift of Administration"
+                                          }
+                                          ]
+                             }
+                             ]
+                 },
+                 {
+                 "name" : "Prayer For Others",
+                 "prayer" : [
+                             {
+                             "name" : "Peoples Groups",
+                             "text" : "*ADD TEXT HERE*"
+                             }
+                             ]
+                 }
+                 ]
+}

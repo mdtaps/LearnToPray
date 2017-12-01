@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="17B1003" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Category" representedClassName="Category" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="prayer" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Prayer" inverseName="category" inverseEntity="Prayer" syncable="YES"/>
+    </entity>
+    <entity name="Details" representedClassName="Details" syncable="YES">
+        <attribute name="test" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="prayer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Prayer" inverseName="details" inverseEntity="Prayer" syncable="YES"/>
+    </entity>
+    <entity name="Prayer" representedClassName="Prayer" syncable="YES">
+        <attribute name="isFavorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="prayer" inverseEntity="Category" syncable="YES"/>
+        <relationship name="details" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Details" inverseName="prayer" inverseEntity="Details" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Category" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Details" positionX="-54" positionY="9" width="128" height="90"/>
+        <element name="Prayer" positionX="-63" positionY="-9" width="128" height="120"/>
+    </elements>
+</model>
