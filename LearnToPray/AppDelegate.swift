@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,8 +16,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var stack = CoreDataStack(modelName: "CoreDataModel")!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        setData()
+        parseJSON { (prayerList, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+                
+            }
+            
+            guard let prayerList = prayerList else {
+                return
+                
+            }
+            
+            for category in prayerList.category {
+                if let categoryEntity = NSEntityDescription.insertNewObject(forEntityName: "Category", into: self.stack.context) as? Category {
+                    categoryEntity.name = category.name
+                    for prayer in category.prayer {
+                        if let prayerEntity = NSEntityDescription.insertNewObject(forEntityName: "Prayer", into: self.stack.context) as? Prayer {
+                            categoryEntity.addToPrayer(prayerEntity)
+                            prayerEntity.name = prayer.name
+                            prayerEntity.text = prayer.text
+                            prayerEntity.category = categoryEntity
+                            if let prayerDetails = prayer.details {
+                                for details in prayerDetails {
+                                    if let detailsEntity = NSEntityDescription.insertNewObject(forEntityName: "Details", into: self.stack.context) as? Details {
+                                        prayerEntity.details = detailsEntity
+                                        detailsEntity.title = details.title
+                                        detailsEntity.text = details.text
+                                        detailsEntity.prayer = prayerEntity
+                                        
+                                    }
+                                    
+                                }
+                                
+                            }
+                            
+                        }
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        }
         return true
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

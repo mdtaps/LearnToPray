@@ -2,7 +2,7 @@
 //  Category+CoreDataProperties.swift
 //  LearnToPray
 //
-//  Created by Mark Tapia on 11/30/17.
+//  Created by Mark Tapia on 12/3/17.
 //  Copyright © 2017 Mark Tapia. All rights reserved.
 //
 //
@@ -17,7 +17,7 @@ extension Category {
         return NSFetchRequest<Category>(entityName: "Category")
     }
 
-    @NSManaged public var name: String?
+    @NSManaged public var name: String
     @NSManaged public var prayer: NSSet?
 
 }

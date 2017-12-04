@@ -19,17 +19,8 @@ class PrayersListViewController: CoreDataViewController {
         prayersTableView.delegate = self
         prayersTableView.dataSource = self
         
-        fetchedResultsController = createFetchedResultsController(for: Category.self)
-        setData()
-        parseJSON { (prayerList, error) in
-            if let error = error {
-                print(error.localizedDescription)
-            }
-            
-            if let prayerList = prayerList {
-                dump(prayerList)
-            }
-        }
+        fetchedResultsController = createFetchedResultsController(for: Prayer.self)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,17 +32,42 @@ class PrayersListViewController: CoreDataViewController {
 extension PrayersListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        guard let count = fetchedResultsController?.sections?.count else {
+            print("Sections failed, returning 0 sections")
+            return 0
+        }
+        
+        print("Sections count is \(count)")
+        return count
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        guard let sections = fetchedResultsController?.sections else {
+            fatalError("No sections in fetchedResultsController")
+        }
+        
+        let sectionInfo = sections[section]
+        return sectionInfo.numberOfObjects
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        guard let sections = fetchedResultsController?.sections else {
+            fatalError("No sections in fetchedResultsController")
+            
+        }
+        
+        if let category = sections[section] as? Category {
+            return category.name
+
+        }
+        
+        return nil
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier")!
-        
-        cell.textLabel?.text = "\(indexPath.row)"
+       
         return cell
 
     }

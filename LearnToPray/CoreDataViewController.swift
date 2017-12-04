@@ -32,21 +32,12 @@ class CoreDataViewController: UIViewController {
         
         //Add sort descriptors
         var descriptors = [NSSortDescriptor]()
-        
-        for attribute in managedObject.entity().attributesByName {
-            
-            if descriptor == attribute.key {
-                
-                descriptors.append(NSSortDescriptor(key: attribute.key, ascending: true))
-            } else {
-                descriptors.append(NSSortDescriptor(key: attribute.key, ascending: false))
-            }
-        }
+        descriptors.append(NSSortDescriptor(key: "category.name", ascending: true))
         
         fetchRequest.sortDescriptors = descriptors
         
         //Return fetchedresultsController
-        return NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: delegate.stack.context, sectionNameKeyPath: nil, cacheName: nil)
+        return NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: delegate.stack.context, sectionNameKeyPath: "category.name", cacheName: nil)
         
     }
 }

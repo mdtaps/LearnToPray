@@ -113,12 +113,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tcA-Mp-Yla">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="tcA-Mp-Yla">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reuseIdentifier" textLabel="YZl-47-nto" detailTextLabel="M8y-Lo-28X" style="IBUITableViewCellStyleValue1" id="0eD-dG-Ueg">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0eD-dG-Ueg" id="QTP-m7-n34">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -151,6 +151,7 @@
                             <constraint firstItem="tcA-Mp-Yla" firstAttribute="top" secondItem="5uY-bn-iON" secondAttribute="top" id="UeF-23-6il"/>
                             <constraint firstAttribute="trailing" secondItem="tcA-Mp-Yla" secondAttribute="trailing" id="s8i-5K-iyQ"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="eFk-a0-IwE"/>
                     </view>
                     <connections>
                         <outlet property="prayersTableView" destination="tcA-Mp-Yla" id="qXI-ZJ-xcX"/>
