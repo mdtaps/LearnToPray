@@ -33,41 +33,48 @@ extension PrayersListViewController: UITableViewDelegate, UITableViewDataSource 
     
     func numberOfSections(in tableView: UITableView) -> Int {
         guard let count = fetchedResultsController?.sections?.count else {
-            print("Sections failed, returning 0 sections")
-            return 0
+            fatalError("No sections to return in numberOfSections")
         }
         
-        print("Sections count is \(count)")
         return count
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let sections = fetchedResultsController?.sections else {
-            fatalError("No sections in fetchedResultsController")
+            fatalError("No sections in numberOfRowsInSection")
         }
         
         let sectionInfo = sections[section]
         return sectionInfo.numberOfObjects
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        guard let sections = fetchedResultsController?.sections else {
-            fatalError("No sections in fetchedResultsController")
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let sectionHeader = tableView.dequeueReusableCell(withIdentifier: "section")!
+        guard let prayer = fetchedResultsController?.object(at: IndexPath(row: 0, section: section)) as? Prayer else {
+            fatalError("Could not get an object for section \(section)")
             
         }
         
-        if let category = sections[section] as? Category {
-            return category.name
-
-        }
+        sectionHeader.textLabel?.text = prayer.category?.name ?? ""
+        return sectionHeader
         
-        return nil
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
        
+        guard let prayer = fetchedResultsController?.object(at: indexPath) as? Prayer else {
+            fatalError("Could not get an object for indexPath \(indexPath)")
+            
+        }
+        cell.textLabel?.text = prayer.name
+        
         return cell
 
     }
