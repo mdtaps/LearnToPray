@@ -2,7 +2,7 @@
 //  Details+CoreDataProperties.swift
 //  LearnToPray
 //
-//  Created by Mark Tapia on 12/3/17.
+//  Created by Mark Tapia on 12/11/17.
 //  Copyright © 2017 Mark Tapia. All rights reserved.
 //
 //
@@ -17,8 +17,8 @@ extension Details {
         return NSFetchRequest<Details>(entityName: "Details")
     }
 
-    @NSManaged public var title: String?
     @NSManaged public var text: String?
+    @NSManaged public var title: String?
     @NSManaged public var prayer: Prayer?
 
 }

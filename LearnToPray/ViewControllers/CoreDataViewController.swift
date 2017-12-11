@@ -11,7 +11,7 @@ import CoreData
 
 class CoreDataViewController: UIViewController {
     
-    let delegate = UIApplication.shared.delegate as! AppDelegate
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>? {
         didSet {
@@ -37,7 +37,7 @@ class CoreDataViewController: UIViewController {
         fetchRequest.sortDescriptors = descriptors
         
         //Return fetchedresultsController
-        return NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: delegate.stack.context, sectionNameKeyPath: "category.name", cacheName: nil)
+        return NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: appDelegate.stack.context, sectionNameKeyPath: "category.name", cacheName: nil)
         
     }
 }

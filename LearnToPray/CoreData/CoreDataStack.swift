@@ -20,7 +20,6 @@ struct CoreDataStack {
     private let modelURL: URL
     internal let dbURL: URL
     internal let persistingContext: NSManagedObjectContext
-    internal let backgroundContext: NSManagedObjectContext
     let context: NSManagedObjectContext
     
     // MARK: Initializers
@@ -51,10 +50,6 @@ struct CoreDataStack {
         
         context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         context.parent = persistingContext
-        
-        // Create a background context child of main context
-        backgroundContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
-        backgroundContext.parent = context
         
         // Add a SQLite store located in the documents folder
         let fm = FileManager.default
@@ -93,27 +88,6 @@ internal extension CoreDataStack  {
     }
 }
 
-// MARK: - CoreDataStack (Batch Processing in the Background)
-
-extension CoreDataStack {
-    
-    typealias Batch = (_ workerContext: NSManagedObjectContext) -> ()
-    
-    func performBackgroundBatchOperation(_ batch: @escaping Batch) {
-        backgroundContext.perform() {
-            batch(self.backgroundContext)
-            
-            // Save it to the parent context, so normal saving
-            // can work
-            do {
-                try self.backgroundContext.save()
-            } catch let e as NSError {
-                print("Error while saving: \(e.localizedDescription)")
-            }
-        }
-    }
-}
-
 // MARK: - CoreDataStack (Save Data)
 
 extension CoreDataStack {
@@ -140,25 +114,6 @@ extension CoreDataStack {
                         fatalError("Error while saving persisting context: \(error)")
                     }
                 }
-            }
-        }
-    }
-    
-    func autoSave(_ delayInSeconds : Int) {
-        
-        if delayInSeconds > 0 {
-            do {
-                try self.context.save()
-                print("Autosaving")
-            } catch {
-                print("Error while autosaving")
-            }
-            
-            let delayInNanoSeconds = UInt64(delayInSeconds) * NSEC_PER_SEC
-            let time = DispatchTime.now() + Double(Int64(delayInNanoSeconds)) / Double(NSEC_PER_SEC)
-            
-            DispatchQueue.main.asyncAfter(deadline: time) {
-                self.autoSave(delayInSeconds)
             }
         }
     }

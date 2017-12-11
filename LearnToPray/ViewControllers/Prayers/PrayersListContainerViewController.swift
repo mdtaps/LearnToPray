@@ -1,5 +1,5 @@
 //
-//  PrayersListViewController.swift
+//  PrayersListContainerViewController.swift
 //  LearnToPray
 //
 //  Created by Mark Tapia on 11/9/17.
@@ -8,9 +8,15 @@
 
 import UIKit
 
-class PrayersListViewController: CoreDataViewController {
+protocol PrayersListDelegate {
+    func didSelectPrayer(prayerName: String)
+}
+
+class PrayersListContainerViewController: CoreDataViewController {
 
     @IBOutlet weak var prayersTableView: UITableView!
+    
+    var delegate: PrayersListDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +35,9 @@ class PrayersListViewController: CoreDataViewController {
     }
 }
 
-extension PrayersListViewController: UITableViewDelegate, UITableViewDataSource {
+extension PrayersListContainerViewController: UITableViewDelegate, UITableViewDataSource {
     
+    //MARK: Number of Sections/Rows Functions
     func numberOfSections(in tableView: UITableView) -> Int {
         guard let count = fetchedResultsController?.sections?.count else {
             fatalError("No sections to return in numberOfSections")
@@ -49,6 +56,7 @@ extension PrayersListViewController: UITableViewDelegate, UITableViewDataSource 
         return sectionInfo.numberOfObjects
     }
     
+    //MARK: Section Header Functions
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let sectionHeader = tableView.dequeueReusableCell(withIdentifier: "section")!
         guard let prayer = fetchedResultsController?.object(at: IndexPath(row: 0, section: section)) as? Prayer else {
@@ -56,7 +64,7 @@ extension PrayersListViewController: UITableViewDelegate, UITableViewDataSource 
             
         }
         
-        sectionHeader.textLabel?.text = prayer.category?.name ?? ""
+        sectionHeader.textLabel?.text = prayer.category.name
         return sectionHeader
         
     }
@@ -77,6 +85,15 @@ extension PrayersListViewController: UITableViewDelegate, UITableViewDataSource 
         
         return cell
 
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        guard let prayerName = cell?.textLabel?.text else {
+            fatalError("Could not get prayerName from cell in didSelectRowAtIndexPath")
+        }
+        
+        delegate?.didSelectPrayer(prayerName: prayerName)
     }
     
 }

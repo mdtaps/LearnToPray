@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="r8j-p1-OGC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="r8j-p1-OGC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,7 +12,7 @@
         <!--Guided Prayer-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LearnToPray" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GuidedPrayersViewController" customModule="LearnToPray" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,6 +38,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1476" y="130.88455772113943"/>
+        </scene>
+        <!--Prayer Details View Controller-->
+        <scene sceneID="FsK-7t-7Ki">
+            <objects>
+                <viewController id="8z9-7i-cfg" customClass="PrayerDetailsViewController" customModule="LearnToPray" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qzw-eQ-JN5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0uF-i4-Akv">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <connections>
+                                    <segue destination="j8V-Sa-Wjw" kind="embed" id="eO2-CC-SNC"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="E8b-hu-HcZ" firstAttribute="bottom" secondItem="0uF-i4-Akv" secondAttribute="bottom" id="8ni-dQ-o9L"/>
+                            <constraint firstItem="0uF-i4-Akv" firstAttribute="leading" secondItem="E8b-hu-HcZ" secondAttribute="leading" id="B26-7A-nU5"/>
+                            <constraint firstItem="0uF-i4-Akv" firstAttribute="top" secondItem="E8b-hu-HcZ" secondAttribute="top" id="RfJ-AU-Qjk"/>
+                            <constraint firstItem="E8b-hu-HcZ" firstAttribute="trailing" secondItem="0uF-i4-Akv" secondAttribute="trailing" id="fGi-F5-POU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="E8b-hu-HcZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tNp-Yv-Fu6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2424.8000000000002" y="131.78410794602701"/>
         </scene>
         <!--Item-->
         <scene sceneID="Xp1-FV-SAH">
@@ -110,10 +139,10 @@
             </objects>
             <point key="canvasLocation" x="-164" y="965"/>
         </scene>
-        <!--Prayers List View Controller-->
+        <!--Prayers List Container View Controller-->
         <scene sceneID="3FG-ir-nrY">
             <objects>
-                <viewController id="8Du-tS-KyX" customClass="PrayersListViewController" customModule="LearnToPray" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8Du-tS-KyX" customClass="PrayersListContainerViewController" customModule="LearnToPray" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5uY-bn-iON">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,12 +205,89 @@
                         <viewLayoutGuide key="safeArea" id="eFk-a0-IwE"/>
                     </view>
                     <connections>
-                        <outlet property="prayersTableView" destination="tcA-Mp-Yla" id="qXI-ZJ-xcX"/>
+                        <outlet property="prayersTableView" destination="tcA-Mp-Yla" id="Lf8-eC-pT0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAu-g2-n7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1476" y="908"/>
+        </scene>
+        <!--Details Container View Controller-->
+        <scene sceneID="IWy-DO-UJj">
+            <objects>
+                <viewController id="j8V-Sa-Wjw" customClass="DetailsContainerViewController" customModule="LearnToPray" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1SK-DM-4G4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nz9-y7-1SZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sectionHeaderCell" id="gn4-tR-ZHD" customClass="PrayerDetailsHeaderTableViewCell" customModule="LearnToPray" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gn4-tR-ZHD" id="LLv-1P-xk8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JgM-cC-PdG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CO-mK-s85">
+                                                            <rect key="frame" x="166.5" y="0.0" width="42" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toj-Jc-qHw">
+                                                            <rect key="frame" x="166.5" y="28.5" width="42" height="15"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JgM-cC-PdG" firstAttribute="top" secondItem="LLv-1P-xk8" secondAttribute="top" id="ZAk-r0-sKh"/>
+                                                <constraint firstItem="JgM-cC-PdG" firstAttribute="leading" secondItem="LLv-1P-xk8" secondAttribute="leading" id="eQP-yB-RJY"/>
+                                                <constraint firstAttribute="trailing" secondItem="JgM-cC-PdG" secondAttribute="trailing" id="nYH-5s-hqH"/>
+                                                <constraint firstAttribute="bottom" secondItem="JgM-cC-PdG" secondAttribute="bottom" id="wvL-Ev-sek"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="prayerNameLabel" destination="4CO-mK-s85" id="Q3v-HV-f8z"/>
+                                            <outlet property="prayerTextLabel" destination="toj-Jc-qHw" id="iik-go-oAp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="NWb-1f-19h">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NWb-1f-19h" id="9ey-Qb-yXl">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Nz9-y7-1SZ" secondAttribute="bottom" id="CrG-oC-w37"/>
+                            <constraint firstItem="Nz9-y7-1SZ" firstAttribute="leading" secondItem="1SK-DM-4G4" secondAttribute="leading" id="Rqd-OR-RGQ"/>
+                            <constraint firstItem="Nz9-y7-1SZ" firstAttribute="top" secondItem="1SK-DM-4G4" secondAttribute="top" id="aoK-S3-tno"/>
+                            <constraint firstAttribute="trailing" secondItem="Nz9-y7-1SZ" secondAttribute="trailing" id="wHT-ON-POo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pnE-jw-IDg"/>
+                    </view>
+                    <connections>
+                        <outlet property="prayerTableView" destination="Nz9-y7-1SZ" id="UPA-v7-HsA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1i3-dl-z9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2424.8000000000002" y="957.57121439280365"/>
         </scene>
     </scenes>
 </document>

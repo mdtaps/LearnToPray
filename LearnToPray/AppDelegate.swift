@@ -37,15 +37,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         if let prayerEntity = NSEntityDescription.insertNewObject(forEntityName: "Prayer", into: self.stack.context) as? Prayer {
                             categoryEntity.addToPrayer(prayerEntity)
                             prayerEntity.name = prayer.name
-                            prayerEntity.text = prayer.text
                             prayerEntity.category = categoryEntity
+                            
+                            if let text = prayer.text {
+                                prayerEntity.text = text
+                                
+                            }
+                            
                             if let prayerDetails = prayer.details {
                                 for details in prayerDetails {
                                     if let detailsEntity = NSEntityDescription.insertNewObject(forEntityName: "Details", into: self.stack.context) as? Details {
-                                        prayerEntity.details = detailsEntity
-                                        detailsEntity.title = details.title
-                                        detailsEntity.text = details.text
+                                        prayerEntity.addToDetails(detailsEntity)
                                         detailsEntity.prayer = prayerEntity
+                                        
+                                        if let title = details.title {
+                                            detailsEntity.title = title
+
+                                        }
+                                        
+                                        if let text = details.text {
+                                            detailsEntity.text = text
+
+                                        }
+                                        
                                         
                                     }
                                     
@@ -62,6 +76,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
         }
+        
+        stack.save()
+        
         return true
         
     }
@@ -74,6 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -82,10 +100,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        
+        stack.save()
+
     }
 
 
