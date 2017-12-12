@@ -9,12 +9,12 @@
 import UIKit
 
 protocol DetailsListDelegate {
-    var prayer: Prayer { get set }
+    var prayer: Prayer? { get set }
 }
 
 class DetailsContainerViewController: CoreDataViewController {
     
-    let delegate: DetailsListDelegate?
+    var delegate: DetailsListDelegate?
 
     @IBOutlet weak var prayerTableView: UITableView!
     
@@ -46,8 +46,8 @@ extension DetailsContainerViewController: UITableViewDelegate, UITableViewDataSo
             fatalError("No prayer set in viewForHeaderInSection")
         }
         
-        sectionCell.prayerNameLabel.text = delegate.prayer.text
-        sectionCell.prayerTextLabel.text = delegate.prayer.text
+        sectionCell.prayerNameLabel.text = delegate.prayer?.text
+        sectionCell.prayerTextLabel.text = delegate.prayer?.text
         
         return sectionCell
     }

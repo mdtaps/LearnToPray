@@ -10,26 +10,23 @@ import UIKit
 
 class PrayerDetailsViewController: UIViewController, DetailsListDelegate {
     
-    var prayer: Prayer
+    fileprivate var detailsViewController: DetailsContainerViewController?
     
-    init(prayer: Prayer) {
-        self.prayer = prayer
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    var prayer: Prayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    private func setupChildViewControllers() {
+        guard let detailsViewController = childViewControllers.first as? DetailsContainerViewController else {
+            fatalError("Check storyboard for missing DetailsContainerViewController")
+        }
+        
+        self.detailsViewController = detailsViewController
+        self.detailsViewController?.delegate = self
+        
     }
-
 }

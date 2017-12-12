@@ -42,7 +42,7 @@
         <!--Prayer Details View Controller-->
         <scene sceneID="FsK-7t-7Ki">
             <objects>
-                <viewController id="8z9-7i-cfg" customClass="PrayerDetailsViewController" customModule="LearnToPray" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PrayerDetailsViewController" id="8z9-7i-cfg" customClass="PrayerDetailsViewController" customModule="LearnToPray" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qzw-eQ-JN5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

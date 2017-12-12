@@ -11,23 +11,41 @@ import CoreData
 
 class GuidedPrayersViewController: CoreDataViewController, PrayersListDelegate {
     
-    func didSelectPrayer(prayerName: String) {
+    fileprivate var prayersListViewController: PrayersListContainerViewController?
+    
+    override func viewDidLoad() {
+        
+        setupChildViewControllers()
+    }
+    
+    func didSelectPrayer(prayer: Prayer) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "PrayerDetailsViewController") as? PrayerDetailsViewController else {
+            fatalError("Check storyboard for missing PrayerDetailsViewController")
+        }
         
         //Create fetch request
-        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Prayer.fetchRequest()
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Details.fetchRequest()
         
         //Add sort descriptors
-        var descriptors = [NSSortDescriptor]()
-        descriptors.append(NSSortDescriptor(key: "name", ascending: true))
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
         
-        fetchRequest.sortDescriptors = descriptors
-        
-        let predicate = NSPredicate(format: "name = %@", argumentArray: [prayerName])
+        let predicate = NSPredicate(format: "prayer = %@", argumentArray: [prayer])
         fetchRequest.predicate = predicate
         
         let frController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: appDelegate.stack.context, sectionNameKeyPath: nil, cacheName: nil)
         
-        dump(frController.fetchedObjects)
+        vc.prayer = prayer
+        
+        
+    }
+    
+    private func setupChildViewControllers() {
+        guard let prayersListViewController = childViewControllers.first as? PrayersListContainerViewController else {
+            fatalError("Check storyboard for missing PrayersListContainerViewController")
+        }
+        
+        self.prayersListViewController = prayersListViewController
+        self.prayersListViewController?.delegate = self
         
     }
 }

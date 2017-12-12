@@ -9,10 +9,10 @@
 import UIKit
 
 protocol PrayersListDelegate {
-    func didSelectPrayer(prayerName: String)
+    func didSelectPrayer(prayer: Prayer)
 }
 
-class PrayersListContainerViewController: CoreDataViewController {
+class PrayersListContainerViewController: CoreDataViewController {    
 
     @IBOutlet weak var prayersTableView: UITableView!
     
@@ -88,12 +88,11 @@ extension PrayersListContainerViewController: UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        guard let prayerName = cell?.textLabel?.text else {
-            fatalError("Could not get prayerName from cell in didSelectRowAtIndexPath")
+        guard let prayer = fetchedResultsController?.object(at: indexPath) as? Prayer else {
+            fatalError("Could not get an object for indexPath \(indexPath)")
+
         }
-        
-        delegate?.didSelectPrayer(prayerName: prayerName)
+        delegate?.didSelectPrayer(prayer: prayer)
     }
     
 }

@@ -17,49 +17,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        setData()
-        parseJSON { (prayerList, error) in
-            if let error = error {
-                print(error.localizedDescription)
-                return
+        if !UserDefaultsManager.hasLaunchedPreviously {
+            setData()
+            parseJSON { (prayerList, error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                    
+                }
                 
-            }
-            
-            guard let prayerList = prayerList else {
-                return
+                guard let prayerList = prayerList else {
+                    return
+                    
+                }
                 
-            }
-            
-            for category in prayerList.category {
-                if let categoryEntity = NSEntityDescription.insertNewObject(forEntityName: "Category", into: self.stack.context) as? Category {
-                    categoryEntity.name = category.name
-                    for prayer in category.prayer {
-                        if let prayerEntity = NSEntityDescription.insertNewObject(forEntityName: "Prayer", into: self.stack.context) as? Prayer {
-                            categoryEntity.addToPrayer(prayerEntity)
-                            prayerEntity.name = prayer.name
-                            prayerEntity.category = categoryEntity
-                            
-                            if let text = prayer.text {
-                                prayerEntity.text = text
+                for category in prayerList.category {
+                    if let categoryEntity = NSEntityDescription.insertNewObject(forEntityName: "Category", into: self.stack.context) as? Category {
+                        categoryEntity.name = category.name
+                        for prayer in category.prayer {
+                            if let prayerEntity = NSEntityDescription.insertNewObject(forEntityName: "Prayer", into: self.stack.context) as? Prayer {
+                                categoryEntity.addToPrayer(prayerEntity)
+                                prayerEntity.name = prayer.name
+                                prayerEntity.category = categoryEntity
                                 
-                            }
-                            
-                            if let prayerDetails = prayer.details {
-                                for details in prayerDetails {
-                                    if let detailsEntity = NSEntityDescription.insertNewObject(forEntityName: "Details", into: self.stack.context) as? Details {
-                                        prayerEntity.addToDetails(detailsEntity)
-                                        detailsEntity.prayer = prayerEntity
-                                        
-                                        if let title = details.title {
-                                            detailsEntity.title = title
-
+                                if let text = prayer.text {
+                                    prayerEntity.text = text
+                                    
+                                }
+                                
+                                if let prayerDetails = prayer.details {
+                                    for details in prayerDetails {
+                                        if let detailsEntity = NSEntityDescription.insertNewObject(forEntityName: "Details", into: self.stack.context) as? Details {
+                                            prayerEntity.addToDetails(detailsEntity)
+                                            detailsEntity.prayer = prayerEntity
+                                            
+                                            if let title = details.title {
+                                                detailsEntity.title = title
+                                                
+                                            }
+                                            
+                                            if let text = details.text {
+                                                detailsEntity.text = text
+                                                
+                                            }
+                                            
+                                            
                                         }
-                                        
-                                        if let text = details.text {
-                                            detailsEntity.text = text
-
-                                        }
-                                        
                                         
                                     }
                                     
@@ -75,9 +78,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
             }
             
+            stack.save()
+            UserDefaultsManager.hasLaunchedPreviously = true
         }
-        
-        stack.save()
         
         return true
         
