@@ -1,108 +1,190 @@
 {
-    "category": [
-                 {
-                 "name" : "Prayer For Yourself",
-                 "prayer" : [
-                             {
-                             "name" : "Centering Prayer",
-                             "details" : [
-                                          {
-                                          "title" : "Palms Up",
-                                          "text" : "*ADD TEXT HERE*"
-                                          },
-                                          {
-                                          "title" : "Palms Down",
-                                          "text" : "*ADD TEXT HERE*"
-                                          }
-                                          ]
-                             },
-                             {
-                             "name" : "Fruit Of The Spirit",
-                             "details" : [
-                                          {
-                                          "title" : "Love"
-                                          },
-                                          {
-                                          "title" : "Joy"
-                                          },
-                                          {
-                                          "title" : "Peace"
-                                          },
-                                          {
-                                          "title" : "Patience"
-                                          },
-                                          {
-                                          "title" : "Kindness"
-                                          },
-                                          {
-                                          "title" : "Goodness"
-                                          },
-                                          {
-                                          "title" : "Faithfulness"
-                                          },
-                                          {
-                                          "title" : "Gentleness"
-                                          },
-                                          {
-                                          "title" : "Self-Control"
-                                          }
-                                          ]
-                             },
-                             {
-                             "name" : "Gifts of the Spirit",
-                             "text" : "1 Corinthians 14:1 - Follow the way of love and eagerly desire gifts of the Spirit, especially prophecy.",
-                             "details" : [
-                                          {
-                                          "title" : "Gift of Prophecy"
-                                          },
-                                          {
-                                          "title" : "Gift of Serving"
-                                          },
-                                          {
-                                          "title" : "Gift of Teaching"
-                                          },
-                                          {
-                                          "title" : "Gift of Exhortation"
-                                          },
-                                          {
-                                          "title" : "Gift of Giving"
-                                          },
-                                          {
-                                          "title" : "Gift of Leadership"
-                                          },
-                                          {
-                                          "title" : "Gift of Mercy"
-                                          },
-                                          {
-                                          "title" : "Gift of Faith"
-                                          },
-                                          {
-                                          "title" : "Gifts of Healing"
-                                          },
-                                          {
-                                          "title" : "Gift of Distinguishing between Spirits"
-                                          },
-                                          {
-                                          "title" : "Gift of Tongues"
-                                          },
-                                          {
-                                          "title" : "Gift of Interpretation of Tongues"
-                                          },
-                                          {
-                                          "title" : "Gift of Administration"
-                                          }
-                                          ]
-                             }
-                             ]
-                 },
-                 {
-                 "name" : "Prayer For Others",
-                 "prayer" : [
-                             {
-                             "name" : "People Groups",
-                             "text" : "*ADD TEXT HERE*"
-                             }
-                             ]
-                 }
-                 ]
+	"category": [
+		{ 
+			"name" : "Prayer For Yourself",
+			"prayer" : [
+				{
+					"name" : "Centering Prayer",
+					"details" : [
+						{ 
+							"title" : "Palms Up",
+							"text" : "*ADD TEXT HERE*"
+						}, 
+						{
+							"title" : "Palms Down",
+							"text" : "*ADD TEXT HERE*"
+						}
+					]
+				},
+				{ 
+					"name" : "Fruit Of The Spirit",
+					"text" : "I'm going to write a long string of text here as a placeholder just to see how it shows up in the app but I'll need to make sure to delete this before I actually finish the app. I would be huge bummer if I had to write everything out on "
+					"one line but it looks like I'll be able to break it up.",
+					"details" : [
+						{
+							"title" : "Love"
+						},
+						{
+							"title" : "Joy"
+						},
+						{
+							"title" : "Peace"
+						},
+						{
+							"title" : "Patience"
+						},
+						{
+							"title" : "Kindness"
+						},
+						{
+							"title" : "Goodness"
+						},
+						{
+							"title" : "Faithfulness"
+						},
+						{
+							"title" : "Gentleness"
+						},
+						{
+							"title" : "Self-Control"
+						}
+					]
+				},
+				{
+					"name" : "Gifts of the Spirit",
+					"text" : "1 Corinthians 14:1 - Follow the way of love and eagerly desire gifts of the Spirit, especially prophecy.",
+					"details" : [
+						{
+							"title" : "Gift of Prophecy"
+						},
+						{
+							"title" : "Gift of Serving"
+						},
+						{
+							"title" : "Gift of Teaching"
+						},
+						{
+							"title" : "Gift of Exhortation"
+						},
+						{
+							"title" : "Gift of Giving"
+						},
+						{
+							"title" : "Gift of Leadership"
+						},
+						{
+							"title" : "Gift of Mercy"
+						},
+						{
+							"title" : "Gift of Faith"
+						},
+						{
+							"title" : "Gifts of Healing"
+						},
+						{
+							"title" : "Gift of Distinguishing between Spirits"
+						},
+						{
+							"title" : "Gift of Tongues"
+						},
+						{
+							"title" : "Gift of Interpretation of Tongues"
+						},
+						{
+							"title" : "Gift of Administration"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name" : "Prayer For Others",
+			"prayer" : [
+				{
+					"name" : "People Groups",
+					"text" : "*ADD TEXT HERE*"
+				}
+			]
+		}
+	]
+}
+			{ "Who I Am In Christ" : {
+				"*ADD TEXT HERE*" : "*ADD TEXT HERE*" }
+			}
+		]},
+
+		{ "Praise Prayers" : [
+			{ "Alphabet of Praise " : {
+				"Alphabet of Praise" : "*ADD TEXT HERE*",
+				"A" : "*ADD TEXT HERE*",
+				"B" : "*ADD TEXT HERE*",
+				"C" : "*ADD TEXT HERE*",
+				"D" : "*ADD TEXT HERE*",
+				"E" : "*ADD TEXT HERE*",
+				"F" : "*ADD TEXT HERE*",
+				"G" : "*ADD TEXT HERE*",
+				"H" : "*ADD TEXT HERE*",
+				"I" : "*ADD TEXT HERE*",
+				"J" : "*ADD TEXT HERE*",
+				"K" : "*ADD TEXT HERE*",
+				"L" : "*ADD TEXT HERE*",
+				"M" : "*ADD TEXT HERE*",
+				"N" : "*ADD TEXT HERE*",
+				"O" : "*ADD TEXT HERE*",
+				"P" : "*ADD TEXT HERE*",
+				"Q" : "*ADD TEXT HERE*",
+				"R" : "*ADD TEXT HERE*",
+				"S" : "*ADD TEXT HERE*",
+				"T" : "*ADD TEXT HERE*",
+				"U" : "*ADD TEXT HERE*",
+				"V" : "*ADD TEXT HERE*",
+				"W" : "*ADD TEXT HERE*",
+				"X" : "*ADD TEXT HERE*",
+				"Y" : "*ADD TEXT HERE*",
+				"Z" : "*ADD TEXT HERE*" }
+			},
+
+			{ "Names of God" : {
+				"Old Testament Names of God" : "*ADD TEXT HERE",
+				"Lord God Almighty" : "El Shaddi",
+				"The Most High God" : "El Elyon",
+				"Lord, Master" : "Adonai",
+				"Unchanging, Eternal God" : "Yahweh",
+				"My Leader and Protector" : "Jehovah Nissi",
+				"My Shepherd" : "Jehovah-Raah",
+				"My Healer" : "Jehovah Rapha",
+				"The Lord Is There" : "Jehovah Shammah",
+				"The Lord My Righteousness" : "Jehovah Tsidkenu",
+				"The Lord Who Makes Me Whole" : "Jehovah Mekoddishkem",
+				"The Everlasting God" : "El Olam",
+				"God Is Jealous For You" : "Qanna",
+				"The Lord Who Provides" : "Jehovah Jireh",
+				"The Lord Is Peace" : "Jehovah Shalom",
+				"Leader of the Army" : "Jehovah Sabaoth" }
+			}
+		]},
+
+		{ "Prayer Models" : [
+			{ "The Lord's Prayer" : { }
+
+			},
+
+			{ "ACTS" : { }
+
+			},
+
+			{ "Psalm 23" : { }
+
+			},
+
+			{ "Prayer Circles" : {
+				"Self" : "*ADD TEXT HERE*",
+				"Family" : "*ADD TEXT HERE*",
+				"Work/Community" : "*ADD TEXT HERE*",
+				"City" : "*ADD TEXT HERE*",
+				"Country" : "*ADD TEXT HERE*",
+				"World" : "*ADD TEXT HERE*" }
+			}
+		]}
+	]
 }

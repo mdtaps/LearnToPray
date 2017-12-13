@@ -23,19 +23,20 @@ class GuidedPrayersViewController: CoreDataViewController, PrayersListDelegate {
             fatalError("Check storyboard for missing PrayerDetailsViewController")
         }
         
-        //Create fetch request
-        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Details.fetchRequest()
-        
-        //Add sort descriptors
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
-        
-        let predicate = NSPredicate(format: "prayer = %@", argumentArray: [prayer])
-        fetchRequest.predicate = predicate
-        
-        let frController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: appDelegate.stack.context, sectionNameKeyPath: nil, cacheName: nil)
+//        //Create fetch request
+//        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Details.fetchRequest()
+//
+//        //Add sort descriptors
+//        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+//
+//        let predicate = NSPredicate(format: "prayer = %@", argumentArray: [prayer])
+//        fetchRequest.predicate = predicate
+//
+//        let frController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: appDelegate.stack.context, sectionNameKeyPath: nil, cacheName: nil)
         
         vc.prayer = prayer
         
+        present(vc, animated: true, completion: nil)
         
     }
     

@@ -10,23 +10,24 @@ import UIKit
 
 class PrayerDetailsViewController: UIViewController, DetailsListDelegate {
     
-    fileprivate var detailsViewController: DetailsContainerViewController?
+    fileprivate var detailsListViewController: DetailsContainerViewController?
     
     var prayer: Prayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupChildViewControllers()
         // Do any additional setup after loading the view.
     }
     
     private func setupChildViewControllers() {
-        guard let detailsViewController = childViewControllers.first as? DetailsContainerViewController else {
+        guard let detailsListViewController = childViewControllers.first as? DetailsContainerViewController else {
             fatalError("Check storyboard for missing DetailsContainerViewController")
         }
         
-        self.detailsViewController = detailsViewController
-        self.detailsViewController?.delegate = self
+        self.detailsListViewController = detailsListViewController
+        self.detailsListViewController?.delegate = self
         
     }
 }
