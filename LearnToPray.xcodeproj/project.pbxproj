@@ -28,6 +28,9 @@
 		F4A8FDC61FDF93E20058DF97 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8FDC51FDF93E20058DF97 /* UserDefaultsManager.swift */; };
 		F4A8FDC81FE0F81A0058DF97 /* PrayerList.json in Resources */ = {isa = PBXBuildFile; fileRef = F4A8FDC71FE0F81A0058DF97 /* PrayerList.json */; };
 		F4C51EAD1FE39995007F2195 /* PrayerDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C51EAC1FE39995007F2195 /* PrayerDetailsTableViewCell.swift */; };
+		F4C51EAF1FE4F833007F2195 /* JoshuaProjectClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C51EAE1FE4F833007F2195 /* JoshuaProjectClient.swift */; };
+		F4C51EB11FE4FEE4007F2195 /* APIKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4C51EB01FE4FEE4007F2195 /* APIKey.plist */; };
+		F4C51EB31FE50957007F2195 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C51EB21FE50957007F2195 /* Constants.swift */; };
 		F4D3D4A21FCBBCB60035F860 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D3D4A11FCBBCB60035F860 /* CoreDataStack.swift */; };
 		F4D3D4A51FCBD1DD0035F860 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D3D4A41FCBD1DD0035F860 /* CoreDataViewController.swift */; };
 		F4D3D4A71FCBD57D0035F860 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D3D4A61FCBD57D0035F860 /* LoadData.swift */; };
@@ -79,6 +82,9 @@
 		F4A8FDC51FDF93E20058DF97 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		F4A8FDC71FE0F81A0058DF97 /* PrayerList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PrayerList.json; sourceTree = "<group>"; };
 		F4C51EAC1FE39995007F2195 /* PrayerDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		F4C51EAE1FE4F833007F2195 /* JoshuaProjectClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoshuaProjectClient.swift; sourceTree = "<group>"; };
+		F4C51EB01FE4FEE4007F2195 /* APIKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKey.plist; sourceTree = "<group>"; };
+		F4C51EB21FE50957007F2195 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F4D3D4A11FCBBCB60035F860 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		F4D3D4A41FCBD1DD0035F860 /* CoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
 		F4D3D4A61FCBD57D0035F860 /* LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadData.swift; sourceTree = "<group>"; };
@@ -142,6 +148,8 @@
 			children = (
 				F4D3D4A61FCBD57D0035F860 /* LoadData.swift */,
 				F4D3D4AA1FD1201D0035F860 /* Parsing.swift */,
+				F4C51EAE1FE4F833007F2195 /* JoshuaProjectClient.swift */,
+				F4C51EB21FE50957007F2195 /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -200,6 +208,7 @@
 				F43ED5F41FB5719F008E6078 /* Main.storyboard */,
 				F43ED5F91FB5719F008E6078 /* LaunchScreen.storyboard */,
 				F43ED5FC1FB5719F008E6078 /* Info.plist */,
+				F4C51EB01FE4FEE4007F2195 /* APIKey.plist */,
 				F4A8FDC71FE0F81A0058DF97 /* PrayerList.json */,
 				F4D3D4A31FCBD1590035F860 /* CoreData */,
 				F408DB461FDDF95900C93434 /* View */,
@@ -342,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4C51EB11FE4FEE4007F2195 /* APIKey.plist in Resources */,
 				F43ED5FB1FB5719F008E6078 /* LaunchScreen.storyboard in Resources */,
 				F43ED5F81FB5719F008E6078 /* Assets.xcassets in Resources */,
 				F4A8FDC81FE0F81A0058DF97 /* PrayerList.json in Resources */,
@@ -381,11 +391,13 @@
 				F4A8FDC21FDE8A170058DF97 /* Category+CoreDataProperties.swift in Sources */,
 				F4A8FDC41FDE8A170058DF97 /* Prayer+CoreDataProperties.swift in Sources */,
 				F4A8FDC01FDE8A170058DF97 /* Details+CoreDataProperties.swift in Sources */,
+				F4C51EB31FE50957007F2195 /* Constants.swift in Sources */,
 				F408DB4D1FDE68DA00C93434 /* PrayerDetailsViewController.swift in Sources */,
 				F4A8FDC11FDE8A170058DF97 /* Category+CoreDataClass.swift in Sources */,
 				F4D3D4A21FCBBCB60035F860 /* CoreDataStack.swift in Sources */,
 				F4A8FDC31FDE8A170058DF97 /* Prayer+CoreDataClass.swift in Sources */,
 				F4A8FDC61FDF93E20058DF97 /* UserDefaultsManager.swift in Sources */,
+				F4C51EAF1FE4F833007F2195 /* JoshuaProjectClient.swift in Sources */,
 				F43ED5F11FB5719F008E6078 /* AppDelegate.swift in Sources */,
 				F43ED6201FB57234008E6078 /* CoreDataModel.xcdatamodeld in Sources */,
 				F4D3D4A71FCBD57D0035F860 /* LoadData.swift in Sources */,
