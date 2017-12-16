@@ -259,13 +259,40 @@
                                             <outlet property="prayerTextLabel" destination="toj-Jc-qHw" id="iik-go-oAp"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="NWb-1f-19h">
-                                        <rect key="frame" x="0.0" y="148" width="359" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" rowHeight="183" id="NWb-1f-19h" userLabel="detailCell" customClass="PrayerDetailsTableViewCell" customModule="LearnToPray" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="148" width="359" height="183"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NWb-1f-19h" id="9ey-Qb-yXl">
-                                            <rect key="frame" x="0.0" y="0.0" width="359" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="359" height="182.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5z-9O-yq0">
+                                                    <rect key="frame" x="8" y="4" width="343" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Js-tE-6PQ">
+                                                    <rect key="frame" x="8" y="33" width="343" height="145.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9Js-tE-6PQ" firstAttribute="leading" secondItem="9ey-Qb-yXl" secondAttribute="leading" constant="8" id="Gu7-Pz-7pY"/>
+                                                <constraint firstItem="h5z-9O-yq0" firstAttribute="leading" secondItem="9ey-Qb-yXl" secondAttribute="leading" constant="8" id="N5r-wm-NK4"/>
+                                                <constraint firstAttribute="trailing" secondItem="h5z-9O-yq0" secondAttribute="trailing" constant="8" id="NK2-P0-95K"/>
+                                                <constraint firstAttribute="bottom" secondItem="9Js-tE-6PQ" secondAttribute="bottom" constant="4" id="aRq-g9-fXh"/>
+                                                <constraint firstItem="9Js-tE-6PQ" firstAttribute="top" secondItem="h5z-9O-yq0" secondAttribute="bottom" constant="8" id="cbn-IX-rNG"/>
+                                                <constraint firstAttribute="trailing" secondItem="9Js-tE-6PQ" secondAttribute="trailing" constant="8" id="odE-Fd-C9t"/>
+                                                <constraint firstItem="h5z-9O-yq0" firstAttribute="top" secondItem="9ey-Qb-yXl" secondAttribute="top" constant="4" id="zWg-3P-ltE"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailsTextLabel" destination="9Js-tE-6PQ" id="fgX-5e-Wbx"/>
+                                            <outlet property="detailsTitleLabel" destination="h5z-9O-yq0" id="CpA-rE-w0K"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

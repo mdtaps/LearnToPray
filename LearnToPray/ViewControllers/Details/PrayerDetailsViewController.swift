@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreData
 
-class PrayerDetailsViewController: UIViewController, DetailsListDelegate {
+class PrayerDetailsViewController: CoreDataViewController, DetailsListDelegate {
     
     fileprivate var detailsListViewController: DetailsContainerViewController?
     
@@ -18,7 +19,7 @@ class PrayerDetailsViewController: UIViewController, DetailsListDelegate {
         super.viewDidLoad()
 
         setupChildViewControllers()
-        // Do any additional setup after loading the view.
+        setupFetchedResultsController()
     }
     
     private func setupChildViewControllers() {
@@ -29,5 +30,20 @@ class PrayerDetailsViewController: UIViewController, DetailsListDelegate {
         self.detailsListViewController = detailsListViewController
         self.detailsListViewController?.delegate = self
         
+    }
+    
+    private func setupFetchedResultsController() {
+        
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Details.fetchRequest()
+        
+        var descriptors = [NSSortDescriptor]()
+        descriptors.append(NSSortDescriptor(key: "title", ascending: true))
+        
+        let predicate = NSPredicate(format: "prayer = %@", argumentArray: [prayer as Any])
+        
+        fetchRequest.sortDescriptors = descriptors
+        fetchRequest.predicate = predicate
+        
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: appDelegate.stack.context, sectionNameKeyPath: nil, cacheName: nil)
     }
 }

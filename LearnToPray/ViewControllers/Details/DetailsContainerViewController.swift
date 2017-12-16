@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 protocol DetailsListDelegate {
     var prayer: Prayer? { get set }
+    var fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>? { get set }
 }
 
 class DetailsContainerViewController: CoreDataViewController {
@@ -38,6 +40,15 @@ extension DetailsContainerViewController: UITableViewDelegate, UITableViewDataSo
         return delegate?.prayer?.details?.count ?? 0
     }
     
+    //MARK: Table View Header Delegate Functions
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+
+    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+        return 100
+    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let sectionCell = tableView.dequeueReusableCell(withIdentifier: "sectionHeaderCell") as? PrayerDetailsHeaderTableViewCell else {
             fatalError("Check tableView for cell with identifier \"sectionHeaderCell\"")
@@ -54,16 +65,17 @@ extension DetailsContainerViewController: UITableViewDelegate, UITableViewDataSo
         return sectionCell
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
-
-    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
-        return 100
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell") as? PrayerDetailsTableViewCell else {
+            fatalError("Check tableView for cell with identifier \"detailCell\"")
+        }
+        
+        guard let detail = delegate?.fetchedResultsController?.object(at: indexPath) as? Details else {
+            return cell
+        }
+        
+        cell.detailsTitleLabel.text = detail.title
+        cell.detailsTextLabel.text = detail.text
         
         return cell
     }
