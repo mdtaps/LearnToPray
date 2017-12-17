@@ -8,21 +8,23 @@
 
 import Foundation
 
-struct JoshuaProjectConstants {
+struct JoshuaProjectAPIConstants {
     
-    struct APIURL {
+    struct URLComponents {
         static let Scheme = "https"
         static let Host = "joshuaproject.net"
         static let Path = "/api/v2/upgotd"
     }
     
-    struct APIURLKey {
+    struct URLQueryKey {
         static let APIKey = "api_key"
         static let ROL3Profile = "ROL3Profile"
+        static let LRofTheDayMonth = "LRofTheDayMonth"
+        static let LRofTheDayDay = "LRofTheDayDay"
     }
     
-    struct APIURLValue {
-        static let Eng = "eng"
+    struct URLQueryValue {
+        static let ROL3Profile = "eng"
         static let APIKey = getAPIKey()
     }
     
