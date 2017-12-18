@@ -29,11 +29,11 @@ class JoshuaProjectClient {
             return
         }
         
+        print("URL is \(url.absoluteString)")
+        
         //TODO: Figure out if URLRequest or URL are needed.
         //Probably based on if URL header is needed
-        
-//        let urlRequest = URLRequest(url: url)
-        
+                
         let urlTask = session.dataTask(with: url) { (data, response, error) in
             
             if let error = error {
@@ -42,8 +42,13 @@ class JoshuaProjectClient {
 
             }
             
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                completionHandler(.Failure(with: "Invalid response from server"))
+            guard let response = response as? HTTPURLResponse else {
+                completionHandler(.Failure(with: "No response from server"))
+                return
+            }
+            
+            if response.statusCode != 200 {
+                completionHandler(.Failure(with: "Invalid response from server: \(response.statusCode)"))
                 return
             }
             
@@ -92,7 +97,7 @@ extension JoshuaProjectClient {
         queryItems.append(URLQueryItem(name: JoshuaProjectAPIConstants.URLQueryKey.APIKey,
                                        value: JoshuaProjectAPIConstants.URLQueryValue.APIKey))
         queryItems.append(URLQueryItem(name: JoshuaProjectAPIConstants.URLQueryKey.ROL3Profile,
-                                       value: JoshuaProjectAPIConstants.URLQueryKey.ROL3Profile))
+                                       value: JoshuaProjectAPIConstants.URLQueryValue.ROL3Profile))
         queryItems.append(URLQueryItem(name: JoshuaProjectAPIConstants.URLQueryKey.LRofTheDayMonth,
                                        value: String(monthOfTodayAsInt())))
         queryItems.append(URLQueryItem(name: JoshuaProjectAPIConstants.URLQueryKey.LRofTheDayDay,

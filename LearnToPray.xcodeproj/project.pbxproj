@@ -32,6 +32,7 @@
 		F4C51EB31FE50957007F2195 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C51EB21FE50957007F2195 /* Constants.swift */; };
 		F4C51EB51FE512D1007F2195 /* APIKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4C51EB41FE512D1007F2195 /* APIKey.plist */; };
 		F4C51EB71FE63281007F2195 /* DateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C51EB61FE63281007F2195 /* DateFunctions.swift */; };
+		F4C51EB91FE78D6B007F2195 /* JoshuaProjectsConvenienceFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C51EB81FE78D6B007F2195 /* JoshuaProjectsConvenienceFunctions.swift */; };
 		F4D3D4A21FCBBCB60035F860 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D3D4A11FCBBCB60035F860 /* CoreDataStack.swift */; };
 		F4D3D4A51FCBD1DD0035F860 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D3D4A41FCBD1DD0035F860 /* CoreDataViewController.swift */; };
 		F4D3D4A71FCBD57D0035F860 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D3D4A61FCBD57D0035F860 /* LoadData.swift */; };
@@ -87,6 +88,7 @@
 		F4C51EB21FE50957007F2195 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F4C51EB41FE512D1007F2195 /* APIKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKey.plist; sourceTree = "<group>"; };
 		F4C51EB61FE63281007F2195 /* DateFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFunctions.swift; sourceTree = "<group>"; };
+		F4C51EB81FE78D6B007F2195 /* JoshuaProjectsConvenienceFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoshuaProjectsConvenienceFunctions.swift; sourceTree = "<group>"; };
 		F4D3D4A11FCBBCB60035F860 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		F4D3D4A41FCBD1DD0035F860 /* CoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
 		F4D3D4A61FCBD57D0035F860 /* LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadData.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				F4D3D4A61FCBD57D0035F860 /* LoadData.swift */,
 				F4D3D4AA1FD1201D0035F860 /* Parsing.swift */,
 				F4C51EAE1FE4F833007F2195 /* JoshuaProjectClient.swift */,
+				F4C51EB81FE78D6B007F2195 /* JoshuaProjectsConvenienceFunctions.swift */,
 				F4C51EB21FE50957007F2195 /* Constants.swift */,
 				F4C51EB61FE63281007F2195 /* DateFunctions.swift */,
 			);
@@ -394,6 +397,7 @@
 				F4D3D4A51FCBD1DD0035F860 /* CoreDataViewController.swift in Sources */,
 				F4A8FDC21FDE8A170058DF97 /* Category+CoreDataProperties.swift in Sources */,
 				F4A8FDC41FDE8A170058DF97 /* Prayer+CoreDataProperties.swift in Sources */,
+				F4C51EB91FE78D6B007F2195 /* JoshuaProjectsConvenienceFunctions.swift in Sources */,
 				F4A8FDC01FDE8A170058DF97 /* Details+CoreDataProperties.swift in Sources */,
 				F4C51EB31FE50957007F2195 /* Constants.swift in Sources */,
 				F408DB4D1FDE68DA00C93434 /* PrayerDetailsViewController.swift in Sources */,
