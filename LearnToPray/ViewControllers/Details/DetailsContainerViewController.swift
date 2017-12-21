@@ -24,6 +24,7 @@ class DetailsContainerViewController: CoreDataViewController {
         super.viewDidLoad()
         
         setTableViewDelegates()
+        
     }
     
     private func setTableViewDelegates() {

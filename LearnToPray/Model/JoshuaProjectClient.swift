@@ -28,11 +28,6 @@ class JoshuaProjectClient {
             completionHandler(.Failure(with: "Invalid URL"))
             return
         }
-        
-        print("URL is \(url.absoluteString)")
-        
-        //TODO: Figure out if URLRequest or URL are needed.
-        //Probably based on if URL header is needed
                 
         let urlTask = session.dataTask(with: url) { (data, response, error) in
             
@@ -63,19 +58,6 @@ class JoshuaProjectClient {
         
         urlTask.resume()
     }
-    
-
-    //https://joshuaproject.net/api/v2/upgotd?api_key=yourkey
-    
-    //TODO: Find out if headers are needed
-//    func unreachedPeopleGroupURLRequest() -> URLRequest? {
-//        guard let url = unreachedPeopleGroupURL() else {
-//
-//            return nil
-//        }
-//
-//        var mutableUrlRequest = NSMutableURLRequest(url: url)
-//    }
 
     func unreachedPeopleGroupURL() -> URL? {
         var components = URLComponents()

@@ -17,14 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        JoshuaProjectClient.shared.jpGETRequest { (result) in
-            switch result {
-            case .Success(let responseData):
-                print("Yay! Success!")
-            case .Failure(let failureString):
-                print("Failure: \(failureString)")
-            }
-        }
         
         if !UserDefaultsManager.hasLaunchedPreviously {
             setData()

@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -67,6 +68,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNp-Yv-Fu6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2424.8000000000002" y="131.78410794602701"/>
+        </scene>
+        <!--People Groups View Controller-->
+        <scene sceneID="nTf-Cc-PTk">
+            <objects>
+                <viewController storyboardIdentifier="PeopleGroupsViewController" id="wXD-7j-dJs" customClass="PeopleGroupsViewController" customModule="LearnToPray" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zf0-QP-odg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="t6a-Tq-wQj">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="People Group of the Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czX-td-v8J">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3i-1F-JtR">
+                                        <rect key="frame" x="0.0" y="29.5" width="375" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xwX-Eu-YHW">
+                                        <rect key="frame" x="0.0" y="59.5" width="375" height="174"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1IL-de-pIZ">
+                                        <rect key="frame" x="0.0" y="242.5" width="375" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="m5x-g8-MgJ">
+                                        <rect key="frame" x="0.0" y="272" width="375" height="375"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="m5x-g8-MgJ" secondAttribute="height" multiplier="1:1" id="fp6-Cb-udr"/>
+                                        </constraints>
+                                    </mapView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="m5x-g8-MgJ" secondAttribute="bottom" id="4SC-gH-WNe"/>
+                                    <constraint firstItem="xwX-Eu-YHW" firstAttribute="leading" secondItem="t6a-Tq-wQj" secondAttribute="leading" id="9tp-d0-s2H"/>
+                                    <constraint firstAttribute="trailing" secondItem="L3i-1F-JtR" secondAttribute="trailing" id="FaZ-12-Vba"/>
+                                    <constraint firstItem="czX-td-v8J" firstAttribute="leading" secondItem="t6a-Tq-wQj" secondAttribute="leading" id="JO7-wU-91b"/>
+                                    <constraint firstAttribute="trailing" secondItem="1IL-de-pIZ" secondAttribute="trailing" id="Kjt-fm-xjH"/>
+                                    <constraint firstItem="L3i-1F-JtR" firstAttribute="centerX" secondItem="t6a-Tq-wQj" secondAttribute="centerX" id="LNm-hx-Ny0"/>
+                                    <constraint firstAttribute="trailing" secondItem="czX-td-v8J" secondAttribute="trailing" id="SXJ-Tx-w9H"/>
+                                    <constraint firstAttribute="trailing" secondItem="m5x-g8-MgJ" secondAttribute="trailing" id="Sdc-UJ-Fpb"/>
+                                    <constraint firstAttribute="trailing" secondItem="xwX-Eu-YHW" secondAttribute="trailing" id="hft-hC-LN6"/>
+                                    <constraint firstItem="m5x-g8-MgJ" firstAttribute="leading" secondItem="t6a-Tq-wQj" secondAttribute="leading" id="iBm-VB-duv"/>
+                                    <constraint firstItem="L3i-1F-JtR" firstAttribute="leading" secondItem="t6a-Tq-wQj" secondAttribute="leading" id="lH0-Ao-d6w"/>
+                                    <constraint firstItem="1IL-de-pIZ" firstAttribute="leading" secondItem="t6a-Tq-wQj" secondAttribute="leading" id="m9O-ts-Fjo"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="t6a-Tq-wQj" firstAttribute="top" secondItem="sAz-Ty-cJW" secondAttribute="top" id="5ch-dh-Hbb"/>
+                            <constraint firstItem="sAz-Ty-cJW" firstAttribute="bottom" secondItem="t6a-Tq-wQj" secondAttribute="bottom" id="ES5-zD-yHC"/>
+                            <constraint firstItem="t6a-Tq-wQj" firstAttribute="leading" secondItem="sAz-Ty-cJW" secondAttribute="leading" id="Udi-yZ-9V6"/>
+                            <constraint firstItem="sAz-Ty-cJW" firstAttribute="trailing" secondItem="t6a-Tq-wQj" secondAttribute="trailing" id="vIn-Uq-S9d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sAz-Ty-cJW"/>
+                    </view>
+                    <connections>
+                        <outlet property="peopleGroupImage" destination="xwX-Eu-YHW" id="9EL-I9-jJ4"/>
+                        <outlet property="peopleGroupNameLabel" destination="L3i-1F-JtR" id="IoH-fh-EcQ"/>
+                        <outlet property="peopleGroupPopulation" destination="1IL-de-pIZ" id="AiO-DK-s6J"/>
+                        <outlet property="peopleGroupsMapView" destination="m5x-g8-MgJ" id="a6I-8T-0N5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ngb-ek-DPn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3224.8000000000002" y="131.78410794602701"/>
         </scene>
         <!--Item-->
         <scene sceneID="Xp1-FV-SAH">
