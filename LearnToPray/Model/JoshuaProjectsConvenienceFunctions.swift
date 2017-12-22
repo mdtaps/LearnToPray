@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MapKit
 
 extension JoshuaProjectClient {
     
@@ -17,7 +18,7 @@ extension JoshuaProjectClient {
             case .Failure(let failureString):
                 completionHandler(.Failure(with: failureString))
             case .Success(let data):
-                parseJoshuaProject(jsonData: data) { (jsonParsingResult) in
+                self.parseJoshuaProject(jsonData: data) { (jsonParsingResult) in
                     switch jsonParsingResult {
                     case .Failure(let failureString):
                         completionHandler(.Failure(with: failureString))
@@ -28,29 +29,30 @@ extension JoshuaProjectClient {
             }
         }
     }
-}
-
-func parseJoshuaProject(jsonData: Data, _ completionHandler: @escaping (Result<JoshuaProjectObject>) -> Void) {
-    let decoder = JSONDecoder()
-    do {
-        let joshuaProjectObject = try decoder.decode(JoshuaProjectObject.self, from: jsonData)
-        completionHandler(.Success(with: joshuaProjectObject))
-    } catch {
-        completionHandler(.Failure(with: error.localizedDescription))
+    
+    private func parseJoshuaProject(jsonData: Data, _ completionHandler: @escaping (Result<JoshuaProjectObject>) -> Void) {
+        let decoder = JSONDecoder()
+        do {
+            let joshuaProjectObject = try decoder.decode(JoshuaProjectObject.self, from: jsonData)
+            completionHandler(.Success(with: joshuaProjectObject))
+        } catch {
+            completionHandler(.Failure(with: error.localizedDescription))
+        }
     }
 }
+
 
 struct JoshuaProjectObject: Codable {
     
     let data: [JoshuaProjectData]?
 
     struct JoshuaProjectData: Codable {
-        let regionName: String?
-        let peopleNameInCountry: String?
-        let worldPopulation: Int?
-        let photoAddress: String?
-        let longitude: Double?
-        let latitude: Double?
+        let regionName: String
+        let peopleNameInCountry: String
+        let worldPopulation: Int
+        let photoAddress: String
+        let longitude: Double
+        let latitude: Double
         
         enum CodingKeys: String, CodingKey {
             case regionName = "RegionName"
@@ -59,7 +61,6 @@ struct JoshuaProjectObject: Codable {
             case photoAddress = "PhotoAddress"
             case longitude = "Longitude"
             case latitude = "Latitude"
-            
         }
     }
 }

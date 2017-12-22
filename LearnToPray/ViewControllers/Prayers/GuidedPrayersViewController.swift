@@ -8,19 +8,18 @@
 
 import UIKit
 import CoreData
+import MapKit
 
 class GuidedPrayersViewController: CoreDataViewController, PrayersListDelegate {
     
     fileprivate var prayersListViewController: PrayersListContainerViewController?
-    
+
     override func viewDidLoad() {
         
         setupChildViewControllers()
     }
     
     func didSelectPrayer(prayer: Prayer) {
-        
-        var data: JoshuaProjectObject.JoshuaProjectData?
         
         if prayer.name == "People Groups" {
             JoshuaProjectClient.shared.retreivePeopleGroupOfTheDay { (joshuaProjectResponse) in
@@ -31,24 +30,12 @@ class GuidedPrayersViewController: CoreDataViewController, PrayersListDelegate {
                     fatalError(failureString)
         
                 case .Success(let response):
-                    data = response.data!.first!
+                    DispatchQueue.main.async {
+                        self.launchPeopleGroupViewController(response)
+
+                    }
                 }
             }
-            
-            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "PeopleGroupsViewController") as? PeopleGroupsViewController else {
-                fatalError("Check stroyboard for missing PeopleGroupsViewController")
-            }
-            
-            //TODO: Make sure data is returned from network call before making this call. Maybe send a data object to the next vc? Or make the call in viewdidload?
-            vc.peopleGroupNameLabel.text = data?.peopleNameInCountry
-            do {
-                            vc.peopleGroupImage.image = try UIImage(data: Data(contentsOf: URL(string: data!.photoAddress!)!))
-            } catch {
-                print(error)
-            }
-            
-            show(vc, sender: self)
-
             
         } else {
             guard let vc = storyboard?.instantiateViewController(withIdentifier: "PrayerDetailsViewController") as? PrayerDetailsViewController else {
@@ -68,5 +55,45 @@ class GuidedPrayersViewController: CoreDataViewController, PrayersListDelegate {
         self.prayersListViewController = prayersListViewController
         self.prayersListViewController?.delegate = self
         
+    }
+}
+
+extension GuidedPrayersViewController {
+    func launchPeopleGroupViewController(_ response: JoshuaProjectObject) {
+        
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "PeopleGroupsViewController") as? PeopleGroupsViewController else {
+            fatalError("Check stroyboard for missing PeopleGroupsViewController")
+        }
+        
+        let data = response.data!.first!
+        //Called to get view to load
+        let _ = vc.view
+        
+        vc.peopleGroupNameLabel.text = data.peopleNameInCountry
+        vc.peopleGroupImage.image = getImage(from: data.photoAddress)
+        vc.peopleGroupPopulation.text = "Population: \(data.worldPopulation)"
+        
+        let coordinate = CLLocationCoordinate2D(latitude: data.latitude, longitude: data.longitude)
+        //TODO: Add coordinate to map
+        
+        show(vc, sender: self)
+    }
+    
+    private func getImage(from urlString: String) -> UIImage {
+        guard let url = URL(string: urlString) else {
+            return UIImage()
+        }
+        
+        do {
+            let data = try Data(contentsOf: url)
+        } catch {
+            return UIImage()
+        }
+        
+        guard let image = UIImage(data: data) else {
+            return UIImage()
+        }
+        
+        return image
     }
 }
