@@ -87,7 +87,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3i-1F-JtR">
-                                        <rect key="frame" x="0.0" y="59.5" width="375" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="60" width="375" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -115,7 +115,6 @@
                                     <constraint firstItem="L3i-1F-JtR" firstAttribute="centerX" secondItem="t6a-Tq-wQj" secondAttribute="centerX" id="LNm-hx-Ny0"/>
                                     <constraint firstAttribute="trailing" secondItem="czX-td-v8J" secondAttribute="trailing" id="SXJ-Tx-w9H"/>
                                     <constraint firstAttribute="trailing" secondItem="m5x-g8-MgJ" secondAttribute="trailing" id="Sdc-UJ-Fpb"/>
-                                    <constraint firstItem="czX-td-v8J" firstAttribute="top" secondItem="t6a-Tq-wQj" secondAttribute="top" id="eLP-V0-fLl"/>
                                     <constraint firstAttribute="trailing" secondItem="xwX-Eu-YHW" secondAttribute="trailing" id="hft-hC-LN6"/>
                                     <constraint firstItem="m5x-g8-MgJ" firstAttribute="leading" secondItem="t6a-Tq-wQj" secondAttribute="leading" id="iBm-VB-duv"/>
                                     <constraint firstItem="L3i-1F-JtR" firstAttribute="leading" secondItem="t6a-Tq-wQj" secondAttribute="leading" id="lH0-Ao-d6w"/>
