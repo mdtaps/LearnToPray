@@ -22,7 +22,12 @@ class PrayerDetailsViewController: CoreDataViewController, DetailsListDelegate {
         setupFetchedResultsController()
     }
     
-    private func setupChildViewControllers() {
+    //TODO: Add launch PrayerTimeViewController
+
+}
+
+extension PrayerDetailsViewController {
+    fileprivate func setupChildViewControllers() {
         guard let detailsListViewController = childViewControllers.first as? DetailsContainerViewController else {
             fatalError("Check storyboard for missing DetailsContainerViewController")
         }
@@ -32,7 +37,7 @@ class PrayerDetailsViewController: CoreDataViewController, DetailsListDelegate {
         
     }
     
-    private func setupFetchedResultsController() {
+    fileprivate func setupFetchedResultsController() {
         
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Details.fetchRequest()
         

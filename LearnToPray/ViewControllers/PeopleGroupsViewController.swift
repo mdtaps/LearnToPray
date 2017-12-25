@@ -17,16 +17,16 @@ class PeopleGroupsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        setMapRegion()
+    }
+}
+
+extension PeopleGroupsViewController {
+    
+    fileprivate func setMapRegion() {
         let span = MKCoordinateSpanMake(25, 25)
         let region = MKCoordinateRegion(center: peopleGroupsMapView.annotations.first!.coordinate, span: span)
         
         peopleGroupsMapView.setRegion(region, animated: false)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }

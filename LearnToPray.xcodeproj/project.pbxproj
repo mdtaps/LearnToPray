@@ -14,7 +14,6 @@
 		F43ED5F31FB5719F008E6078 /* PrayersListContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43ED5F21FB5719F008E6078 /* PrayersListContainerViewController.swift */; };
 		F43ED5F61FB5719F008E6078 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43ED5F41FB5719F008E6078 /* Main.storyboard */; };
 		F43ED5F81FB5719F008E6078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F43ED5F71FB5719F008E6078 /* Assets.xcassets */; };
-		F43ED5FB1FB5719F008E6078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43ED5F91FB5719F008E6078 /* LaunchScreen.storyboard */; };
 		F43ED6061FB5719F008E6078 /* LearnToPrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43ED6051FB5719F008E6078 /* LearnToPrayTests.swift */; };
 		F43ED6111FB5719F008E6078 /* LearnToPrayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43ED6101FB5719F008E6078 /* LearnToPrayUITests.swift */; };
 		F43ED6201FB57234008E6078 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F43ED61E1FB57234008E6078 /* CoreDataModel.xcdatamodeld */; };
@@ -34,6 +33,9 @@
 		F4C51EB71FE63281007F2195 /* DateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C51EB61FE63281007F2195 /* DateFunctions.swift */; };
 		F4C51EB91FE78D6B007F2195 /* JoshuaProjectsConvenienceFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C51EB81FE78D6B007F2195 /* JoshuaProjectsConvenienceFunctions.swift */; };
 		F4C51EBB1FEB491D007F2195 /* PeopleGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C51EBA1FEB491D007F2195 /* PeopleGroupsViewController.swift */; };
+		F4C51EBF1FF06734007F2195 /* PrayerTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C51EBD1FF06734007F2195 /* PrayerTimeViewController.swift */; };
+		F4C51EC01FF06735007F2195 /* PrayerTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4C51EBE1FF06734007F2195 /* PrayerTimeViewController.xib */; };
+		F4C51EC21FF0A9D7007F2195 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C51EC11FF0A9D7007F2195 /* LaunchScreen.storyboard */; };
 		F4D3D4A21FCBBCB60035F860 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D3D4A11FCBBCB60035F860 /* CoreDataStack.swift */; };
 		F4D3D4A51FCBD1DD0035F860 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D3D4A41FCBD1DD0035F860 /* CoreDataViewController.swift */; };
 		F4D3D4A71FCBD57D0035F860 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D3D4A61FCBD57D0035F860 /* LoadData.swift */; };
@@ -66,7 +68,6 @@
 		F43ED5F21FB5719F008E6078 /* PrayersListContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersListContainerViewController.swift; sourceTree = "<group>"; };
 		F43ED5F51FB5719F008E6078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F43ED5F71FB5719F008E6078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F43ED5FA1FB5719F008E6078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F43ED5FC1FB5719F008E6078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F43ED6011FB5719F008E6078 /* LearnToPrayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnToPrayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43ED6051FB5719F008E6078 /* LearnToPrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnToPrayTests.swift; sourceTree = "<group>"; };
@@ -91,6 +92,9 @@
 		F4C51EB61FE63281007F2195 /* DateFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFunctions.swift; sourceTree = "<group>"; };
 		F4C51EB81FE78D6B007F2195 /* JoshuaProjectsConvenienceFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoshuaProjectsConvenienceFunctions.swift; sourceTree = "<group>"; };
 		F4C51EBA1FEB491D007F2195 /* PeopleGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleGroupsViewController.swift; sourceTree = "<group>"; };
+		F4C51EBD1FF06734007F2195 /* PrayerTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeViewController.swift; sourceTree = "<group>"; };
+		F4C51EBE1FF06734007F2195 /* PrayerTimeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrayerTimeViewController.xib; sourceTree = "<group>"; };
+		F4C51EC11FF0A9D7007F2195 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4D3D4A11FCBBCB60035F860 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		F4D3D4A41FCBD1DD0035F860 /* CoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
 		F4D3D4A61FCBD57D0035F860 /* LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadData.swift; sourceTree = "<group>"; };
@@ -216,7 +220,9 @@
 				F408DB491FDDFFC900C93434 /* Model */,
 				F43ED5F71FB5719F008E6078 /* Assets.xcassets */,
 				F43ED5F41FB5719F008E6078 /* Main.storyboard */,
-				F43ED5F91FB5719F008E6078 /* LaunchScreen.storyboard */,
+				F4C51EBD1FF06734007F2195 /* PrayerTimeViewController.swift */,
+				F4C51EBE1FF06734007F2195 /* PrayerTimeViewController.xib */,
+				F4C51EC11FF0A9D7007F2195 /* LaunchScreen.storyboard */,
 				F43ED5FC1FB5719F008E6078 /* Info.plist */,
 				F4C51EB41FE512D1007F2195 /* APIKey.plist */,
 				F4A8FDC71FE0F81A0058DF97 /* PrayerList.json */,
@@ -369,8 +375,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4C51EB51FE512D1007F2195 /* APIKey.plist in Resources */,
-				F43ED5FB1FB5719F008E6078 /* LaunchScreen.storyboard in Resources */,
+				F4C51EC01FF06735007F2195 /* PrayerTimeViewController.xib in Resources */,
 				F43ED5F81FB5719F008E6078 /* Assets.xcassets in Resources */,
+				F4C51EC21FF0A9D7007F2195 /* LaunchScreen.storyboard in Resources */,
 				F4A8FDC81FE0F81A0058DF97 /* PrayerList.json in Resources */,
 				F43ED5F61FB5719F008E6078 /* Main.storyboard in Resources */,
 			);
@@ -410,6 +417,7 @@
 				F4A8FDC21FDE8A170058DF97 /* Category+CoreDataProperties.swift in Sources */,
 				F4A8FDC41FDE8A170058DF97 /* Prayer+CoreDataProperties.swift in Sources */,
 				F4C51EB91FE78D6B007F2195 /* JoshuaProjectsConvenienceFunctions.swift in Sources */,
+				F4C51EBF1FF06734007F2195 /* PrayerTimeViewController.swift in Sources */,
 				F4A8FDC01FDE8A170058DF97 /* Details+CoreDataProperties.swift in Sources */,
 				F4C51EB31FE50957007F2195 /* Constants.swift in Sources */,
 				F408DB4D1FDE68DA00C93434 /* PrayerDetailsViewController.swift in Sources */,
@@ -462,14 +470,6 @@
 				F43ED5F51FB5719F008E6078 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F43ED5F91FB5719F008E6078 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F43ED5FA1FB5719F008E6078 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
