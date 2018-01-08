@@ -49,18 +49,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0uF-i4-Akv">
-                                <rect key="frame" x="8" y="20" width="359" height="647"/>
+                                <rect key="frame" x="8" y="28" width="359" height="563"/>
                                 <connections>
                                     <segue destination="j8V-Sa-Wjw" kind="embed" id="eO2-CC-SNC"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="753" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9E-Qn-QXq">
+                                <rect key="frame" x="8" y="599" width="359" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="iNc-5u-xFs"/>
+                                </constraints>
+                                <state key="normal" title="Start Praying"/>
+                                <connections>
+                                    <action selector="prayingButtonPressed:" destination="8z9-7i-cfg" eventType="touchUpInside" id="WSd-VL-vx8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="z9E-Qn-QXq" firstAttribute="top" secondItem="0uF-i4-Akv" secondAttribute="bottom" constant="8" id="0qN-jU-duF"/>
+                            <constraint firstItem="z9E-Qn-QXq" firstAttribute="leading" secondItem="E8b-hu-HcZ" secondAttribute="leading" constant="8" id="Lab-uw-HBe"/>
                             <constraint firstItem="0uF-i4-Akv" firstAttribute="leading" secondItem="E8b-hu-HcZ" secondAttribute="leading" constant="8" id="O1x-GS-FhF"/>
-                            <constraint firstItem="0uF-i4-Akv" firstAttribute="top" secondItem="E8b-hu-HcZ" secondAttribute="top" id="Qup-66-PHq"/>
-                            <constraint firstItem="E8b-hu-HcZ" firstAttribute="bottom" secondItem="0uF-i4-Akv" secondAttribute="bottom" id="ZUW-YD-SNR"/>
+                            <constraint firstItem="E8b-hu-HcZ" firstAttribute="bottom" secondItem="z9E-Qn-QXq" secondAttribute="bottom" constant="20" id="PNF-D1-3VH"/>
+                            <constraint firstItem="0uF-i4-Akv" firstAttribute="top" secondItem="E8b-hu-HcZ" secondAttribute="top" constant="8" id="XUN-nQ-QQI"/>
                             <constraint firstItem="E8b-hu-HcZ" firstAttribute="trailing" secondItem="0uF-i4-Akv" secondAttribute="trailing" constant="8" id="kZa-Qv-CUs"/>
+                            <constraint firstItem="E8b-hu-HcZ" firstAttribute="trailing" secondItem="z9E-Qn-QXq" secondAttribute="trailing" constant="8" id="kcx-Ff-Ca6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="E8b-hu-HcZ"/>
                     </view>
@@ -292,11 +305,11 @@
             <objects>
                 <viewController id="j8V-Sa-Wjw" customClass="DetailsContainerViewController" customModule="LearnToPray" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1SK-DM-4G4">
-                        <rect key="frame" x="0.0" y="0.0" width="359" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="359" height="563"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nz9-y7-1SZ">
-                                <rect key="frame" x="0.0" y="0.0" width="359" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="359" height="563"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sectionHeaderCell" rowHeight="120" id="gn4-tR-ZHD" customClass="PrayerDetailsHeaderTableViewCell" customModule="LearnToPray" customModuleProvider="target">

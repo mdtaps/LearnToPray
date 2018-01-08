@@ -22,8 +22,19 @@ class PrayerDetailsViewController: CoreDataViewController, DetailsListDelegate {
         setupFetchedResultsController()
     }
     
-    //TODO: Add launch PrayerTimeViewController
-
+    @IBAction func prayingButtonPressed(_ sender: UIButton) {
+        launchPrayerTime()
+    }
+    
+    func launchPrayerTime() {
+        let vc = PrayerTimeViewController(nibName: "PrayerTimeViewController", bundle: nil)
+        
+        if let prayer = prayer {
+            vc.prayerDetails = PrayerDetails(prayer: prayer)
+        }
+        
+        show(vc, sender: nil)
+    }
 }
 
 extension PrayerDetailsViewController {

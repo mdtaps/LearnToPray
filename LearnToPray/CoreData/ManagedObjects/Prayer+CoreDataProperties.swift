@@ -17,7 +17,7 @@ extension Prayer {
         return NSFetchRequest<Prayer>(entityName: "Prayer")
     }
 
-    @NSManaged public var name: String?
+    @NSManaged public var name: String
     @NSManaged public var text: String?
     @NSManaged public var category: Category
     @NSManaged public var details: NSSet?

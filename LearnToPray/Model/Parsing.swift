@@ -8,6 +8,8 @@
 
 import Foundation
 
+//TODO: Put in a struct?
+
 var data = Data()
 
 func setData() {
