@@ -10,6 +10,7 @@
 		F408DB431FDDF70300C93434 /* GuidedPrayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F408DB421FDDF70300C93434 /* GuidedPrayersViewController.swift */; };
 		F408DB451FDDF93200C93434 /* PrayerDetailsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F408DB441FDDF93200C93434 /* PrayerDetailsHeaderTableViewCell.swift */; };
 		F408DB4D1FDE68DA00C93434 /* PrayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F408DB4C1FDE68DA00C93434 /* PrayerDetailsViewController.swift */; };
+		F437381C2005E13F0067F1F7 /* LabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437381B2005E13F0067F1F7 /* LabelExtensions.swift */; };
 		F43ED5F11FB5719F008E6078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43ED5F01FB5719F008E6078 /* AppDelegate.swift */; };
 		F43ED5F31FB5719F008E6078 /* PrayersListContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43ED5F21FB5719F008E6078 /* PrayersListContainerViewController.swift */; };
 		F43ED5F61FB5719F008E6078 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43ED5F41FB5719F008E6078 /* Main.storyboard */; };
@@ -64,6 +65,7 @@
 		F408DB421FDDF70300C93434 /* GuidedPrayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedPrayersViewController.swift; sourceTree = "<group>"; };
 		F408DB441FDDF93200C93434 /* PrayerDetailsHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerDetailsHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		F408DB4C1FDE68DA00C93434 /* PrayerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerDetailsViewController.swift; sourceTree = "<group>"; };
+		F437381B2005E13F0067F1F7 /* LabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtensions.swift; sourceTree = "<group>"; };
 		F43ED5ED1FB5719F008E6078 /* LearnToPray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnToPray.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43ED5F01FB5719F008E6078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F43ED5F21FB5719F008E6078 /* PrayersListContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersListContainerViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				F4C51EB21FE50957007F2195 /* Constants.swift */,
 				F4C51EB61FE63281007F2195 /* DateFunctions.swift */,
 				F451FD0E1FFF669200540B31 /* PrayerDetails.swift */,
+				F437381B2005E13F0067F1F7 /* LabelExtensions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,9 +226,7 @@
 				F408DB4B1FDE002200C93434 /* ViewControllers */,
 				F408DB491FDDFFC900C93434 /* Model */,
 				F43ED5F71FB5719F008E6078 /* Assets.xcassets */,
-				F43ED5F41FB5719F008E6078 /* Main.storyboard */,
 				F4C51EC31FF5FA9E007F2195 /* XIB Files */,
-				F4C51EC11FF0A9D7007F2195 /* LaunchScreen.storyboard */,
 				F43ED5FC1FB5719F008E6078 /* Info.plist */,
 				F4C51EB41FE512D1007F2195 /* APIKey.plist */,
 				F4A8FDC71FE0F81A0058DF97 /* PrayerList.json */,
@@ -263,6 +264,8 @@
 		F4C51EC31FF5FA9E007F2195 /* XIB Files */ = {
 			isa = PBXGroup;
 			children = (
+				F4C51EC11FF0A9D7007F2195 /* LaunchScreen.storyboard */,
+				F43ED5F41FB5719F008E6078 /* Main.storyboard */,
 				F451FD0C1FFF561700540B31 /* PrayerTimeViewController.xib */,
 			);
 			path = "XIB Files";
@@ -441,6 +444,7 @@
 				F43ED5F11FB5719F008E6078 /* AppDelegate.swift in Sources */,
 				F43ED6201FB57234008E6078 /* CoreDataModel.xcdatamodeld in Sources */,
 				F4D3D4A71FCBD57D0035F860 /* LoadData.swift in Sources */,
+				F437381C2005E13F0067F1F7 /* LabelExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

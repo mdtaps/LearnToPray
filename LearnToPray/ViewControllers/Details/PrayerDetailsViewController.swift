@@ -33,7 +33,7 @@ class PrayerDetailsViewController: CoreDataViewController, DetailsListDelegate {
             vc.prayerDetails = PrayerDetails(prayer: prayer)
         }
         
-        show(vc, sender: nil)
+        present(vc, animated: true, completion: nil)
     }
 }
 
