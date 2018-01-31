@@ -26,14 +26,13 @@ class PrayerDetailsViewController: CoreDataViewController, DetailsListDelegate {
         launchPrayerTime()
     }
     
-    func launchPrayerTime() {
-        let vc = PrayerTimeViewController(nibName: "PrayerTimeViewController", bundle: nil)
-        
+    //Set Timer Length
+    private func launchPrayerTime() {
         if let prayer = prayer {
-            vc.prayerDetails = PrayerDetails(prayer: prayer)
+            let vc = PrayerTimeViewController(prayer: prayer, timerLength: 300)
+            
+            present(vc, animated: true, completion: nil)
         }
-        
-        present(vc, animated: true, completion: nil)
     }
 }
 

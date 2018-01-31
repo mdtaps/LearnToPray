@@ -9,30 +9,23 @@
 import Foundation
 
 struct PrayerDetails {
-    var prayerName: String
-    var detailsArray: [String]
+    var prayer: Prayer
+    var detailsArray = [String]()
+    var arrayPosition = 0
     
     init(prayer: Prayer) {
-        prayerName = prayer.name
-        detailsArray = detailsFrom(prayer: prayer)
-    }
-}
-
-func detailsFrom(prayer: Prayer) -> [String] {
-        
-    guard let details = prayer.details else {
-        fatalError("Prayer has no details in PrayerDetails")
+        self.prayer = prayer
+        populateDetailsArray()
     }
     
-    var array = [String]()
-    
-    for detail in details {
-        guard let detail = detail as? Details else {
-            fatalError("Cannot get data from prayer detail")
+    private mutating func populateDetailsArray() {
+        guard let details = prayer.details as? Set<Details> else {
+            print("No details in prayer object")
+            return
         }
         
-        array.append(detail.title!)
+        for detail in details {
+            detailsArray.append(detail.title!)
+        }
     }
-    
-    return array
 }

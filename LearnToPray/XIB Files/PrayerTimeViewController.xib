@@ -12,8 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PrayerTimeViewController" customModule="LearnToPray" customModuleProvider="target">
             <connections>
-                <outlet property="prayerDetailLabel" destination="ba2-Uq-fic" id="6e5-Qz-FbU"/>
-                <outlet property="prayerTimerLabel" destination="QgW-DG-VPg" id="zq6-gc-nmx"/>
+                <outlet property="prayerDetailPlaceHolderLabel" destination="ba2-Uq-fic" id="KOL-J4-1WA"/>
+                <outlet property="prayerTimeStackView" destination="CwW-HY-fgC" id="t6u-FH-OiU"/>
+                <outlet property="prayerTimerLabel" destination="KEQ-hX-Kvw" id="fKx-vb-oVB"/>
                 <outlet property="prayerTitleLabel" destination="cYN-VS-mCA" id="ZE6-ng-5Er"/>
                 <outlet property="view" destination="iN0-l3-epB" id="t5f-Kp-x9g"/>
             </connections>
@@ -32,39 +33,61 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ba2-Uq-fic">
-                            <rect key="frame" x="0.0" y="200" width="375" height="399"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ba2-Uq-fic">
+                            <rect key="frame" x="0.0" y="200" width="375" height="388"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgW-DG-VPg">
-                            <rect key="frame" x="0.0" y="599" width="375" height="48"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3J6-og-uK8">
+                            <rect key="frame" x="0.0" y="588" width="375" height="59"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vv6-Mv-L39">
+                                    <rect key="frame" x="0.0" y="0.0" width="64" height="59"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEQ-hX-Kvw">
+                                    <rect key="frame" x="64" y="0.0" width="247.5" height="59"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giw-Sl-ewz">
+                                    <rect key="frame" x="311.5" y="0.0" width="63.5" height="59"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                            </subviews>
                             <constraints>
-                                <constraint firstAttribute="height" constant="48" id="KVZ-eY-HeK"/>
+                                <constraint firstItem="Vv6-Mv-L39" firstAttribute="width" secondItem="giw-Sl-ewz" secondAttribute="width" id="lOe-1C-Ti8"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        </stackView>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="ba2-Uq-fic" firstAttribute="width" secondItem="CwW-HY-fgC" secondAttribute="width" id="Xq3-sZ-4ez"/>
+                        <constraint firstItem="ba2-Uq-fic" firstAttribute="height" secondItem="CwW-HY-fgC" secondAttribute="height" multiplier="0.6" id="zQZ-AH-pDc"/>
+                    </constraints>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VV1-5s-d0Z" userLabel="Left Button">
-                    <rect key="frame" x="0.0" y="220" width="56.5" height="399"/>
+                    <rect key="frame" x="0.0" y="220" width="56.5" height="388"/>
                     <state key="normal" title="Button"/>
                     <connections>
-                        <action selector="leftButtonPressed" destination="-1" eventType="touchUpInside" id="B53-wq-jB6"/>
+                        <action selector="leftButtonPressed" destination="-1" eventType="touchUpInside" id="mqt-Na-8Lo"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0n-Bw-3Py" userLabel="Right Button">
-                    <rect key="frame" x="319" y="220" width="56" height="399"/>
+                    <rect key="frame" x="319" y="220" width="56" height="388"/>
                     <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="rightButtonPressed" destination="-1" eventType="touchUpInside" id="Nc3-sJ-ygE"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="CwW-HY-fgC" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="1Wl-iF-2vy"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CwW-HY-fgC" secondAttribute="trailing" id="4xx-8z-exr"/>
+                <constraint firstItem="KEQ-hX-Kvw" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.66" id="CH0-G8-yBe"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="CwW-HY-fgC" secondAttribute="bottom" id="GeB-qq-eQN"/>
                 <constraint firstItem="VV1-5s-d0Z" firstAttribute="height" secondItem="ba2-Uq-fic" secondAttribute="height" id="K9E-tb-b1e"/>
                 <constraint firstItem="CwW-HY-fgC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="LNr-1i-4ZW"/>
