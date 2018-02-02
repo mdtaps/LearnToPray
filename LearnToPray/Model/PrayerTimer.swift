@@ -24,21 +24,37 @@ class PrayerTimer {
         }
     }
     var timer = Timer()
+    var timerState: TimerState
     var delegate: TimerDelegate?
     
     init(timerCounter: Int) {
         self.timerCounter = timerCounter
+        self.timerState = .Paused
+    }
+}
+
+extension PrayerTimer {
+    enum TimerState: String {
+        case Running = "Pause"
+        case Paused = "Resume"
     }
     
-    func startPrayerTimer() {
+    func start() {
+        timerState = .Running
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in self.timerCounter -= 1 }
     }
     
-    func stopPrayerTimer() {
+    func stop() {
+        timerState = .Paused
         timer.invalidate()
     }
     
-    func pausePrayerTimer() {
-        timer.invalidate()
+    func toggleTimer() {
+        switch timerState {
+        case .Running:
+            stop()
+        case .Paused:
+            start()
+        }
     }
 }

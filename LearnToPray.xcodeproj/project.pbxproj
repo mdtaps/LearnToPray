@@ -20,6 +20,8 @@
 		F43ED6201FB57234008E6078 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F43ED61E1FB57234008E6078 /* CoreDataModel.xcdatamodeld */; };
 		F451FD0D1FFF561700540B31 /* PrayerTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F451FD0C1FFF561700540B31 /* PrayerTimeViewController.xib */; };
 		F451FD0F1FFF669200540B31 /* PrayerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451FD0E1FFF669200540B31 /* PrayerDetails.swift */; };
+		F45D74BA20244B6E00A9C9CD /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D74B820244B6E00A9C9CD /* DonationViewController.swift */; };
+		F45D74BB20244B6E00A9C9CD /* DonationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45D74B920244B6E00A9C9CD /* DonationViewController.xib */; };
 		F485D11A20146BB200304DBE /* PrayerTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485D11920146BB200304DBE /* PrayerTimer.swift */; };
 		F48FB6B91FD67C3E009318F9 /* DetailsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48FB6B81FD67C3E009318F9 /* DetailsContainerViewController.swift */; };
 		F4A8FDBF1FDE8A170058DF97 /* Details+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8FDB91FDE8A170058DF97 /* Details+CoreDataClass.swift */; };
@@ -82,6 +84,9 @@
 		F43ED61F1FB57234008E6078 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		F451FD0C1FFF561700540B31 /* PrayerTimeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrayerTimeViewController.xib; sourceTree = "<group>"; };
 		F451FD0E1FFF669200540B31 /* PrayerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerDetails.swift; sourceTree = "<group>"; };
+		F45D74B820244B6E00A9C9CD /* DonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
+		F45D74B920244B6E00A9C9CD /* DonationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationViewController.xib; sourceTree = "<group>"; };
+		F45D74BC2024548B00A9C9CD /* LearnToPray.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LearnToPray.entitlements; sourceTree = "<group>"; };
 		F485D11920146BB200304DBE /* PrayerTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimer.swift; sourceTree = "<group>"; };
 		F48FB6B81FD67C3E009318F9 /* DetailsContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsContainerViewController.swift; sourceTree = "<group>"; };
 		F4A8FDB91FDE8A170058DF97 /* Details+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Details+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -164,9 +169,7 @@
 			children = (
 				F4D3D4A61FCBD57D0035F860 /* LoadData.swift */,
 				F4D3D4AA1FD1201D0035F860 /* Parsing.swift */,
-				F4C51EAE1FE4F833007F2195 /* JoshuaProjectClient.swift */,
-				F4C51EB81FE78D6B007F2195 /* JoshuaProjectsConvenienceFunctions.swift */,
-				F4C51EB21FE50957007F2195 /* Constants.swift */,
+				F4B864822022DC7400735337 /* Networking */,
 				F4C51EB61FE63281007F2195 /* DateFunctions.swift */,
 				F451FD0E1FFF669200540B31 /* PrayerDetails.swift */,
 				F437381B2005E13F0067F1F7 /* LabelExtensions.swift */,
@@ -197,6 +200,8 @@
 				F4C51EBC1FEB494C007F2195 /* People Groups */,
 				F4C51EBA1FEB491D007F2195 /* PeopleGroupsViewController.swift */,
 				F4C51EBD1FF06734007F2195 /* PrayerTimeViewController.swift */,
+				F45D74B820244B6E00A9C9CD /* DonationViewController.swift */,
+				F45D74B920244B6E00A9C9CD /* DonationViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 		F43ED5EF1FB5719F008E6078 /* LearnToPray */ = {
 			isa = PBXGroup;
 			children = (
+				F45D74BC2024548B00A9C9CD /* LearnToPray.entitlements */,
 				F43ED5F01FB5719F008E6078 /* AppDelegate.swift */,
 				F4A8FDC51FDF93E20058DF97 /* UserDefaultsManager.swift */,
 				F408DB4B1FDE002200C93434 /* ViewControllers */,
@@ -255,6 +261,16 @@
 				F43ED6121FB5719F008E6078 /* Info.plist */,
 			);
 			path = LearnToPrayUITests;
+			sourceTree = "<group>";
+		};
+		F4B864822022DC7400735337 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F4C51EAE1FE4F833007F2195 /* JoshuaProjectClient.swift */,
+				F4C51EB81FE78D6B007F2195 /* JoshuaProjectsConvenienceFunctions.swift */,
+				F4C51EB21FE50957007F2195 /* Constants.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		F4C51EBC1FEB494C007F2195 /* People Groups */ = {
@@ -353,6 +369,11 @@
 					F43ED5EC1FB5719F008E6078 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplePay = {
+								enabled = 1;
+							};
+						};
 					};
 					F43ED6001FB5719F008E6078 = {
 						CreatedOnToolsVersion = 9.0.1;
@@ -393,6 +414,7 @@
 			files = (
 				F4C51EB51FE512D1007F2195 /* APIKey.plist in Resources */,
 				F43ED5F81FB5719F008E6078 /* Assets.xcassets in Resources */,
+				F45D74BB20244B6E00A9C9CD /* DonationViewController.xib in Resources */,
 				F451FD0D1FFF561700540B31 /* PrayerTimeViewController.xib in Resources */,
 				F4C51EC21FF0A9D7007F2195 /* LaunchScreen.storyboard in Resources */,
 				F4A8FDC81FE0F81A0058DF97 /* PrayerList.json in Resources */,
@@ -444,6 +466,7 @@
 				F4D3D4A21FCBBCB60035F860 /* CoreDataStack.swift in Sources */,
 				F4A8FDC31FDE8A170058DF97 /* Prayer+CoreDataClass.swift in Sources */,
 				F4A8FDC61FDF93E20058DF97 /* UserDefaultsManager.swift in Sources */,
+				F45D74BA20244B6E00A9C9CD /* DonationViewController.swift in Sources */,
 				F4C51EAF1FE4F833007F2195 /* JoshuaProjectClient.swift in Sources */,
 				F43ED5F11FB5719F008E6078 /* AppDelegate.swift in Sources */,
 				F43ED6201FB57234008E6078 /* CoreDataModel.xcdatamodeld in Sources */,
@@ -606,11 +629,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LearnToPray/LearnToPray.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CGABW4X2P7;
+				DEVELOPMENT_TEAM = 7W4UP5Q55U;
 				INFOPLIST_FILE = LearnToPray/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mdtaps.LearnToPray;
+				PRODUCT_BUNDLE_IDENTIFIER = "-W4UP5Q55U.com.mdtaps.LearnToPray";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -621,11 +645,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LearnToPray/LearnToPray.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CGABW4X2P7;
+				DEVELOPMENT_TEAM = 7W4UP5Q55U;
 				INFOPLIST_FILE = LearnToPray/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mdtaps.LearnToPray;
+				PRODUCT_BUNDLE_IDENTIFIER = "-W4UP5Q55U.com.mdtaps.LearnToPray";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

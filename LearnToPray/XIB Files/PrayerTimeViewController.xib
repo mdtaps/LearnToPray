@@ -9,9 +9,15 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Medium</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PrayerTimeViewController" customModule="LearnToPray" customModuleProvider="target">
             <connections>
+                <outlet property="pauseTimerButton" destination="Vv6-Mv-L39" id="2wx-vT-StE"/>
                 <outlet property="prayerDetailPlaceHolderLabel" destination="ba2-Uq-fic" id="KOL-J4-1WA"/>
                 <outlet property="prayerTimeStackView" destination="CwW-HY-fgC" id="t6u-FH-OiU"/>
                 <outlet property="prayerTimerLabel" destination="KEQ-hX-Kvw" id="fKx-vb-oVB"/>
@@ -27,10 +33,16 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CwW-HY-fgC">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYN-VS-mCA">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="cYN-VS-mCA">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
+                            <attributedString key="attributedText">
+                                <fragment content="Label">
+                                    <attributes>
+                                        <font key="NSFont" size="36" name=".SFNSText"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ba2-Uq-fic">
@@ -43,19 +55,27 @@
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3J6-og-uK8">
                             <rect key="frame" x="0.0" y="588" width="375" height="59"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vv6-Mv-L39">
-                                    <rect key="frame" x="0.0" y="0.0" width="64" height="59"/>
-                                    <state key="normal" title="Button"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vv6-Mv-L39">
+                                    <rect key="frame" x="0.0" y="0.0" width="124" height="59"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                    <state key="normal" title="Pause"/>
+                                    <connections>
+                                        <action selector="pauseButtonPressed" destination="-1" eventType="touchUpInside" id="teF-NR-pi6"/>
+                                    </connections>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEQ-hX-Kvw">
-                                    <rect key="frame" x="64" y="0.0" width="247.5" height="59"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEQ-hX-Kvw">
+                                    <rect key="frame" x="124" y="0.0" width="127.5" height="59"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giw-Sl-ewz">
-                                    <rect key="frame" x="311.5" y="0.0" width="63.5" height="59"/>
-                                    <state key="normal" title="Button"/>
+                                    <rect key="frame" x="251.5" y="0.0" width="123.5" height="59"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                    <state key="normal" title="Finish"/>
+                                    <connections>
+                                        <action selector="finishButtonPressed" destination="-1" eventType="touchUpInside" id="Nj8-PZ-UUy"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
@@ -87,7 +107,7 @@
             <constraints>
                 <constraint firstItem="CwW-HY-fgC" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="1Wl-iF-2vy"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CwW-HY-fgC" secondAttribute="trailing" id="4xx-8z-exr"/>
-                <constraint firstItem="KEQ-hX-Kvw" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.66" id="CH0-G8-yBe"/>
+                <constraint firstItem="KEQ-hX-Kvw" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.34" id="CH0-G8-yBe"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="CwW-HY-fgC" secondAttribute="bottom" id="GeB-qq-eQN"/>
                 <constraint firstItem="VV1-5s-d0Z" firstAttribute="height" secondItem="ba2-Uq-fic" secondAttribute="height" id="K9E-tb-b1e"/>
                 <constraint firstItem="CwW-HY-fgC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="LNr-1i-4ZW"/>
