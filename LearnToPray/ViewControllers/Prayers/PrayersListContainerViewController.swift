@@ -28,20 +28,13 @@ class PrayersListContainerViewController: CoreDataViewController {
         fetchedResultsController = createFetchedResultsController(for: Prayer.self)
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 }
 
 extension PrayersListContainerViewController: UITableViewDelegate, UITableViewDataSource {
     
     //MARK: Number of Sections/Rows Functions
     func numberOfSections(in tableView: UITableView) -> Int {
-        guard let count = fetchedResultsController?.sections?.count else {
-            fatalError("No sections to return in numberOfSections")
-        }
+        let count = fetchedResultsController?.sections?.count ?? 0
         
         return count
         

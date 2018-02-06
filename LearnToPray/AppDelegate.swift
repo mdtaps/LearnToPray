@@ -13,21 +13,35 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    private var tabBarController: UITabBarController {
+        return window!.rootViewController as! UITabBarController
+    }
+    
+    private let donationVC = DonationViewController(nibName: nil, bundle: nil)
+    private var storyboard: UIStoryboard {
+        return UIStoryboard(name: "Main", bundle: nil)
+    }
+    private lazy var navigationController: UINavigationController = {
+        return self.storyboard.instantiateViewController(withIdentifier: "NavigationController") as! UINavigationController
+    }()
+    
     var stack = CoreDataStack(modelName: "CoreDataModel")!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+        addViews()
         
         if !UserDefaultsManager.hasLaunchedPreviously {
             setData()
             parseJSON { (prayerList, error) in
                 if let error = error {
                     print(error.localizedDescription)
+                    print("too bad so sad")
                     return
                     
                 }
                 
                 guard let prayerList = prayerList else {
+                    print("No Prayer List")
                     return
                     
                 }
@@ -112,6 +126,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         stack.save()
 
+    }
+    
+    func addViews() {
+        tabBarController.viewControllers = [donationVC, navigationController]
     }
 
 

@@ -36,7 +36,7 @@ class CoreDataViewController: UIViewController {
         
         fetchRequest.sortDescriptors = descriptors
         
-        //Return fetchedresultsController
+        //Return fetchedResultsController
         return NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: appDelegate.stack.context, sectionNameKeyPath: "category.name", cacheName: nil)
         
     }
