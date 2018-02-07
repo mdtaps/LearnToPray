@@ -29,11 +29,6 @@ extension UILabel {
         return label
     }
     
-    func clone() -> UILabel{
-        let data = NSKeyedArchiver.archivedData(withRootObject: self)
-        return NSKeyedUnarchiver.unarchiveObject(with: data) as! UILabel
-    }
-    
     func applyPrayerDetailStyling() {
         self.numberOfLines = 0
         self.textAlignment = .center

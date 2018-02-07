@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DonationViewController" customModule="LearnToPray" customModuleProvider="target">
             <connections>
+                <outlet property="donationAmountTextField" destination="FLB-s6-guM" id="UAh-li-AFr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,12 +27,31 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="LPq-cX-nze">
+                    <rect key="frame" x="38" y="575" width="299" height="30"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donation Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHC-vE-mSF">
+                            <rect key="frame" x="0.0" y="0.0" width="133.5" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="$0.00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FLB-s6-guM">
+                            <rect key="frame" x="165.5" y="0.0" width="133.5" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                        </textField>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="HxU-sy-HJb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="AgW-lB-uOZ"/>
+                <constraint firstItem="LPq-cX-nze" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="T6n-fG-YeC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HxU-sy-HJb" secondAttribute="trailing" constant="16" id="bA7-8r-4cR"/>
                 <constraint firstItem="HxU-sy-HJb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="eKT-iN-sMG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="LPq-cX-nze" secondAttribute="bottom" constant="62" id="j5R-XU-Qou"/>
                 <constraint firstItem="HxU-sy-HJb" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="mQ3-My-VRU"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
