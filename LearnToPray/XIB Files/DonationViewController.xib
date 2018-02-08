@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DonationViewController" customModule="LearnToPray" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundView" destination="vAp-j6-08v" id="vd6-DV-Ap8"/>
                 <outlet property="donationAmountTextField" destination="FLB-s6-guM" id="UAh-li-AFr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,37 +22,63 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Test Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HxU-sy-HJb">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAp-j6-08v">
+                    <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HxU-sy-HJb">
                     <rect key="frame" x="16" y="20" width="343" height="333.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <attributedString key="attributedText">
+                        <fragment>
+                            <string key="content">Thank you for downloading my app!
+</string>
+                            <attributes>
+                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <font key="NSFont" size="24" name="Helvetica-Bold"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content">
+My name is Mark Tapia and I'm an aspiring developer in San Diego. I made this app for free to help people pray. Any donations will go toward time improving this app. Thank you for your support!</string>
+                            <attributes>
+                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <font key="NSFont" metaFont="system" size="17"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="LPq-cX-nze">
-                    <rect key="frame" x="38" y="575" width="299" height="30"/>
+                    <rect key="frame" x="38" y="523" width="299" height="30"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donation Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHC-vE-mSF">
                             <rect key="frame" x="0.0" y="0.0" width="133.5" height="30"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="$0.00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FLB-s6-guM">
                             <rect key="frame" x="165.5" y="0.0" width="133.5" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="continue"/>
                         </textField>
                     </subviews>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="HxU-sy-HJb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="AgW-lB-uOZ"/>
-                <constraint firstItem="LPq-cX-nze" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="T6n-fG-YeC"/>
+                <constraint firstItem="LPq-cX-nze" firstAttribute="bottom" secondItem="vAp-j6-08v" secondAttribute="bottom" constant="-114" id="09E-p0-dMB"/>
+                <constraint firstItem="HxU-sy-HJb" firstAttribute="top" secondItem="vAp-j6-08v" secondAttribute="top" constant="20" id="AgW-lB-uOZ"/>
+                <constraint firstItem="vAp-j6-08v" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="JOG-mC-6uD"/>
+                <constraint firstAttribute="bottom" secondItem="vAp-j6-08v" secondAttribute="bottom" id="Law-aD-BhP" customClass="KeyboardLayoutConstraint" customModule="LearnToPray" customModuleProvider="target"/>
+                <constraint firstItem="LPq-cX-nze" firstAttribute="centerX" secondItem="vAp-j6-08v" secondAttribute="centerX" id="T6n-fG-YeC"/>
+                <constraint firstItem="vAp-j6-08v" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="XNZ-4L-WIT"/>
+                <constraint firstItem="vAp-j6-08v" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="Xfd-r0-Wko"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HxU-sy-HJb" secondAttribute="trailing" constant="16" id="bA7-8r-4cR"/>
                 <constraint firstItem="HxU-sy-HJb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="eKT-iN-sMG"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="LPq-cX-nze" secondAttribute="bottom" constant="62" id="j5R-XU-Qou"/>
                 <constraint firstItem="HxU-sy-HJb" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="mQ3-My-VRU"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

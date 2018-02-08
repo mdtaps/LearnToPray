@@ -13,14 +13,12 @@ class DonationViewController: UIViewController {
     
     let applePaySetUp = ApplePaySetUp()
     @IBOutlet weak var donationAmountTextField: UITextField!
+    @IBOutlet weak var backgroundView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpViewElements()
-        //Add KeyboardDidShow listeners
     }
-    
-    //TODO: Add Keyboard Showing Shift
     
     @objc func purchase() {
         if let applePayController = ApplePaySetUp.makeApplePayController() {
@@ -42,17 +40,17 @@ class DonationViewController: UIViewController {
         paymentButton.translatesAutoresizingMaskIntoConstraints = false
         
         //Set button constraints to bottom middle of the screen
-        let bottomConstraint = NSLayoutConstraint(item: paymentButton,
+        let bottomConstraint = KeyboardLayoutConstraint(item: paymentButton,
                                                         attribute: .bottom,
                                                         relatedBy: .equal,
-                                                        toItem: view,
-                                                        attribute: .bottomMargin,
+                                                        toItem: backgroundView,
+                                                        attribute: .bottom,
                                                         multiplier: 1.0,
-                                                        constant: -16)
+                                                        constant: -60)
         let centerConstraint = NSLayoutConstraint(item: paymentButton,
                                                   attribute: .centerX,
                                                   relatedBy: .equal,
-                                                  toItem: view,
+                                                  toItem: backgroundView,
                                                   attribute: .centerX,
                                                   multiplier: 1.0,
                                                   constant: 0)
@@ -61,8 +59,6 @@ class DonationViewController: UIViewController {
         //Set up button tap
         let applePayButtonTap = UIGestureRecognizer(target: self, action: #selector(purchase))
         paymentButton.addGestureRecognizer(applePayButtonTap)
-        
-        print("Height is: \(paymentButton.frame.height)")
     }
 }
 
