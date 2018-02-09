@@ -9,9 +9,8 @@
 import UIKit
 import PassKit
 
-class DonationViewController: UIViewController {
+class DonationViewController: UIViewController, UIGestureRecognizerDelegate {
     
-    let applePaySetUp = ApplePaySetUp()
     @IBOutlet weak var donationAmountTextField: UITextField!
     @IBOutlet weak var backgroundView: UIView!
     
@@ -21,6 +20,12 @@ class DonationViewController: UIViewController {
     }
     
     @objc func purchase() {
+        guard let text = donationAmountTextField.text?.currencyInputFormatting().replacingOccurrences(of: "$", with: "") else {
+            return
+        }
+        print(text)
+        let donationAmount = NSDecimalNumber(string: text)
+        ApplePaySetUp.donationAmount = donationAmount
         if let applePayController = ApplePaySetUp.makeApplePayController() {
             present(applePayController, animated: true, completion: nil)
         }
@@ -57,8 +62,9 @@ class DonationViewController: UIViewController {
         view.addConstraints([bottomConstraint, centerConstraint])
         
         //Set up button tap
-        let applePayButtonTap = UIGestureRecognizer(target: self, action: #selector(purchase))
+        let applePayButtonTap = UITapGestureRecognizer(target: self, action: #selector(purchase))
         paymentButton.addGestureRecognizer(applePayButtonTap)
+        paymentButton.isUserInteractionEnabled = true
     }
 }
 

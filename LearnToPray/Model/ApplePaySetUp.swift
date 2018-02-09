@@ -12,8 +12,8 @@ import PassKit
 struct ApplePaySetUp {
     
     static let SupportedPaymentNetworks: [PKPaymentNetwork] = [.visa, .discover, .amex, .masterCard]
-    static let ApplePayMerchantID = "com.merchant.marktapia"
-    var donationAmount = 0
+    static let ApplePayMerchantID = "merchant.com.marktapia"
+    static var donationAmount: NSDecimalNumber = 0.0
     
     static func makeApplePayController() -> PKPaymentAuthorizationViewController? {
         let request = PKPaymentRequest()
@@ -23,6 +23,10 @@ struct ApplePaySetUp {
         request.countryCode = "US"
         request.currencyCode = "USD"
         
+        request.paymentSummaryItems = [
+            PKPaymentSummaryItem(label: "Donation Amount", amount: donationAmount),
+            PKPaymentSummaryItem(label: "Learn To Pray", amount: donationAmount)
+        ]
         
         return PKPaymentAuthorizationViewController(paymentRequest: request)
     }
