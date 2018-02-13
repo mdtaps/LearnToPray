@@ -34,7 +34,6 @@ extension String {
             return "0"
         }
         
-        
         return formatter.string(from: number)!
     }
     

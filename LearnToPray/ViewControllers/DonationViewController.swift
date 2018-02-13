@@ -23,10 +23,12 @@ class DonationViewController: UIViewController, UIGestureRecognizerDelegate {
         guard let text = donationAmountTextField.text?.currencyInputFormatting().replacingOccurrences(of: "$", with: "") else {
             return
         }
-        print(text)
+        
         let donationAmount = NSDecimalNumber(string: text)
         ApplePaySetUp.donationAmount = donationAmount
         if let applePayController = ApplePaySetUp.makeApplePayController() {
+            donationAmountTextField.resignFirstResponder()
+            applePayController.delegate = self
             present(applePayController, animated: true, completion: nil)
         }
     }
@@ -75,4 +77,20 @@ extension DonationViewController: UITextFieldDelegate {
             textField.text = amountString
         }
     }
+}
+
+extension DonationViewController: PKPaymentAuthorizationViewControllerDelegate {
+    func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, handler completion: @escaping (PKPaymentAuthorizationResult) -> Void) {
+        
+        StripeNetworkingClient.shared.stripeRequest(payment: payment) { (payment) in
+            let result = PKPaymentAuthorizationResult(status: payment, errors: nil)
+            completion(result)
+        }
+    }
+    
+    func paymentAuthorizationViewControllerDidFinish(_ controller: PKPaymentAuthorizationViewController) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
