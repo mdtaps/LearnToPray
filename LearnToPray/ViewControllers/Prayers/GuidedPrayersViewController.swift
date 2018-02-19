@@ -15,12 +15,15 @@ class GuidedPrayersViewController: CoreDataViewController, PrayersListDelegate {
     fileprivate var prayersListViewController: PrayersListContainerViewController?
 
     override func viewDidLoad() {
-        
         setupChildViewControllers()
+        
     }
     
-    func didSelectPrayer(prayer: Prayer) {
+    @IBAction func closeButtonTapped(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
         
+    }
+    func didSelectPrayer(prayer: Prayer) {
         if prayer.name == "People Groups" {
             JoshuaProjectClient.shared.retreivePeopleGroupOfTheDay { (joshuaProjectResponse) in
                 switch joshuaProjectResponse {

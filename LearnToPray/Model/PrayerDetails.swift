@@ -9,9 +9,11 @@
 import Foundation
 
 struct PrayerDetails {
-    var prayer: Prayer
+    var prayer: Prayer?
     var detailsArray = [String]()
     var arrayPosition = 0
+    
+    init() { }
     
     init(prayer: Prayer) {
         self.prayer = prayer
@@ -19,7 +21,7 @@ struct PrayerDetails {
     }
     
     private mutating func populateDetailsArray() {
-        guard let details = prayer.details as? Set<Details> else {
+        guard let details = prayer?.details as? Set<Details> else {
             print("No details in prayer object")
             return
         }

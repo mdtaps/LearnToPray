@@ -20,8 +20,12 @@ class PrayerTimeViewController: UIViewController {
     var prayerDetailLabel = UILabel()
     var prayerTimer: PrayerTimer
     
-    init(prayer: Prayer, timerLength: Int) {
-        self.prayerDetails = PrayerDetails(prayer: prayer)
+    init(prayer: Prayer?, timerLength: Int) {
+        if let prayer = prayer {
+            self.prayerDetails = PrayerDetails(prayer: prayer)
+        } else {
+            self.prayerDetails = PrayerDetails()
+        }
         self.prayerTimer = PrayerTimer(timerCounter: timerLength)
         
         super.init(nibName: nil, bundle: nil)
@@ -36,7 +40,12 @@ class PrayerTimeViewController: UIViewController {
         
         prayerTimer.delegate = self
         prayerTimer.start()
-        setUpLabels()
+        
+        if let _ = prayerDetails.prayer {
+            setUpLabels()
+        } else {
+            
+        }
     }
     
     @IBAction func pauseButtonPressed() {
@@ -46,8 +55,7 @@ class PrayerTimeViewController: UIViewController {
     }
     
     @IBAction func finishButtonPressed() {
-        prayerTimer.stop()
-        
+        dismiss(animated: true) { self.prayerTimer.stop() }
     }
     
     @IBAction func rightButtonPressed() {
@@ -76,6 +84,11 @@ class PrayerTimeViewController: UIViewController {
         newPrayerDetailLabel.text = prayerDetails.detailsArray[prayerDetails.arrayPosition]
         
         shiftLabelsRight(label: newPrayerDetailLabel)
+    }
+    
+    @IBAction func finishButton(_ sender: UIButton) {
+        
+        dismiss(animated: true, completion: nil)
     }
 }
 
@@ -125,7 +138,7 @@ extension PrayerTimeViewController {
         prayerDetailLabel.applyPrayerDetailStyling()
         prayerTimeStackView.addSubview(prayerDetailLabel)
         
-        prayerTitleLabel.text = prayerDetails.prayer.name
+        prayerTitleLabel.text = prayerDetails.prayer?.name
         prayerDetailLabel.text = prayerDetails.detailsArray.first ?? ""
         
         prayerTimerLabel.text = timeString(time: TimeInterval(prayerTimer.timerCounter))

@@ -36,7 +36,7 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="cYN-VS-mCA">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                             <attributedString key="attributedText">
-                                <fragment content="Label">
+                                <fragment content="Prayer Timer">
                                     <attributes>
                                         <font key="NSFont" size="36" name=".SFNSText"/>
                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -63,7 +63,7 @@
                                         <action selector="pauseButtonPressed" destination="-1" eventType="touchUpInside" id="teF-NR-pi6"/>
                                     </connections>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEQ-hX-Kvw">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEQ-hX-Kvw">
                                     <rect key="frame" x="124" y="0.0" width="127.5" height="59"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                     <nil key="textColor"/>
@@ -74,6 +74,7 @@
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                     <state key="normal" title="Finish"/>
                                     <connections>
+                                        <action selector="finishButton:" destination="-1" eventType="touchUpInside" id="ucU-P8-dZ8"/>
                                         <action selector="finishButtonPressed" destination="-1" eventType="touchUpInside" id="Nj8-PZ-UUy"/>
                                     </connections>
                                 </button>

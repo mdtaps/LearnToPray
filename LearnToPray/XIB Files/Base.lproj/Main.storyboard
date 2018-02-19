@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="r8j-p1-OGC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -34,7 +34,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Guided Prayer" id="eYr-t5-wnf"/>
+                    <navigationItem key="navigationItem" title="Guided Prayer" id="eYr-t5-wnf">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="BQ1-u9-pk0">
+                            <connections>
+                                <action selector="closeButtonTapped:" destination="BYZ-38-t0r" id="Xbs-Gc-qTe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,21 +161,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ngb-ek-DPn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3224.8000000000002" y="131.78410794602701"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="C7c-ui-WXB">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="r8j-p1-OGC" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mRn-lN-3bE">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="44U-4W-G9z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-163.19999999999999" y="132.23388305847078"/>
         </scene>
         <!--Guided Prayer-->
         <scene sceneID="qUg-iI-sl0">

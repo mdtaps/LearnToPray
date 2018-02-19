@@ -17,10 +17,19 @@ class DonationViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpViewElements()
+        donationAmountTextField.delegate = self
+    }
+    
+    @IBAction func tapOutsideTextField() {
+        donationAmountTextField.resignFirstResponder()
+    }
+    
+    @IBAction func closeTapped() {
+        dismiss(animated: true, completion: nil)
     }
     
     @objc func purchase() {
-        guard let text = donationAmountTextField.text?.currencyInputFormatting().replacingOccurrences(of: "$", with: "") else {
+        guard let text = donationAmountTextField.text else {
             return
         }
         
@@ -34,14 +43,13 @@ class DonationViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     private func setUpViewElements() {
-        var paymentButton = UIButton()
+        var paymentButton = UIButton(type: .roundedRect)
         
         if PKPaymentAuthorizationViewController.canMakePayments(usingNetworks: ApplePaySetUp.SupportedPaymentNetworks) {
             paymentButton = PKPaymentButton(paymentButtonType: .buy, paymentButtonStyle: .black)
         } else {
-            paymentButton = UIButton(type: .roundedRect)
-            paymentButton.frame.size = CGSize(width: 300, height: 48)
-            paymentButton.setTitle("Unable to Accept Payments", for: .normal)
+            paymentButton.applyNoPaymentStyling()
+            
         }
         view.addSubview(paymentButton)
         paymentButton.translatesAutoresizingMaskIntoConstraints = false
@@ -72,17 +80,26 @@ class DonationViewController: UIViewController, UIGestureRecognizerDelegate {
 
 extension DonationViewController: UITextFieldDelegate {
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        if let amountString = textField.text?.currencyInputFormatting() {
-            textField.text = amountString
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if string.isEmpty {
+            return true
         }
+        let regex = try! NSRegularExpression(pattern: "[0-9]", options: .caseInsensitive)
+        let match = regex.matches(in: string, options: .init(rawValue: 0), range: NSMakeRange(0, string.count))
+        
+        if match.isEmpty {
+            return false
+        }
+        
+        return true
     }
 }
 
 extension DonationViewController: PKPaymentAuthorizationViewControllerDelegate {
     func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, handler completion: @escaping (PKPaymentAuthorizationResult) -> Void) {
         
-        StripeNetworkingClient.shared.stripeRequest(payment: payment) { (payment) in
+        StripeNetworkingClient.shared.stripeRequest(payment: payment, amount: ApplePaySetUp.donationAmount) { (payment) in
             let result = PKPaymentAuthorizationResult(status: payment, errors: nil)
             completion(result)
         }
@@ -91,6 +108,5 @@ extension DonationViewController: PKPaymentAuthorizationViewControllerDelegate {
     func paymentAuthorizationViewControllerDidFinish(_ controller: PKPaymentAuthorizationViewController) {
         controller.dismiss(animated: true, completion: nil)
     }
-    
     
 }

@@ -49,7 +49,7 @@ class StripeNetworkingClient {
                         "description": "Donation to Learn to Pray"] as [String : Any]
             
             do {
-                request.httpBody = try JSONSerialization.data(withJSONObject: body, options: JSONSerialization.WritingOptions())
+                request.httpBody = try JSONSerialization.data(withJSONObject: body, options:JSONSerialization.WritingOptions())
             } catch {
                 print(error)
                 completion(.failure)

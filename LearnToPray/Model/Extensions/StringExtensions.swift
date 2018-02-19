@@ -16,7 +16,7 @@ extension String {
         
         var number: NSNumber!
         let formatter = NumberFormatter()
-        formatter.numberStyle = .currencyAccounting
+        formatter.numberStyle = .currency
         formatter.maximumFractionDigits = 2
         formatter.minimumFractionDigits = 2
         
@@ -31,13 +31,9 @@ extension String {
         
         // if first number is 0 or all numbers were deleted
         guard number != 0 as NSNumber else {
-            return "0"
+            return "0.00"
         }
         
         return formatter.string(from: number)!
     }
-    
-//    func currencyTextToDoubleFormat() ->  {
-//
-//    }
 }
