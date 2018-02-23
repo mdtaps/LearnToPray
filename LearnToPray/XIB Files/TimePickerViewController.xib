@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimePickerViewController" customModule="LearnToPray" customModuleProvider="target">
+            <connections>
+                <outlet property="timePicker" destination="aWP-hE-GDe" id="TPI-wA-tA6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N5p-SU-RTf">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RNg-Gf-Vz0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5A6-Ke-Agj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <action selector="dismissButtonPressed:" destination="-1" eventType="touchUpInside" id="yxK-uM-kqJ"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6l-Bs-wpN">
+                                <rect key="frame" x="67" y="173" width="240" height="320"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How Long Would You Like To Pray For?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Re1-WN-dzQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="evJ-y6-wEh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="aWP-hE-GDe">
+                                        <rect key="frame" x="0.0" y="56" width="240" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="540796696.44409502">
+                                            <!--2018-02-20 05:18:16 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="K3d-3J-FGL">
+                                        <rect key="frame" x="0.0" y="272" width="240" height="48"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olo-CT-bqV">
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="48"/>
+                                                <state key="normal" title="Pray"/>
+                                                <connections>
+                                                    <action selector="prayPressed:" destination="-1" eventType="touchUpInside" id="cCp-k9-Z4d"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0Q-0k-tQx">
+                                                <rect key="frame" x="122" y="0.0" width="118" height="48"/>
+                                                <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="dismissButtonPressed:" destination="-1" eventType="touchUpInside" id="drj-Kz-bpS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="K3d-3J-FGL" firstAttribute="top" secondItem="aWP-hE-GDe" secondAttribute="bottom" id="4Jb-UX-egV"/>
+                                    <constraint firstItem="K3d-3J-FGL" firstAttribute="leading" secondItem="a6l-Bs-wpN" secondAttribute="leading" id="7gM-RL-9Zs"/>
+                                    <constraint firstItem="aWP-hE-GDe" firstAttribute="top" secondItem="Re1-WN-dzQ" secondAttribute="bottom" constant="8" id="9TI-H7-t9G"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="320" id="AzK-ui-h3K"/>
+                                    <constraint firstItem="Re1-WN-dzQ" firstAttribute="leading" secondItem="a6l-Bs-wpN" secondAttribute="leading" id="Ios-UH-fTl"/>
+                                    <constraint firstAttribute="trailing" secondItem="Re1-WN-dzQ" secondAttribute="trailing" id="MrC-eF-IoF"/>
+                                    <constraint firstAttribute="width" constant="240" id="PCZ-TR-0HG"/>
+                                    <constraint firstAttribute="bottom" secondItem="K3d-3J-FGL" secondAttribute="bottom" id="T6s-TE-2ve"/>
+                                    <constraint firstItem="aWP-hE-GDe" firstAttribute="leading" secondItem="a6l-Bs-wpN" secondAttribute="leading" id="TTi-Hc-pPW"/>
+                                    <constraint firstItem="Re1-WN-dzQ" firstAttribute="top" secondItem="a6l-Bs-wpN" secondAttribute="top" id="gyZ-ai-SnC"/>
+                                    <constraint firstAttribute="trailing" secondItem="K3d-3J-FGL" secondAttribute="trailing" id="sQc-Wn-s3h"/>
+                                    <constraint firstAttribute="trailing" secondItem="aWP-hE-GDe" secondAttribute="trailing" id="xKB-QE-RCO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5A6-Ke-Agj" secondAttribute="trailing" id="34g-xs-vII"/>
+                            <constraint firstItem="5A6-Ke-Agj" firstAttribute="leading" secondItem="RNg-Gf-Vz0" secondAttribute="leading" id="5R5-c8-yRv"/>
+                            <constraint firstItem="a6l-Bs-wpN" firstAttribute="centerX" secondItem="RNg-Gf-Vz0" secondAttribute="centerX" id="Lnh-Dh-wG5"/>
+                            <constraint firstAttribute="bottom" secondItem="5A6-Ke-Agj" secondAttribute="bottom" id="hgL-Ne-9tX"/>
+                            <constraint firstItem="5A6-Ke-Agj" firstAttribute="top" secondItem="RNg-Gf-Vz0" secondAttribute="top" id="r7R-sm-wmL"/>
+                            <constraint firstItem="a6l-Bs-wpN" firstAttribute="centerY" secondItem="RNg-Gf-Vz0" secondAttribute="centerY" id="zdL-B6-eUa"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="N5p-SU-RTf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5Vq-3N-ynO"/>
+                <constraint firstItem="N5p-SU-RTf" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="BoD-G8-ZsG"/>
+                <constraint firstItem="N5p-SU-RTf" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Gi1-xF-7qV"/>
+                <constraint firstItem="N5p-SU-RTf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YUP-AD-Wlu"/>
+                <constraint firstItem="N5p-SU-RTf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ypd-HU-62L"/>
+                <constraint firstItem="N5p-SU-RTf" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="oID-Sq-3L9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="116.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

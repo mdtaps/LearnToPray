@@ -18,15 +18,13 @@ class PrayerTimeViewController: UIViewController {
     
     var prayerDetails: PrayerDetails
     var prayerDetailLabel = UILabel()
-    var prayerTimer: PrayerTimer
     
-    init(prayer: Prayer?, timerLength: Int) {
+    init(prayer: Prayer?) {
         if let prayer = prayer {
             self.prayerDetails = PrayerDetails(prayer: prayer)
         } else {
             self.prayerDetails = PrayerDetails()
         }
-        self.prayerTimer = PrayerTimer(timerCounter: timerLength)
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -37,25 +35,24 @@ class PrayerTimeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTimerLabel()
         
-        prayerTimer.delegate = self
-        prayerTimer.start()
+        PrayerTimer.delegate = self
+        PrayerTimer.start()
         
         if let _ = prayerDetails.prayer {
             setUpLabels()
-        } else {
-            
         }
     }
     
     @IBAction func pauseButtonPressed() {
         
-        prayerTimer.toggleTimer()
-        pauseTimerButton.setTitle(prayerTimer.timerState.rawValue, for: .normal)
+        PrayerTimer.toggleTimer()
+        pauseTimerButton.setTitle(PrayerTimer.timerState.rawValue, for: .normal)
     }
     
     @IBAction func finishButtonPressed() {
-        dismiss(animated: true) { self.prayerTimer.stop() }
+        dismiss(animated: true) { PrayerTimer.stop() }
     }
     
     @IBAction func rightButtonPressed() {
@@ -140,14 +137,16 @@ extension PrayerTimeViewController {
         
         prayerTitleLabel.text = prayerDetails.prayer?.name
         prayerDetailLabel.text = prayerDetails.detailsArray.first ?? ""
-        
-        prayerTimerLabel.text = timeString(time: TimeInterval(prayerTimer.timerCounter))
-        pauseTimerButton.setTitle(prayerTimer.timerState.rawValue, for: .normal)
+    }
+    
+    private func setupTimerLabel() {
+        prayerTimerLabel.text = timeString(time: TimeInterval(PrayerTimer.timerCounter))
+    pauseTimerButton.setTitle(PrayerTimer.timerState.rawValue, for: .normal)
     }
 }
 
 extension PrayerTimeViewController: TimerDelegate {
     func timerCounterDidUpdate() {
-        prayerTimerLabel.text = timeString(time: TimeInterval(prayerTimer.timerCounter))
+        prayerTimerLabel.text = timeString(time: TimeInterval(PrayerTimer.timerCounter))
     }
 }

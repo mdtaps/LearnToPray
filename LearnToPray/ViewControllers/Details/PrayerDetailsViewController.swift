@@ -29,7 +29,7 @@ class PrayerDetailsViewController: CoreDataViewController, DetailsListDelegate {
     //Set Timer Length
     private func launchPrayerTime() {
         if let prayer = prayer {
-            let vc = PrayerTimeViewController(prayer: prayer, timerLength: 300)
+            let vc = PrayerTimeViewController(prayer: prayer)
             
             present(vc, animated: true, completion: nil)
         }

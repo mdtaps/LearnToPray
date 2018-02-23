@@ -13,8 +13,8 @@ protocol TimerDelegate {
     func timerCounterDidUpdate()
 }
 
-class PrayerTimer {
-    var timerCounter: Int {
+struct PrayerTimer {
+    static var timerCounter: Int = 65 {
         didSet {
             if timerCounter < 1 {
                 timer.invalidate()
@@ -23,14 +23,9 @@ class PrayerTimer {
             }
         }
     }
-    var timer = Timer()
-    var timerState: TimerState
-    var delegate: TimerDelegate?
-    
-    init(timerCounter: Int) {
-        self.timerCounter = timerCounter
-        self.timerState = .Paused
-    }
+    static var timer = Timer()
+    static var timerState: TimerState = .Running
+    static var delegate: TimerDelegate?
 }
 
 extension PrayerTimer {
@@ -39,18 +34,19 @@ extension PrayerTimer {
         case Paused = "Resume"
     }
     
-    func start() {
-        timerState = .Running
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in self.timerCounter -= 1 }
+    static func start() {
+        PrayerTimer.timerState = .Running
+        PrayerTimer.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+            PrayerTimer.timerCounter -= 1 }
     }
     
-    func stop() {
-        timerState = .Paused
-        timer.invalidate()
+    static func stop() {
+        PrayerTimer.timerState = .Paused
+        PrayerTimer.timer.invalidate()
     }
     
-    func toggleTimer() {
-        switch timerState {
+    static func toggleTimer() {
+        switch PrayerTimer.timerState {
         case .Running:
             stop()
         case .Paused:

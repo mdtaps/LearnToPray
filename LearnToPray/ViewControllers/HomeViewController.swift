@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController {
     
     private func launchPrayerTime() {
-        let prayerTimeVC = PrayerTimeViewController(prayer: nil, timerLength: 300)
+        let prayerTimeVC = PrayerTimeViewController(prayer: nil)
         present(prayerTimeVC, animated: true, completion: nil)
     }
     
@@ -42,5 +42,7 @@ extension HomeViewController {
         
         present(navigationController, animated: true, completion: nil)
     }
+    
+    
 
 }

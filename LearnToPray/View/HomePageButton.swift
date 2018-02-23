@@ -8,11 +8,12 @@
 
 import UIKit
 
-class HomePageButton: UIButton {
+@IBDesignable class HomePageButton: UIButton {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        self.layer.cornerRadius = 5
+    @IBInspectable var cornerRadius: CGFloat = 0 {
+        didSet {
+            self.layer.cornerRadius = cornerRadius
+
+        }
     }
 }
