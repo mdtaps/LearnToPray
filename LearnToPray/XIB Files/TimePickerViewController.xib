@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,43 +27,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5A6-Ke-Agj">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5A6-Ke-Agj">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <connections>
                                     <action selector="dismissButtonPressed:" destination="-1" eventType="touchUpInside" id="yxK-uM-kqJ"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6l-Bs-wpN">
-                                <rect key="frame" x="67" y="173" width="240" height="320"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kcF-Mf-kaM">
+                                <rect key="frame" x="56.5" y="171" width="262.5" height="326"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How Long Would You Like To Pray For?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Re1-WN-dzQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="262.5" height="64"/>
+                                        <color key="backgroundColor" red="0.0" green="0.067659859779683432" blue="0.50005584955215454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="evJ-y6-wEh"/>
+                                            <constraint firstAttribute="height" constant="64" id="sKd-Bj-2aL"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="aWP-hE-GDe">
-                                        <rect key="frame" x="0.0" y="56" width="240" height="216"/>
-                                        <date key="date" timeIntervalSinceReferenceDate="540796696.44409502">
-                                            <!--2018-02-20 05:18:16 +0000-->
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWP-hE-GDe">
+                                        <rect key="frame" x="0.0" y="72" width="262.5" height="216"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="540720000.44409502">
+                                            <!--2018-02-19 08:00:00 +0000-->
                                         </date>
                                     </datePicker>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="K3d-3J-FGL">
-                                        <rect key="frame" x="0.0" y="272" width="240" height="48"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="K3d-3J-FGL">
+                                        <rect key="frame" x="0.0" y="296" width="262.5" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olo-CT-bqV">
-                                                <rect key="frame" x="0.0" y="0.0" width="118" height="48"/>
-                                                <state key="normal" title="Pray"/>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olo-CT-bqV">
+                                                <rect key="frame" x="0.0" y="0.0" width="131" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.067659859779999998" blue="0.50005584960000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Pray">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="prayPressed:" destination="-1" eventType="touchUpInside" id="cCp-k9-Z4d"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0Q-0k-tQx">
-                                                <rect key="frame" x="122" y="0.0" width="118" height="48"/>
-                                                <state key="normal" title="Cancel"/>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0Q-0k-tQx">
+                                                <rect key="frame" x="131" y="0.0" width="131.5" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.067659859779999998" blue="0.50005584960000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="dismissButtonPressed:" destination="-1" eventType="touchUpInside" id="drj-Kz-bpS"/>
                                                 </connections>
@@ -70,36 +89,21 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="K3d-3J-FGL" firstAttribute="top" secondItem="aWP-hE-GDe" secondAttribute="bottom" id="4Jb-UX-egV"/>
-                                    <constraint firstItem="K3d-3J-FGL" firstAttribute="leading" secondItem="a6l-Bs-wpN" secondAttribute="leading" id="7gM-RL-9Zs"/>
-                                    <constraint firstItem="aWP-hE-GDe" firstAttribute="top" secondItem="Re1-WN-dzQ" secondAttribute="bottom" constant="8" id="9TI-H7-t9G"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="320" id="AzK-ui-h3K"/>
-                                    <constraint firstItem="Re1-WN-dzQ" firstAttribute="leading" secondItem="a6l-Bs-wpN" secondAttribute="leading" id="Ios-UH-fTl"/>
-                                    <constraint firstAttribute="trailing" secondItem="Re1-WN-dzQ" secondAttribute="trailing" id="MrC-eF-IoF"/>
-                                    <constraint firstAttribute="width" constant="240" id="PCZ-TR-0HG"/>
-                                    <constraint firstAttribute="bottom" secondItem="K3d-3J-FGL" secondAttribute="bottom" id="T6s-TE-2ve"/>
-                                    <constraint firstItem="aWP-hE-GDe" firstAttribute="leading" secondItem="a6l-Bs-wpN" secondAttribute="leading" id="TTi-Hc-pPW"/>
-                                    <constraint firstItem="Re1-WN-dzQ" firstAttribute="top" secondItem="a6l-Bs-wpN" secondAttribute="top" id="gyZ-ai-SnC"/>
-                                    <constraint firstAttribute="trailing" secondItem="K3d-3J-FGL" secondAttribute="trailing" id="sQc-Wn-s3h"/>
-                                    <constraint firstAttribute="trailing" secondItem="aWP-hE-GDe" secondAttribute="trailing" id="xKB-QE-RCO"/>
-                                </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="5A6-Ke-Agj" secondAttribute="trailing" id="34g-xs-vII"/>
                             <constraint firstItem="5A6-Ke-Agj" firstAttribute="leading" secondItem="RNg-Gf-Vz0" secondAttribute="leading" id="5R5-c8-yRv"/>
-                            <constraint firstItem="a6l-Bs-wpN" firstAttribute="centerX" secondItem="RNg-Gf-Vz0" secondAttribute="centerX" id="Lnh-Dh-wG5"/>
+                            <constraint firstItem="kcF-Mf-kaM" firstAttribute="width" secondItem="RNg-Gf-Vz0" secondAttribute="width" multiplier="0.7" id="a0P-9F-jfM"/>
                             <constraint firstAttribute="bottom" secondItem="5A6-Ke-Agj" secondAttribute="bottom" id="hgL-Ne-9tX"/>
                             <constraint firstItem="5A6-Ke-Agj" firstAttribute="top" secondItem="RNg-Gf-Vz0" secondAttribute="top" id="r7R-sm-wmL"/>
-                            <constraint firstItem="a6l-Bs-wpN" firstAttribute="centerY" secondItem="RNg-Gf-Vz0" secondAttribute="centerY" id="zdL-B6-eUa"/>
+                            <constraint firstItem="kcF-Mf-kaM" firstAttribute="centerY" secondItem="RNg-Gf-Vz0" secondAttribute="centerY" id="tiP-wh-tZp"/>
+                            <constraint firstItem="kcF-Mf-kaM" firstAttribute="centerX" secondItem="RNg-Gf-Vz0" secondAttribute="centerX" id="v8g-cl-h3t"/>
                         </constraints>
                     </view>
                     <blurEffect style="light"/>
                 </visualEffectView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="N5p-SU-RTf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5Vq-3N-ynO"/>
                 <constraint firstItem="N5p-SU-RTf" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="BoD-G8-ZsG"/>

@@ -35,10 +35,10 @@ class PrayerTimeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTimerLabel()
-        
         PrayerTimer.delegate = self
         PrayerTimer.start()
+        
+        setupTimerLabel()
         
         if let _ = prayerDetails.prayer {
             setUpLabels()
@@ -52,7 +52,8 @@ class PrayerTimeViewController: UIViewController {
     }
     
     @IBAction func finishButtonPressed() {
-        dismiss(animated: true) { PrayerTimer.stop() }
+        PrayerTimer.stop()
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func rightButtonPressed() {

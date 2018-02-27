@@ -41,6 +41,11 @@ extension PrayerTimer {
     }
     
     static func stop() {
+        PrayerTimer.pause()
+        PrayerTimer.timerCounter = 0
+    }
+    
+    static func pause() {
         PrayerTimer.timerState = .Paused
         PrayerTimer.timer.invalidate()
     }
@@ -48,7 +53,7 @@ extension PrayerTimer {
     static func toggleTimer() {
         switch PrayerTimer.timerState {
         case .Running:
-            stop()
+            pause()
         case .Paused:
             start()
         }

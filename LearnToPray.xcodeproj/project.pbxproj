@@ -29,7 +29,6 @@
 		F46A3ACF20369E5400616BAF /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46A3ACE20369E5400616BAF /* UIButtonExtensions.swift */; };
 		F46A3AD32036C5FB00616BAF /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46A3AD22036C5FB00616BAF /* HomeViewController.xib */; };
 		F46A3AD52036D0F800616BAF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46A3AD42036D0F800616BAF /* HomeViewController.swift */; };
-		F46A3AD72036D32C00616BAF /* HomePageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46A3AD62036D32C00616BAF /* HomePageButton.swift */; };
 		F46A3ADA203BE46800616BAF /* TimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46A3AD8203BE46800616BAF /* TimePickerViewController.swift */; };
 		F46A3ADB203BE46800616BAF /* TimePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46A3AD9203BE46800616BAF /* TimePickerViewController.xib */; };
 		F485D11A20146BB200304DBE /* PrayerTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485D11920146BB200304DBE /* PrayerTimer.swift */; };
@@ -56,6 +55,7 @@
 		F4D3D4A71FCBD57D0035F860 /* JSONPrayerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D3D4A61FCBD57D0035F860 /* JSONPrayerList.swift */; };
 		F4D3D4AB1FD1201D0035F860 /* PrayerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D3D4AA1FD1201D0035F860 /* PrayerData.swift */; };
 		F4E716A72032CA930066A20A /* StripeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E716A62032CA930066A20A /* StripeClient.swift */; };
+		F4F27A3120451BB80043CF3C /* UIView+Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F27A3020451BB80043CF3C /* UIView+Designable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,7 +107,6 @@
 		F46A3ACE20369E5400616BAF /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		F46A3AD22036C5FB00616BAF /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		F46A3AD42036D0F800616BAF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		F46A3AD62036D32C00616BAF /* HomePageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageButton.swift; sourceTree = "<group>"; };
 		F46A3AD8203BE46800616BAF /* TimePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerViewController.swift; sourceTree = "<group>"; };
 		F46A3AD9203BE46800616BAF /* TimePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimePickerViewController.xib; sourceTree = "<group>"; };
 		F485D11920146BB200304DBE /* PrayerTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimer.swift; sourceTree = "<group>"; };
@@ -135,6 +134,7 @@
 		F4D3D4AA1FD1201D0035F860 /* PrayerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerData.swift; sourceTree = "<group>"; };
 		F4E716A52032CA190066A20A /* ApplePaySwag-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ApplePaySwag-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4E716A62032CA930066A20A /* StripeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeClient.swift; sourceTree = "<group>"; };
+		F4F27A3020451BB80043CF3C /* UIView+Designable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Designable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,7 +183,7 @@
 		F408DB461FDDF95900C93434 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F46A3AD62036D32C00616BAF /* HomePageButton.swift */,
+				F4F27A3020451BB80043CF3C /* UIView+Designable.swift */,
 				F408DB441FDDF93200C93434 /* PrayerDetailsHeaderTableViewCell.swift */,
 				F4C51EAC1FE39995007F2195 /* PrayerDetailsTableViewCell.swift */,
 			);
@@ -627,9 +627,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4A8FDBF1FDE8A170058DF97 /* Details+CoreDataClass.swift in Sources */,
-				F46A3AD72036D32C00616BAF /* HomePageButton.swift in Sources */,
 				F4C51EB71FE63281007F2195 /* DateFunctions.swift in Sources */,
 				F4D3D4AB1FD1201D0035F860 /* PrayerData.swift in Sources */,
+				F4F27A3120451BB80043CF3C /* UIView+Designable.swift in Sources */,
 				F43ED5F31FB5719F008E6078 /* PrayersListContainerViewController.swift in Sources */,
 				F485D11A20146BB200304DBE /* PrayerTimer.swift in Sources */,
 				F46A3AD52036D0F800616BAF /* HomeViewController.swift in Sources */,
