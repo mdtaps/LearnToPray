@@ -14,6 +14,7 @@ class PeopleGroupsViewController: UIViewController {
     @IBOutlet weak var peopleGroupImage: UIImageView!
     @IBOutlet weak var peopleGroupPopulation: UILabel!
     @IBOutlet weak var peopleGroupsMapView: MKMapView!
+    @IBOutlet weak var peopleGroupsReligion: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

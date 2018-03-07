@@ -53,6 +53,7 @@ struct JoshuaProjectObject: Codable {
         let photoAddress: String
         let longitude: Double
         let latitude: Double
+        let primaryReligion: String
         
         enum CodingKeys: String, CodingKey {
             case regionName = "RegionName"
@@ -61,6 +62,7 @@ struct JoshuaProjectObject: Codable {
             case photoAddress = "PhotoAddress"
             case longitude = "Longitude"
             case latitude = "Latitude"
+            case primaryReligion = "PrimaryReligion"
         }
     }
 }

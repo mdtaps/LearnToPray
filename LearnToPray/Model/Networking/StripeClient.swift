@@ -5,6 +5,7 @@
 //  Created by Mark Tapia on 2/12/18.
 //  Copyright © 2018 Mark Tapia. All rights reserved.
 //
+//  Copied from raywenderlich.com
 
 import Foundation
 import PassKit
@@ -28,7 +29,7 @@ class StripeNetworkingClient {
             (token, error) -> Void in
             
             if (error != nil) {
-                print(error)
+                print(error as Any)
                 completion(PKPaymentAuthorizationStatus.failure)
                 return
             }
@@ -56,7 +57,7 @@ class StripeNetworkingClient {
             }
             
             // 7
-            NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue.main) { (response, data, error) -> Void in
+            URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) in
                 if (error != nil) {
                     completion(PKPaymentAuthorizationStatus.failure)
                 } else {

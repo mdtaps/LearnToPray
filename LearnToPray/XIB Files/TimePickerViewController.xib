@@ -30,11 +30,11 @@
                             <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5A6-Ke-Agj">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <connections>
-                                    <action selector="dismissButtonPressed:" destination="-1" eventType="touchUpInside" id="yxK-uM-kqJ"/>
+                                    <action selector="dismissButtonPressed:" destination="-1" eventType="touchUpInside" id="rjF-v7-Nlq"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kcF-Mf-kaM">
-                                <rect key="frame" x="56.5" y="171" width="262.5" height="326"/>
+                                <rect key="frame" x="56.5" y="162" width="262.5" height="344"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How Long Would You Like To Pray For?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Re1-WN-dzQ">
                                         <rect key="frame" x="0.0" y="0.0" width="262.5" height="64"/>
@@ -54,11 +54,12 @@
                                         </date>
                                     </datePicker>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="K3d-3J-FGL">
-                                        <rect key="frame" x="0.0" y="296" width="262.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="296" width="262.5" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olo-CT-bqV">
-                                                <rect key="frame" x="0.0" y="0.0" width="131" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="131" height="48"/>
                                                 <color key="backgroundColor" red="0.0" green="0.067659859779999998" blue="0.50005584960000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <state key="normal" title="Pray">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -72,8 +73,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0Q-0k-tQx">
-                                                <rect key="frame" x="131" y="0.0" width="131.5" height="30"/>
+                                                <rect key="frame" x="131" y="0.0" width="131.5" height="48"/>
                                                 <color key="backgroundColor" red="0.0" green="0.067659859779999998" blue="0.50005584960000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="Cancel">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -87,6 +89,9 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="oBC-VZ-Ffd"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>

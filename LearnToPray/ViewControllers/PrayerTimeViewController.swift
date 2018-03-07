@@ -132,7 +132,7 @@ extension PrayerTimeViewController {
 extension PrayerTimeViewController {
     
     fileprivate func setUpLabels() {
-        prayerDetailLabel = UILabel(frame: prayerDetailPlaceHolderLabel.frame)
+        prayerDetailLabel = PaddedLabel(frame: prayerDetailPlaceHolderLabel.frame, sidePadding: 72)
         prayerDetailLabel.applyPrayerDetailStyling()
         prayerTimeStackView.addSubview(prayerDetailLabel)
         

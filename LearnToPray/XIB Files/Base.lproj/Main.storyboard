@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="GuidedPrayersViewController" customModule="LearnToPray" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNA-Qm-LZB">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <connections>
                                     <segue destination="8Du-tS-KyX" kind="embed" id="m7P-LA-qMh"/>
                                 </connections>
@@ -55,17 +55,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0uF-i4-Akv">
-                                <rect key="frame" x="8" y="28" width="359" height="563"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="581"/>
                                 <connections>
                                     <segue destination="j8V-Sa-Wjw" kind="embed" id="eO2-CC-SNC"/>
                                 </connections>
                             </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Hj-6I-oiz">
+                                <rect key="frame" x="0.0" y="601" width="375" height="66"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="753" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9E-Qn-QXq">
-                                <rect key="frame" x="8" y="599" width="359" height="48"/>
+                                <rect key="frame" x="8" y="609" width="359" height="48"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="iNc-5u-xFs"/>
                                 </constraints>
-                                <state key="normal" title="Start Praying"/>
+                                <state key="normal" title="Start Praying">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="prayingButtonPressed:" destination="8z9-7i-cfg" eventType="touchUpInside" id="WSd-VL-vx8"/>
                                 </connections>
@@ -74,12 +86,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="z9E-Qn-QXq" firstAttribute="top" secondItem="0uF-i4-Akv" secondAttribute="bottom" constant="8" id="0qN-jU-duF"/>
+                            <constraint firstItem="8Hj-6I-oiz" firstAttribute="width" secondItem="qzw-eQ-JN5" secondAttribute="width" id="9X2-yI-Jqv"/>
+                            <constraint firstItem="8Hj-6I-oiz" firstAttribute="leading" secondItem="E8b-hu-HcZ" secondAttribute="leading" id="GPW-3M-PJQ"/>
                             <constraint firstItem="z9E-Qn-QXq" firstAttribute="leading" secondItem="E8b-hu-HcZ" secondAttribute="leading" constant="8" id="Lab-uw-HBe"/>
-                            <constraint firstItem="0uF-i4-Akv" firstAttribute="leading" secondItem="E8b-hu-HcZ" secondAttribute="leading" constant="8" id="O1x-GS-FhF"/>
-                            <constraint firstItem="E8b-hu-HcZ" firstAttribute="bottom" secondItem="z9E-Qn-QXq" secondAttribute="bottom" constant="20" id="PNF-D1-3VH"/>
-                            <constraint firstItem="0uF-i4-Akv" firstAttribute="top" secondItem="E8b-hu-HcZ" secondAttribute="top" constant="8" id="XUN-nQ-QQI"/>
-                            <constraint firstItem="E8b-hu-HcZ" firstAttribute="trailing" secondItem="0uF-i4-Akv" secondAttribute="trailing" constant="8" id="kZa-Qv-CUs"/>
+                            <constraint firstItem="0uF-i4-Akv" firstAttribute="leading" secondItem="E8b-hu-HcZ" secondAttribute="leading" id="O1x-GS-FhF"/>
+                            <constraint firstItem="E8b-hu-HcZ" firstAttribute="bottom" secondItem="z9E-Qn-QXq" secondAttribute="bottom" constant="10" id="PNF-D1-3VH"/>
+                            <constraint firstItem="E8b-hu-HcZ" firstAttribute="bottom" secondItem="8Hj-6I-oiz" secondAttribute="bottom" id="Uen-nR-hBp"/>
+                            <constraint firstItem="0uF-i4-Akv" firstAttribute="top" secondItem="E8b-hu-HcZ" secondAttribute="top" id="XUN-nQ-QQI"/>
+                            <constraint firstItem="E8b-hu-HcZ" firstAttribute="trailing" secondItem="0uF-i4-Akv" secondAttribute="trailing" id="kZa-Qv-CUs"/>
                             <constraint firstItem="E8b-hu-HcZ" firstAttribute="trailing" secondItem="z9E-Qn-QXq" secondAttribute="trailing" constant="8" id="kcx-Ff-Ca6"/>
+                            <constraint firstItem="E8b-hu-HcZ" firstAttribute="trailing" secondItem="8Hj-6I-oiz" secondAttribute="trailing" id="kt6-vU-Yty"/>
+                            <constraint firstItem="8Hj-6I-oiz" firstAttribute="top" secondItem="0uF-i4-Akv" secondAttribute="bottom" id="xGw-Q5-y85"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="E8b-hu-HcZ"/>
                     </view>
@@ -100,7 +117,10 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="People Group of the Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czX-td-v8J">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="bay-Xi-jQY"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -111,11 +131,17 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xwX-Eu-YHW">
-                                        <rect key="frame" x="0.0" y="119.5" width="375" height="161.5"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="xwX-Eu-YHW">
+                                        <rect key="frame" x="0.0" y="105" width="375" height="161.5"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1IL-de-pIZ">
-                                        <rect key="frame" x="0.0" y="320.5" width="375" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="290.5" width="375" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqC-V1-Q2u">
+                                        <rect key="frame" x="166.5" y="335.5" width="42" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -156,6 +182,7 @@
                         <outlet property="peopleGroupNameLabel" destination="L3i-1F-JtR" id="wBr-Wy-1Oh"/>
                         <outlet property="peopleGroupPopulation" destination="1IL-de-pIZ" id="d96-0p-TCS"/>
                         <outlet property="peopleGroupsMapView" destination="m5x-g8-MgJ" id="MKi-56-rIE"/>
+                        <outlet property="peopleGroupsReligion" destination="NqC-V1-Q2u" id="EA6-Td-VPA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ngb-ek-DPn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -167,9 +194,18 @@
             <objects>
                 <navigationController storyboardIdentifier="NavigationController" title="Guided Prayer" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fDK-PQ-GZ1" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9tt-Zb-ya9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="9tt-Zb-ya9">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -191,47 +227,60 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="tcA-Mp-Yla">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="separatorColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="section" textLabel="z8v-GH-Ob4" style="IBUITableViewCellStyleDefault" id="DJj-vk-wDj">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="section" id="DJj-vk-wDj" customClass="SectionTableViewCell" customModule="LearnToPray" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DJj-vk-wDj" id="VJI-YT-faF">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z8v-GH-Ob4">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oem-Hm-j0g">
+                                                    <rect key="frame" x="165.5" y="9.5" width="44" height="26.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="oem-Hm-j0g" firstAttribute="centerY" secondItem="DJj-vk-wDj" secondAttribute="centerY" id="igf-01-psx"/>
+                                            <constraint firstItem="oem-Hm-j0g" firstAttribute="centerX" secondItem="DJj-vk-wDj" secondAttribute="centerX" id="xtT-Ym-3ao"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="accessoryColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="sectionTitleLabel" destination="oem-Hm-j0g" id="aOK-d3-1jn"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="YZl-47-nto" detailTextLabel="M8y-Lo-28X" style="IBUITableViewCellStyleValue1" id="0eD-dG-Ueg">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="detailButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="YZl-47-nto" style="IBUITableViewCellStyleDefault" id="0eD-dG-Ueg" customClass="PrayerNameTableViewCell" customModule="LearnToPray" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0eD-dG-Ueg" id="QTP-m7-n34">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="328" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YZl-47-nto">
-                                                    <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="313" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M8y-Lo-28X">
-                                                    <rect key="frame" x="316" y="12" width="44" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="accessoryColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -251,70 +300,72 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAu-g2-n7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1476" y="908"/>
+            <point key="canvasLocation" x="1476" y="907.1964017991005"/>
         </scene>
         <!--Details Container View Controller-->
         <scene sceneID="IWy-DO-UJj">
             <objects>
                 <viewController id="j8V-Sa-Wjw" customClass="DetailsContainerViewController" customModule="LearnToPray" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1SK-DM-4G4">
-                        <rect key="frame" x="0.0" y="0.0" width="359" height="563"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="581"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nz9-y7-1SZ">
-                                <rect key="frame" x="0.0" y="0.0" width="359" height="563"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="581"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sectionHeaderCell" rowHeight="120" id="gn4-tR-ZHD" customClass="PrayerDetailsHeaderTableViewCell" customModule="LearnToPray" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="359" height="120"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gn4-tR-ZHD" id="LLv-1P-xk8">
-                                            <rect key="frame" x="0.0" y="0.0" width="359" height="119.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CO-mK-s85">
-                                                    <rect key="frame" x="8" y="8" width="343" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CO-mK-s85" customClass="MarginLabel" customModule="LearnToPray" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="359" height="26.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toj-Jc-qHw">
-                                                    <rect key="frame" x="8" y="36.5" width="343" height="79"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toj-Jc-qHw" customClass="MarginLabel" customModule="LearnToPray" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="38.5" width="359" height="73"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="toj-Jc-qHw" secondAttribute="bottom" constant="4" id="36i-Iz-ZHJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="toj-Jc-qHw" secondAttribute="bottom" constant="8" id="36i-Iz-ZHJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="toj-Jc-qHw" secondAttribute="trailing" constant="8" id="Hc7-uK-lTI"/>
                                                 <constraint firstAttribute="trailing" secondItem="4CO-mK-s85" secondAttribute="trailing" constant="8" id="PcF-E5-wVG"/>
                                                 <constraint firstItem="toj-Jc-qHw" firstAttribute="leading" secondItem="LLv-1P-xk8" secondAttribute="leading" constant="8" id="cLP-En-4Ln"/>
                                                 <constraint firstItem="4CO-mK-s85" firstAttribute="top" secondItem="LLv-1P-xk8" secondAttribute="top" constant="8" id="gfR-Ug-M6D"/>
-                                                <constraint firstItem="toj-Jc-qHw" firstAttribute="top" secondItem="4CO-mK-s85" secondAttribute="bottom" constant="8" id="gyt-5v-ds7"/>
+                                                <constraint firstItem="toj-Jc-qHw" firstAttribute="top" secondItem="4CO-mK-s85" secondAttribute="bottom" constant="4" id="gyt-5v-ds7"/>
                                                 <constraint firstItem="4CO-mK-s85" firstAttribute="leading" secondItem="LLv-1P-xk8" secondAttribute="leading" constant="8" id="yRj-xw-QKp"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="prayerNameLabel" destination="4CO-mK-s85" id="Q3v-HV-f8z"/>
                                             <outlet property="prayerTextLabel" destination="toj-Jc-qHw" id="iik-go-oAp"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" rowHeight="183" id="NWb-1f-19h" userLabel="detailCell" customClass="PrayerDetailsTableViewCell" customModule="LearnToPray" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="148" width="359" height="183"/>
+                                        <rect key="frame" x="0.0" y="148" width="375" height="183"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NWb-1f-19h" id="9ey-Qb-yXl">
-                                            <rect key="frame" x="0.0" y="0.0" width="359" height="182.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="182.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5z-9O-yq0">
-                                                    <rect key="frame" x="8" y="8" width="343" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5z-9O-yq0" customClass="MarginLabel" customModule="LearnToPray" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="359" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Js-tE-6PQ">
-                                                    <rect key="frame" x="8" y="37" width="343" height="141.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Js-tE-6PQ" customClass="MarginLabel" customModule="LearnToPray" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="37" width="359" height="141.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

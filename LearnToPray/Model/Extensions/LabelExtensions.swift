@@ -15,7 +15,7 @@ extension UILabel {
         let frame = self.frame.offsetBy(dx: -(self.frame.width),
                                         dy: 0)
         
-        let label = UILabel(frame: frame)
+        let label = PaddedLabel(frame: frame, sidePadding: 72)
         label.applyPrayerDetailStyling()
         return label
     }
@@ -24,7 +24,7 @@ extension UILabel {
         let frame = self.frame.offsetBy(dx: self.frame.width,
                                         dy: 0)
        
-        let label = UILabel(frame: frame)
+        let label = PaddedLabel(frame: frame, sidePadding: 72)
         label.applyPrayerDetailStyling()
         return label
     }
@@ -32,7 +32,8 @@ extension UILabel {
     func applyPrayerDetailStyling() {
         self.numberOfLines = 0
         self.textAlignment = .center
-        self.backgroundColor = .red
         self.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        
     }
 }

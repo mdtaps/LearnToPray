@@ -56,6 +56,9 @@
 		F4D3D4AB1FD1201D0035F860 /* PrayerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D3D4AA1FD1201D0035F860 /* PrayerData.swift */; };
 		F4E716A72032CA930066A20A /* StripeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E716A62032CA930066A20A /* StripeClient.swift */; };
 		F4F27A3120451BB80043CF3C /* UIView+Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F27A3020451BB80043CF3C /* UIView+Designable.swift */; };
+		F4F27A35204690890043CF3C /* SectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F27A34204690890043CF3C /* SectionTableViewCell.swift */; };
+		F4F27A392046AF0F0043CF3C /* PrayerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F27A382046AF0F0043CF3C /* PrayerNavigationController.swift */; };
+		F4F27A3B2047C3600043CF3C /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F27A3A2047C3600043CF3C /* PaddedLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +138,9 @@
 		F4E716A52032CA190066A20A /* ApplePaySwag-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ApplePaySwag-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4E716A62032CA930066A20A /* StripeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeClient.swift; sourceTree = "<group>"; };
 		F4F27A3020451BB80043CF3C /* UIView+Designable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Designable.swift"; sourceTree = "<group>"; };
+		F4F27A34204690890043CF3C /* SectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewCell.swift; sourceTree = "<group>"; };
+		F4F27A382046AF0F0043CF3C /* PrayerNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PrayerNavigationController.swift; path = LearnToPray/View/PrayerNavigationController.swift; sourceTree = SOURCE_ROOT; };
+		F4F27A3A2047C3600043CF3C /* PaddedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,9 +189,11 @@
 		F408DB461FDDF95900C93434 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F4F27A3020451BB80043CF3C /* UIView+Designable.swift */,
+				F4F27A382046AF0F0043CF3C /* PrayerNavigationController.swift */,
 				F408DB441FDDF93200C93434 /* PrayerDetailsHeaderTableViewCell.swift */,
 				F4C51EAC1FE39995007F2195 /* PrayerDetailsTableViewCell.swift */,
+				F4F27A34204690890043CF3C /* SectionTableViewCell.swift */,
+				F4F27A3A2047C3600043CF3C /* PaddedLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -318,6 +326,7 @@
 				F46A3ACE20369E5400616BAF /* UIButtonExtensions.swift */,
 				F437381B2005E13F0067F1F7 /* LabelExtensions.swift */,
 				F45D74BF202AD52F00A9C9CD /* StringExtensions.swift */,
+				F4F27A3020451BB80043CF3C /* UIView+Designable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -635,8 +644,10 @@
 				F46A3AD52036D0F800616BAF /* HomeViewController.swift in Sources */,
 				F45D74BE202AC78400A9C9CD /* ApplePaySetUp.swift in Sources */,
 				F48FB6B91FD67C3E009318F9 /* DetailsContainerViewController.swift in Sources */,
+				F4F27A35204690890043CF3C /* SectionTableViewCell.swift in Sources */,
 				F46A3ACF20369E5400616BAF /* UIButtonExtensions.swift in Sources */,
 				F4C51EAD1FE39995007F2195 /* PrayerDetailsTableViewCell.swift in Sources */,
+				F4F27A392046AF0F0043CF3C /* PrayerNavigationController.swift in Sources */,
 				F4C51EBB1FEB491D007F2195 /* PeopleGroupsViewController.swift in Sources */,
 				F408DB431FDDF70300C93434 /* GuidedPrayersViewController.swift in Sources */,
 				F4E716A72032CA930066A20A /* StripeClient.swift in Sources */,
@@ -658,6 +669,7 @@
 				F4A8FDC61FDF93E20058DF97 /* UserDefaultsManager.swift in Sources */,
 				F45D74BA20244B6E00A9C9CD /* DonationViewController.swift in Sources */,
 				F4C51EAF1FE4F833007F2195 /* JoshuaProjectClient.swift in Sources */,
+				F4F27A3B2047C3600043CF3C /* PaddedLabel.swift in Sources */,
 				F45D74C0202AD52F00A9C9CD /* StringExtensions.swift in Sources */,
 				F43ED5F11FB5719F008E6078 /* AppDelegate.swift in Sources */,
 				F43ED6201FB57234008E6078 /* CoreDataModel.xcdatamodeld in Sources */,

@@ -51,13 +51,15 @@ extension PrayersListContainerViewController: UITableViewDelegate, UITableViewDa
     
     //MARK: Section Header Functions
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let sectionHeader = tableView.dequeueReusableCell(withIdentifier: "section")!
+        let sectionHeader = tableView.dequeueReusableCell(withIdentifier: "section")! as! SectionTableViewCell
         guard let prayer = fetchedResultsController?.object(at: IndexPath(row: 0, section: section)) as? Prayer else {
             fatalError("Could not get an object for section \(section)")
             
         }
         
-        sectionHeader.textLabel?.text = prayer.category.name
+        //TODO: Wire up custom cell for center aligned spacing
+        
+        sectionHeader.sectionTitleLabel.text = prayer.category.name
         return sectionHeader
         
     }

@@ -73,12 +73,10 @@ extension GuidedPrayersViewController {
         let _ = vc.view
         
         vc.peopleGroupNameLabel.text = data.peopleNameInCountry
-        print(data.photoAddress)
         vc.peopleGroupImage.image = getImage(from: data.photoAddress)
         vc.peopleGroupPopulation.text = "Population: \(data.worldPopulation)"
         let coordiante = CLLocationCoordinate2D(latitude: data.latitude, longitude: data.longitude)
         vc.peopleGroupsMapView.addAnnotation(MapPin(coordinate: coordiante))
-        //TODO: Add coordinate to map
         
         show(vc, sender: self)
     }
