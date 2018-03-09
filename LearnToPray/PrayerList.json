@@ -5,14 +5,15 @@
                  "prayer" : [
                              {
                              "name" : "Centering Prayer",
+                             "text" : "Centering prayer a simple process of giving God your burdens and asking Him to fill you",
                              "details" : [
                                           {
-                                          "title" : "Palms Up",
-                                          "text" : "*ADD TEXT HERE*"
+                                          "title" : "Palms Down",
+                                          "text" : "Place your palms down. Give to God the stress, worries, frustrations, anger, or fears you are experiencing."
                                           },
                                           {
-                                          "title" : "Palms Down",
-                                          "text" : "*ADD TEXT HERE*"
+                                          "title" : "Palms Up",
+                                          "text" : "Place your palms up. In place of what you've given God, ask Him to fill you with His patience, kindness, peace, and joy for the day."
                                           }
                                           ]
                              },
@@ -50,7 +51,7 @@
                              },
                              {
                              "name" : "Gifts of the Spirit",
-                             "text" : "1 Corinthians 14:1 - Follow the way of love and eagerly desire gifts of the Spirit, especially prophecy.",
+                             "text" : "Ask God to fill you with His gifts: 1 Corinthians 14:1a - Follow the way of love and eagerly desire gifts of the Spirit...",
                              "details" : [
                                           {
                                           "title" : "Gift of Prophecy"
@@ -77,7 +78,7 @@
                                           "title" : "Gift of Faith"
                                           },
                                           {
-                                          "title" : "Gift of Healing"
+                                          "title" : "Gifts of Healing"
                                           },
                                           {
                                           "title" : "Gift of Distinguishing between Spirits"
@@ -99,8 +100,85 @@
                  "name" : "Prayer For Others",
                  "prayer" : [
                              {
-                             "name" : "People Groups",
-                             "text" : "*ADD TEXT HERE*"
+                             "name" : "People Groups"
+                             }
+                             ]
+                 },
+                 {
+                 "name" : "Prayer Models",
+                 "prayer" : [
+                             {
+                             "name" : "The Lord's Prayer",
+                             "text" : "*TEXT HERE*",
+                             "details" : [
+                                          {
+                                          "title" : "Our Father, who art in heaven, hallowed be your name",
+                                          },
+                                          {
+                                          "title" : "Your kingdom come, your will be done, on earth as it is in heaven",
+                                          },
+                                          {
+                                          "title" : "Give us this day our daily bread",
+                                          },
+                                          {
+                                          "title" : "And forgive us our debts as we have forgiven our debtors",
+                                          },
+                                          {
+                                          "title" : "And lead us not into temptation, but deliver us from evil"
+                                          }
+                                          ]
+                             },
+                             {
+                             "name" : "ACTS",
+                             "text" : "Praying through four different subjects: Adoration, Confession, Thanksgiving, Seeking",
+                             "details" : [
+                                          {
+                                          "title" : "Adoration",
+                                          "text" : "Spend time worshiping God and telling Him what you love about Him"
+                                          },
+                                          {
+                                          "title" : "Confession",
+                                          "text" : "Confess things you have done wrong and ask God for forgiveness. He forgives!"
+                                          },
+                                          {
+                                          "title" : "Thanksgiving",
+                                          "text" : "Tell God thank you for who He is and what He has given you"
+                                          },
+                                          {
+                                          "title" : "Seeking",
+                                          "text" : "Ask God for things that you need"
+                                          },
+                                          ]
+                             },
+                             {
+                             "name" : "Prayer Circles",
+                             "text" : "*TEXT HERE*",
+                             "details" : [
+                                          {
+                                          "title" : "Self",
+                                          "text" : "Pray for yourself and your own needs"
+                                          },
+                                          {
+                                          "title" : "Family",
+                                          "text" : "Pray for your family"
+                                          },
+                                          {
+                                          "title" : "Work/Community",
+                                          "text" : "Pray for those in your circle of friends/co-workers"
+                                          },
+                                          {
+                                          "title" : "City",
+                                          "text" : "Pray for the city you live in"
+                                          },
+                                          {
+                                          "title" : "Country",
+                                          "text" : "Pray for your country, its people, and its leaders"
+                                          },
+                                          {
+                                          "title" : "World",
+                                          "text" : "Pray for the world, especially places that are experiencing pain"
+                                          }
+                                          ]
                              }
                              ]
                  }
