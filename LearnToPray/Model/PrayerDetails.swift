@@ -11,6 +11,7 @@ import Foundation
 struct PrayerDetails {
     var prayer: Prayer?
     var detailsArray = [String]()
+    var detailsTextArray = [String]()
     var arrayPosition = 0
     
     init() { }
@@ -28,6 +29,8 @@ struct PrayerDetails {
         
         for detail in details {
             detailsArray.append(detail.title!)
+            //TODO: Fix detail.text
+            detailsTextArray.append(detail.text!)
         }
     }
 }

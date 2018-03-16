@@ -12,9 +12,12 @@ import CoreData
 class PrayerTimeViewController: UIViewController {
     @IBOutlet weak var prayerTitleLabel: UILabel!
     @IBOutlet weak var prayerTimeStackView: UIStackView!
-    @IBOutlet weak var prayerDetailPlaceHolderLabel: UILabel!
     @IBOutlet weak var prayerTimerLabel: UILabel!
     @IBOutlet weak var pauseTimerButton: UIButton!
+    @IBOutlet weak var detailsStackView: UIStackView!
+    @IBOutlet weak var prayerDetailTitleLabel: UILabel!
+    @IBOutlet weak var prayerDetailTextLabel: UILabel!
+    
     
     var prayerDetails: PrayerDetails
     var prayerDetailLabel = UILabel()
@@ -132,17 +135,14 @@ extension PrayerTimeViewController {
 extension PrayerTimeViewController {
     
     fileprivate func setUpLabels() {
-        prayerDetailLabel = PaddedLabel(frame: prayerDetailPlaceHolderLabel.frame, sidePadding: 72)
-        prayerDetailLabel.applyPrayerDetailStyling()
-        prayerTimeStackView.addSubview(prayerDetailLabel)
-        
         prayerTitleLabel.text = prayerDetails.prayer?.name
-        prayerDetailLabel.text = prayerDetails.detailsArray.first ?? ""
-    }
+        prayerDetailTitleLabel.text = prayerDetails.detailsArray.first!
+        prayerDetailTextLabel.text = prayerDetails.detailsTextArray.first!
+            }
     
     private func setupTimerLabel() {
         prayerTimerLabel.text = timeString(time: TimeInterval(PrayerTimer.timerCounter))
-    pauseTimerButton.setTitle(PrayerTimer.timerState.rawValue, for: .normal)
+        pauseTimerButton.setTitle(PrayerTimer.timerState.rawValue, for: .normal)
     }
 }
 

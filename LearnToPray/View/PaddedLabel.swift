@@ -8,10 +8,10 @@
 
 import UIKit
 
-class PaddedLabel: UILabel {
+@IBDesignable class PaddedLabel: UILabel {
     
-    var leftPadding: CGFloat = 0.0
-    var rightPadding: CGFloat = 0.0
+    @IBInspectable var leftPadding: CGFloat = 0.0
+    @IBInspectable var rightPadding: CGFloat = 0.0
     
     convenience init(frame: CGRect,
                      sidePadding: CGFloat) {
@@ -19,6 +19,12 @@ class PaddedLabel: UILabel {
         self.leftPadding = sidePadding
         self.rightPadding = sidePadding
         
+    }
+    
+    convenience init(sidePadding: CGFloat) {
+        self.init()
+        self.leftPadding = sidePadding
+        self.rightPadding = sidePadding
     }
 
     override func drawText(in rect: CGRect) {

@@ -21,6 +21,7 @@
 		F43ED6201FB57234008E6078 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F43ED61E1FB57234008E6078 /* CoreDataModel.xcdatamodeld */; };
 		F451FD0D1FFF561700540B31 /* PrayerTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F451FD0C1FFF561700540B31 /* PrayerTimeViewController.xib */; };
 		F451FD0F1FFF669200540B31 /* PrayerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451FD0E1FFF669200540B31 /* PrayerDetails.swift */; };
+		F4541222205661A500A305F5 /* UIStackView+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4541221205661A500A305F5 /* UIStackView+Styling.swift */; };
 		F45D74BA20244B6E00A9C9CD /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D74B820244B6E00A9C9CD /* DonationViewController.swift */; };
 		F45D74BB20244B6E00A9C9CD /* DonationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45D74B920244B6E00A9C9CD /* DonationViewController.xib */; };
 		F45D74BE202AC78400A9C9CD /* ApplePaySetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D74BD202AC78400A9C9CD /* ApplePaySetUp.swift */; };
@@ -101,6 +102,7 @@
 		F43ED61F1FB57234008E6078 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		F451FD0C1FFF561700540B31 /* PrayerTimeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrayerTimeViewController.xib; sourceTree = "<group>"; };
 		F451FD0E1FFF669200540B31 /* PrayerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerDetails.swift; sourceTree = "<group>"; };
+		F4541221205661A500A305F5 /* UIStackView+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Styling.swift"; sourceTree = "<group>"; };
 		F45D74B820244B6E00A9C9CD /* DonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
 		F45D74B920244B6E00A9C9CD /* DonationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationViewController.xib; sourceTree = "<group>"; };
 		F45D74BC2024548B00A9C9CD /* LearnToPray.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LearnToPray.entitlements; sourceTree = "<group>"; };
@@ -325,8 +327,9 @@
 			children = (
 				F46A3ACE20369E5400616BAF /* UIButtonExtensions.swift */,
 				F437381B2005E13F0067F1F7 /* LabelExtensions.swift */,
-				F45D74BF202AD52F00A9C9CD /* StringExtensions.swift */,
+				F4541221205661A500A305F5 /* UIStackView+Styling.swift */,
 				F4F27A3020451BB80043CF3C /* UIView+Designable.swift */,
+				F45D74BF202AD52F00A9C9CD /* StringExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -664,6 +667,7 @@
 				F408DB4D1FDE68DA00C93434 /* PrayerDetailsViewController.swift in Sources */,
 				F4A8FDC11FDE8A170058DF97 /* Category+CoreDataClass.swift in Sources */,
 				F46A3ADA203BE46800616BAF /* TimePickerViewController.swift in Sources */,
+				F4541222205661A500A305F5 /* UIStackView+Styling.swift in Sources */,
 				F4D3D4A21FCBBCB60035F860 /* CoreDataStack.swift in Sources */,
 				F4A8FDC31FDE8A170058DF97 /* Prayer+CoreDataClass.swift in Sources */,
 				F4A8FDC61FDF93E20058DF97 /* UserDefaultsManager.swift in Sources */,

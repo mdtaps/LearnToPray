@@ -23,6 +23,7 @@ class GuidedPrayersViewController: CoreDataViewController, PrayersListDelegate {
         dismiss(animated: true, completion: nil)
         
     }
+    
     func didSelectPrayer(prayer: Prayer) {
         if prayer.name == "People Groups" {
             JoshuaProjectClient.shared.retreivePeopleGroupOfTheDay { (joshuaProjectResponse) in
@@ -75,6 +76,7 @@ extension GuidedPrayersViewController {
         vc.peopleGroupNameLabel.text = data.peopleNameInCountry
         vc.peopleGroupImage.image = getImage(from: data.photoAddress)
         vc.peopleGroupPopulation.text = "Population: \(data.worldPopulation)"
+        vc.peopleGroupsReligion.text = "Primary Religion: \(data.primaryReligion)"
         let coordiante = CLLocationCoordinate2D(latitude: data.latitude, longitude: data.longitude)
         vc.peopleGroupsMapView.addAnnotation(MapPin(coordinate: coordiante))
         

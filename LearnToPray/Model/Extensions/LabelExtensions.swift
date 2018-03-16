@@ -29,11 +29,15 @@ extension UILabel {
         return label
     }
     
+    func addPadding() {
+        
+    }
+    
     func applyPrayerDetailStyling() {
         self.numberOfLines = 0
         self.textAlignment = .center
         self.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
+        self.translatesAutoresizingMaskIntoConstraints = true
         
     }
 }

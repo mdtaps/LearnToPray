@@ -25,6 +25,8 @@ class CoreDataViewController: UIViewController {
         }
     }
     
+    
+    //TODO: Sort by date added
     func createFetchedResultsController(for managedObject: NSManagedObject.Type, sortingBy descriptor: String? = nil) -> NSFetchedResultsController<NSFetchRequestResult> {
         
         //Create fetch request

@@ -17,8 +17,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PrayerTimeViewController" customModule="LearnToPray" customModuleProvider="target">
             <connections>
+                <outlet property="detailsStackView" destination="0Kz-kd-hlu" id="KCy-ev-bBR"/>
                 <outlet property="pauseTimerButton" destination="Vv6-Mv-L39" id="2wx-vT-StE"/>
-                <outlet property="prayerDetailPlaceHolderLabel" destination="ba2-Uq-fic" id="KOL-J4-1WA"/>
+                <outlet property="prayerDetailTextLabel" destination="FJw-7v-gac" id="KvV-N7-wMA"/>
+                <outlet property="prayerDetailTitleLabel" destination="1DI-Ud-ggo" id="2p4-8I-AMs"/>
                 <outlet property="prayerTimeStackView" destination="CwW-HY-fgC" id="t6u-FH-OiU"/>
                 <outlet property="prayerTimerLabel" destination="KEQ-hX-Kvw" id="fKx-vb-oVB"/>
                 <outlet property="prayerTitleLabel" destination="cYN-VS-mCA" id="ZE6-ng-5Er"/>
@@ -34,7 +36,7 @@
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="cYN-VS-mCA">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="133.5"/>
                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <attributedString key="attributedText">
                                 <fragment content="Prayer Time">
@@ -47,18 +49,46 @@
                             </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ba2-Uq-fic">
-                            <rect key="frame" x="0.0" y="200" width="375" height="388.5"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="0Kz-kd-hlu">
+                            <rect key="frame" x="0.0" y="133.5" width="375" height="453"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1DI-Ud-ggo" customClass="PaddedLabel" customModule="LearnToPray" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="226.5"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                            <real key="value" value="72"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                            <real key="value" value="72"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJw-7v-gac" customClass="PaddedLabel" customModule="LearnToPray" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="226.5" width="375" height="226.5"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                            <real key="value" value="72"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                            <real key="value" value="72"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                            </subviews>
+                        </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3J6-og-uK8" userLabel="Bottom Stack View">
-                            <rect key="frame" x="0.0" y="588.5" width="375" height="58.5"/>
+                            <rect key="frame" x="0.0" y="586.5" width="375" height="60.5"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vv6-Mv-L39">
-                                    <rect key="frame" x="0.0" y="0.0" width="124" height="58.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="124" height="60.5"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                     <state key="normal" title="Pause"/>
                                     <connections>
@@ -66,13 +96,13 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEQ-hX-Kvw">
-                                    <rect key="frame" x="124" y="0.0" width="127.5" height="58.5"/>
+                                    <rect key="frame" x="124" y="0.0" width="127.5" height="60.5"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giw-Sl-ewz">
-                                    <rect key="frame" x="251.5" y="0.0" width="123.5" height="58.5"/>
+                                    <rect key="frame" x="251.5" y="0.0" width="123.5" height="60.5"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                     <state key="normal" title="Finish"/>
                                     <connections>
@@ -88,12 +118,13 @@
                         </stackView>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="ba2-Uq-fic" firstAttribute="width" secondItem="CwW-HY-fgC" secondAttribute="width" id="Xq3-sZ-4ez"/>
-                        <constraint firstItem="ba2-Uq-fic" firstAttribute="height" secondItem="CwW-HY-fgC" secondAttribute="height" multiplier="0.6" id="zQZ-AH-pDc"/>
+                        <constraint firstItem="0Kz-kd-hlu" firstAttribute="leading" secondItem="CwW-HY-fgC" secondAttribute="leading" id="85z-nL-J17"/>
+                        <constraint firstItem="0Kz-kd-hlu" firstAttribute="height" secondItem="CwW-HY-fgC" secondAttribute="height" multiplier="0.7" id="95S-Pi-Rcx"/>
+                        <constraint firstAttribute="trailing" secondItem="0Kz-kd-hlu" secondAttribute="trailing" id="ZLF-ar-MmI"/>
                     </constraints>
                 </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVB-Cj-AJK" userLabel="Right Background">
-                    <rect key="frame" x="311" y="220" width="64" height="388.5"/>
+                    <rect key="frame" x="311" y="153.5" width="64" height="453"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="64" id="KgS-q8-jVc"/>
@@ -103,7 +134,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syX-vu-Ntu" userLabel="Left Background">
-                    <rect key="frame" x="0.0" y="220" width="64" height="388.5"/>
+                    <rect key="frame" x="0.0" y="153.5" width="64" height="453"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="64" id="zJZ-Np-eWI"/>
@@ -113,7 +144,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VV1-5s-d0Z" userLabel="Left Button">
-                    <rect key="frame" x="8" y="390.5" width="48" height="48"/>
+                    <rect key="frame" x="8" y="356" width="48" height="48"/>
                     <accessibility key="accessibilityConfiguration">
                         <accessibilityTraits key="traits" button="YES" image="YES"/>
                     </accessibility>
@@ -127,7 +158,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0n-Bw-3Py" userLabel="Right Button">
-                    <rect key="frame" x="319" y="390.5" width="48" height="48"/>
+                    <rect key="frame" x="319" y="356" width="48" height="48"/>
                     <accessibility key="accessibilityConfiguration">
                         <accessibilityTraits key="traits" button="YES" image="YES"/>
                     </accessibility>
@@ -146,16 +177,16 @@
                 <constraint firstItem="CwW-HY-fgC" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="1Wl-iF-2vy"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CwW-HY-fgC" secondAttribute="trailing" id="4xx-8z-exr"/>
                 <constraint firstItem="KEQ-hX-Kvw" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.34" id="CH0-G8-yBe"/>
-                <constraint firstItem="VV1-5s-d0Z" firstAttribute="centerY" secondItem="ba2-Uq-fic" secondAttribute="centerY" id="DiE-IE-Woi"/>
-                <constraint firstItem="J0n-Bw-3Py" firstAttribute="centerY" secondItem="ba2-Uq-fic" secondAttribute="centerY" id="GaE-7x-8Ql"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="CwW-HY-fgC" secondAttribute="bottom" id="GeB-qq-eQN"/>
                 <constraint firstItem="ZVB-Cj-AJK" firstAttribute="bottom" secondItem="3J6-og-uK8" secondAttribute="top" id="IaL-vL-Htw"/>
                 <constraint firstItem="CwW-HY-fgC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="LNr-1i-4ZW"/>
+                <constraint firstItem="VV1-5s-d0Z" firstAttribute="centerY" secondItem="syX-vu-Ntu" secondAttribute="centerY" id="NQG-sk-QBq"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ZVB-Cj-AJK" secondAttribute="trailing" id="OKH-ig-z2b"/>
                 <constraint firstItem="syX-vu-Ntu" firstAttribute="bottom" secondItem="3J6-og-uK8" secondAttribute="top" id="S2k-N1-jRn"/>
+                <constraint firstItem="J0n-Bw-3Py" firstAttribute="centerY" secondItem="ZVB-Cj-AJK" secondAttribute="centerY" id="SVS-bV-tkY"/>
                 <constraint firstItem="syX-vu-Ntu" firstAttribute="top" secondItem="cYN-VS-mCA" secondAttribute="bottom" id="W9r-xj-xVv"/>
                 <constraint firstItem="syX-vu-Ntu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="WL6-q0-MVp"/>
-                <constraint firstItem="cYN-VS-mCA" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.3" id="d2a-Jf-RdV"/>
+                <constraint firstItem="cYN-VS-mCA" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.2" id="d2a-Jf-RdV"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="J0n-Bw-3Py" secondAttribute="trailing" constant="8" id="fcP-b4-KTC"/>
                 <constraint firstItem="CwW-HY-fgC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="k0N-Gf-3gb"/>
                 <constraint firstItem="VV1-5s-d0Z" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="lIi-Hl-Elm"/>
