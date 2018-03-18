@@ -5,7 +5,7 @@
                  "prayer" : [
                              {
                              "name" : "Centering Prayer",
-                             "text" : "Centering prayer a simple process of giving God your burdens and asking Him to fill you",
+                             "text" : "Centering prayer a simple process of spending time giving God your burdens and asking Him to fill you.",
                              "details" : [
                                           {
                                           "title" : "Palms Down",
@@ -22,31 +22,41 @@
                              "text" : "Pray for the fruit of the Spirit (Galations 5:22-23) for yourself.",
                              "details" : [
                                           {
-                                          "title" : "Love"
+                                          "title" : "Love",
+                                          "text" : "Ask the Holy Spirit to fill you with His Love."
                                           },
                                           {
-                                          "title" : "Joy"
+                                          "title" : "Joy",
+                                          "text" : "Ask the Holy Spirit to fill you with His Joy."
+                                          
                                           },
                                           {
-                                          "title" : "Peace"
+                                          "title" : "Peace",
+                                          "text" : "Ask the Holy Spirit to fill you with His Peace."
                                           },
                                           {
-                                          "title" : "Patience"
+                                          "title" : "Patience",
+                                          "text" : "Ask the Holy Spirit to fill you with His Patience."
                                           },
                                           {
-                                          "title" : "Kindness"
+                                          "title" : "Kindness",
+                                          "text" : "Ask the Holy Spirit to fill you with His Kindness."
                                           },
                                           {
-                                          "title" : "Goodness"
+                                          "title" : "Goodness",
+                                          "text" : "Ask the Holy Spirit to fill you with His Goodness."
                                           },
                                           {
-                                          "title" : "Faithfulness"
+                                          "title" : "Faithfulness",
+                                          "text" : "Ask the Holy Spirit to fill you with His Faithfulness."
                                           },
                                           {
-                                          "title" : "Gentleness"
+                                          "title" : "Gentleness",
+                                          "text" : "Ask the Holy Spirit to fill you with His Gentleness."
                                           },
                                           {
-                                          "title" : "Self-Control"
+                                          "title" : "Self-Control",
+                                          "text" : "Ask the Holy Spirit to fill you with His Self-Control."
                                           }
                                           ]
                              },
@@ -55,43 +65,52 @@
                              "text" : "Ask God to fill you with His gifts: 1 Corinthians 14:1a - \"Follow the way of love and eagerly desire gifts of the Spirit...\"",
                              "details" : [
                                           {
-                                          "title" : "Gift of Prophecy"
+                                          "title" : "Gift of Prophecy",
+                                          "text" : "Ask the Holy Spirit to give you/increase your prophetic gifts. Prophetic gifts strengthen, encourage, and comfort others"
                                           },
                                           {
-                                          "title" : "Gift of Serving"
+                                          "title" : "Gift of Serving",
+                                          "text" : "Ask the Holy Spirit to give you/increase your serving gifts."
                                           },
                                           {
-                                          "title" : "Gift of Teaching"
+                                          "title" : "Gift of Teaching",
+                                          "text" : "Ask the Holy Spirit to give you/increase your teaching gifts."
                                           },
                                           {
-                                          "title" : "Gift of Exhortation"
+                                          "title" : "Gift of Exhortation",
+                                          "text" : "Ask the Holy Spirit to give you/increase your encouragement and exhortation gifting."
                                           },
                                           {
-                                          "title" : "Gift of Giving"
+                                          "title" : "Gift of Giving",
+                                          "text" : "Ask the Holy Spirit to give you/increase your ability and willingness to give."
                                           },
                                           {
-                                          "title" : "Gift of Leadership"
+                                          "title" : "Gift of Leadership",
+                                          "text" : "Ask the Holy Spirit to give you/increase your gift of leadership."
                                           },
                                           {
-                                          "title" : "Gift of Mercy"
+                                          "title" : "Gift of Mercy",
+                                          "text" : "Ask the Holy Spirit to give you/increase your gift of being patient and merciful to others."
                                           },
                                           {
-                                          "title" : "Gift of Faith"
+                                          "title" : "Gift of Faith",
+                                          "text" : "Ask the Holy Spirit to give you/increase your gift of faith."
                                           },
                                           {
-                                          "title" : "Gifts of Healing"
+                                          "title" : "Gifts of Healing",
+                                          "text" : "Ask the Holy Spirit to give you/increase your healing gifts. It could be physical, spiritual, emotional, and/or mental healing."
                                           },
                                           {
-                                          "title" : "Gift of Distinguishing between Spirits"
+                                          "title" : "Gift of Distinguishing between Spirits",
+                                          "text" : "Ask the Holy Spirit to give you/increase your ability to understand and correctly respond to spiritual situations."
                                           },
                                           {
-                                          "title" : "Gift of Tongues"
+                                          "title" : "Gift of Tongues",
+                                          "text" : "Ask the Holy Spirit to give you/increase your ability to speak in tongues and interpret tongues."
                                           },
                                           {
-                                          "title" : "Gift of Interpretation of Tongues"
-                                          },
-                                          {
-                                          "title" : "Gift of Administration"
+                                          "title" : "Gift of Administration",
+                                          "text" : "Ask the Holy Spirit to give you/increase your organizational and administrative gifts."
                                           }
                                           ]
                              },
@@ -108,7 +127,7 @@
                                           "text" : "Ask God to fill you with His Righteousness and Purity."
                                           },
                                           {
-                                          "title" : "Sandals of the readiness that comes with the Gospel of Peace",
+                                          "title" : "Sandals of the Readiness that Comes with the Gospel of Peace",
                                           "text" : "Ask God to fill you with His Peace."
                                           },
                                           {
