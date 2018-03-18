@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class PrayerTimeViewController: UIViewController {
+class PrayerTimeViewController: CoreDataViewController {
     @IBOutlet weak var prayerTitleLabel: UILabel!
     @IBOutlet weak var prayerTimeStackView: UIStackView!
     @IBOutlet weak var prayerTimerLabel: UILabel!
@@ -18,25 +18,11 @@ class PrayerTimeViewController: UIViewController {
     @IBOutlet weak var prayerDetailTitleLabel: UILabel!
     @IBOutlet weak var prayerDetailTextLabel: UILabel!
     
-    
-    var prayerDetails: PrayerDetails
     var prayerDetailLabel = UILabel()
+    var row = 0
     
-    init(prayer: Prayer?) {
-        if let prayer = prayer {
-            self.prayerDetails = PrayerDetails(prayer: prayer)
-            
-        } else {
-            self.prayerDetails = PrayerDetails()
-            
-        }
-        
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    //Delegate for FRC and chosen Prayer object
+    var delegate: DetailsListDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,11 +30,8 @@ class PrayerTimeViewController: UIViewController {
         PrayerTimer.start()
         
         setupTimerLabel()
+        setUpLabels()
         
-        if let _ = prayerDetails.prayer {
-            setUpLabels()
-            
-        }
     }
     
     @IBAction func pauseButtonPressed() {
@@ -64,26 +47,36 @@ class PrayerTimeViewController: UIViewController {
     }
     
     @IBAction func rightButtonPressed() {
-        guard prayerDetails.arrayPosition < prayerDetails.detailsTitleArray.count - 1 else {
+        
+        guard let count = delegate?.fetchedResultsController?.fetchedObjects?.count,
+            row < count - 1 else {
             return
         }
         
-        prayerDetails.arrayPosition += 1
+        row += 1
         
-        prayerDetailTitleLabel.fadeInFadeOutWith(text: prayerDetails.title)
-        prayerDetailTextLabel.fadeInFadeOutWith(text: prayerDetails.text)
+        guard let detail = delegate?.fetchedResultsController?.object(at: IndexPath(row: row, section: 0)) as? Details else {
+            print("Failed to get detail from row \(row) FRC in PrayerTimeVC")
+            return
+        }
+        prayerDetailTitleLabel.fadeInFadeOutWith(text: detail.title!)
+        prayerDetailTextLabel.fadeInFadeOutWith(text: detail.text!)
 
     }
     
     @IBAction func leftButtonPressed() {
-        guard prayerDetails.arrayPosition > 0 else {
+        guard row > 0 else {
             return
         }
         
-        prayerDetails.arrayPosition -= 1
+        row -= 1
         
-        prayerDetailTitleLabel.fadeInFadeOutWith(text: prayerDetails.title)
-        prayerDetailTextLabel.fadeInFadeOutWith(text: prayerDetails.text)
+        guard let detail = delegate?.fetchedResultsController?.object(at: IndexPath(row: row, section: 0)) as? Details else {
+            print("Failed to get detail from row \(row) FRC in PrayerTimeVC")
+            return
+        }
+        prayerDetailTitleLabel.fadeInFadeOutWith(text: detail.title!)
+        prayerDetailTextLabel.fadeInFadeOutWith(text: detail.text!)
     }
     
     @IBAction func finishButton(_ sender: UIButton) {
@@ -95,9 +88,13 @@ class PrayerTimeViewController: UIViewController {
 extension PrayerTimeViewController {
     
     fileprivate func setUpLabels() {
-        prayerTitleLabel.text = prayerDetails.prayer?.name
-        prayerDetailTitleLabel.text = prayerDetails.title
-        prayerDetailTextLabel.text = prayerDetails.text
+        guard let detail =
+            delegate?.fetchedResultsController?.object(at: IndexPath(row: 0, section: 0)) as? Details else {
+                return
+                }
+        prayerTitleLabel.text = detail.prayer?.name
+        prayerDetailTitleLabel.text = detail.title
+        prayerDetailTextLabel.text = detail.text
         
     }
     

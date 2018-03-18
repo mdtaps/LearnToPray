@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D416445123336A853B2B5113 /* libPods-LearnToPray.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 837E30E05137A9AB63AF3BE2 /* libPods-LearnToPray.a */; };
+		F407BAA6205E429C009BDF65 /* Details+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F407BAA4205E429C009BDF65 /* Details+CoreDataClass.swift */; };
+		F407BAA7205E429C009BDF65 /* Details+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F407BAA5205E429C009BDF65 /* Details+CoreDataProperties.swift */; };
 		F408DB431FDDF70300C93434 /* GuidedPrayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F408DB421FDDF70300C93434 /* GuidedPrayersViewController.swift */; };
 		F408DB451FDDF93200C93434 /* PrayerDetailsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F408DB441FDDF93200C93434 /* PrayerDetailsHeaderTableViewCell.swift */; };
 		F408DB4D1FDE68DA00C93434 /* PrayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F408DB4C1FDE68DA00C93434 /* PrayerDetailsViewController.swift */; };
@@ -20,10 +22,7 @@
 		F43ED6111FB5719F008E6078 /* LearnToPrayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43ED6101FB5719F008E6078 /* LearnToPrayUITests.swift */; };
 		F43ED6201FB57234008E6078 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F43ED61E1FB57234008E6078 /* CoreDataModel.xcdatamodeld */; };
 		F451FD0D1FFF561700540B31 /* PrayerTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F451FD0C1FFF561700540B31 /* PrayerTimeViewController.xib */; };
-		F451FD0F1FFF669200540B31 /* PrayerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451FD0E1FFF669200540B31 /* PrayerDetails.swift */; };
 		F4541222205661A500A305F5 /* UIStackView+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4541221205661A500A305F5 /* UIStackView+Styling.swift */; };
-		F4541236205E1BC700A305F5 /* Details+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4541234205E1BC700A305F5 /* Details+CoreDataProperties.swift */; };
-		F4541237205E1BC700A305F5 /* Details+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4541235205E1BC700A305F5 /* Details+CoreDataClass.swift */; };
 		F45D74BA20244B6E00A9C9CD /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D74B820244B6E00A9C9CD /* DonationViewController.swift */; };
 		F45D74BB20244B6E00A9C9CD /* DonationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45D74B920244B6E00A9C9CD /* DonationViewController.xib */; };
 		F45D74BE202AC78400A9C9CD /* ApplePaySetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D74BD202AC78400A9C9CD /* ApplePaySetUp.swift */; };
@@ -83,6 +82,8 @@
 		1232BCA1A7408CF9AA58B349 /* Pods-LearnToPray.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnToPray.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnToPray/Pods-LearnToPray.release.xcconfig"; sourceTree = "<group>"; };
 		837E30E05137A9AB63AF3BE2 /* libPods-LearnToPray.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnToPray.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2269D9722178C2077145CEF /* Pods-LearnToPray.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnToPray.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnToPray/Pods-LearnToPray.debug.xcconfig"; sourceTree = "<group>"; };
+		F407BAA4205E429C009BDF65 /* Details+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Details+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F407BAA5205E429C009BDF65 /* Details+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Details+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F408DB421FDDF70300C93434 /* GuidedPrayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedPrayersViewController.swift; sourceTree = "<group>"; };
 		F408DB441FDDF93200C93434 /* PrayerDetailsHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerDetailsHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		F408DB4C1FDE68DA00C93434 /* PrayerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerDetailsViewController.swift; sourceTree = "<group>"; };
@@ -101,11 +102,8 @@
 		F43ED6121FB5719F008E6078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F43ED61F1FB57234008E6078 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		F451FD0C1FFF561700540B31 /* PrayerTimeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrayerTimeViewController.xib; sourceTree = "<group>"; };
-		F451FD0E1FFF669200540B31 /* PrayerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerDetails.swift; sourceTree = "<group>"; };
 		F4541221205661A500A305F5 /* UIStackView+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Styling.swift"; sourceTree = "<group>"; };
 		F4541223205E153F00A305F5 /* CoreDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CoreDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
-		F4541234205E1BC700A305F5 /* Details+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Details+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F4541235205E1BC700A305F5 /* Details+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Details+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F45D74B820244B6E00A9C9CD /* DonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
 		F45D74B920244B6E00A9C9CD /* DonationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationViewController.xib; sourceTree = "<group>"; };
 		F45D74BC2024548B00A9C9CD /* LearnToPray.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LearnToPray.entitlements; sourceTree = "<group>"; };
@@ -227,7 +225,6 @@
 				F4D3D4A61FCBD57D0035F860 /* JSONPrayerList.swift */,
 				F4D3D4AA1FD1201D0035F860 /* PrayerData.swift */,
 				F4C51EB61FE63281007F2195 /* DateFunctions.swift */,
-				F451FD0E1FFF669200540B31 /* PrayerDetails.swift */,
 				F485D11920146BB200304DBE /* PrayerTimer.swift */,
 				F45D74C1202AD53500A9C9CD /* Extensions */,
 				F4B864822022DC7400735337 /* Networking */,
@@ -242,8 +239,8 @@
 				F4A8FDBC1FDE8A170058DF97 /* Category+CoreDataProperties.swift */,
 				F4A8FDBD1FDE8A170058DF97 /* Prayer+CoreDataClass.swift */,
 				F4A8FDBE1FDE8A170058DF97 /* Prayer+CoreDataProperties.swift */,
-				F4541235205E1BC700A305F5 /* Details+CoreDataClass.swift */,
-				F4541234205E1BC700A305F5 /* Details+CoreDataProperties.swift */,
+				F407BAA4205E429C009BDF65 /* Details+CoreDataClass.swift */,
+				F407BAA5205E429C009BDF65 /* Details+CoreDataProperties.swift */,
 			);
 			path = ManagedObjects;
 			sourceTree = "<group>";
@@ -252,13 +249,12 @@
 			isa = PBXGroup;
 			children = (
 				F4D3D4A41FCBD1DD0035F860 /* CoreDataViewController.swift */,
+				F46A3AD42036D0F800616BAF /* HomeViewController.swift */,
+				F45D74B820244B6E00A9C9CD /* DonationViewController.swift */,
 				F408DB471FDDFF9F00C93434 /* Prayers */,
 				F408DB481FDDFFB600C93434 /* Details */,
 				F4C51EBC1FEB494C007F2195 /* People Groups */,
-				F4C51EBD1FF06734007F2195 /* PrayerTimeViewController.swift */,
-				F46A3AD42036D0F800616BAF /* HomeViewController.swift */,
-				F45D74B820244B6E00A9C9CD /* DonationViewController.swift */,
-				F46A3AD8203BE46800616BAF /* TimePickerViewController.swift */,
+				F4C9D50B205E34CA0097E3F2 /* PrayerTime */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -365,6 +361,15 @@
 				F45D74B920244B6E00A9C9CD /* DonationViewController.xib */,
 			);
 			path = "XIB Files";
+			sourceTree = "<group>";
+		};
+		F4C9D50B205E34CA0097E3F2 /* PrayerTime */ = {
+			isa = PBXGroup;
+			children = (
+				F4C51EBD1FF06734007F2195 /* PrayerTimeViewController.swift */,
+				F46A3AD8203BE46800616BAF /* TimePickerViewController.swift */,
+			);
+			path = PrayerTime;
 			sourceTree = "<group>";
 		};
 		F4D3D4A31FCBD1590035F860 /* CoreData */ = {
@@ -654,13 +659,12 @@
 				F4C51EBB1FEB491D007F2195 /* PeopleGroupsViewController.swift in Sources */,
 				F408DB431FDDF70300C93434 /* GuidedPrayersViewController.swift in Sources */,
 				F4E716A72032CA930066A20A /* StripeClient.swift in Sources */,
+				F407BAA6205E429C009BDF65 /* Details+CoreDataClass.swift in Sources */,
+				F407BAA7205E429C009BDF65 /* Details+CoreDataProperties.swift in Sources */,
 				F408DB451FDDF93200C93434 /* PrayerDetailsHeaderTableViewCell.swift in Sources */,
-				F4541236205E1BC700A305F5 /* Details+CoreDataProperties.swift in Sources */,
-				F4541237205E1BC700A305F5 /* Details+CoreDataClass.swift in Sources */,
 				F4D3D4A51FCBD1DD0035F860 /* CoreDataViewController.swift in Sources */,
 				F4A8FDC21FDE8A170058DF97 /* Category+CoreDataProperties.swift in Sources */,
 				F45D74C5202C324800A9C9CD /* KeyboardLayoutConstraint.swift in Sources */,
-				F451FD0F1FFF669200540B31 /* PrayerDetails.swift in Sources */,
 				F4A8FDC41FDE8A170058DF97 /* Prayer+CoreDataProperties.swift in Sources */,
 				F4C51EB91FE78D6B007F2195 /* JoshuaProjectsConvenienceFunctions.swift in Sources */,
 				F4C51EBF1FF06734007F2195 /* PrayerTimeViewController.swift in Sources */,

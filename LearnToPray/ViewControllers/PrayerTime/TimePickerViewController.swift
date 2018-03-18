@@ -12,14 +12,7 @@ class TimePickerViewController: UIViewController {
 
     @IBOutlet weak var timePicker: UIDatePicker!
     
-    var presentingVC: UIViewController?
-    var prayer: Prayer?
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        presentingVC = presentingViewController!
-    }
+    var completion: (() -> ())?
     
     @IBAction func dismissButtonPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
@@ -27,10 +20,11 @@ class TimePickerViewController: UIViewController {
 
     @IBAction func prayPressed(_ sender: UIButton) {
         PrayerTimer.timerCounter = Int(timePicker.countDownDuration)
+        
         dismiss(animated: true) {
-            let prayerTimeVC = PrayerTimeViewController(prayer: self.prayer)
-            
-            self.presentingVC!.present(prayerTimeVC, animated: true, completion: nil)
+            if let completion = self.completion {
+                completion()
+            }
         }
     }
 }

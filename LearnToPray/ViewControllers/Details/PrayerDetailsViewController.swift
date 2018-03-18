@@ -26,11 +26,18 @@ class PrayerDetailsViewController: CoreDataViewController, DetailsListDelegate {
         launchPrayerTime()
     }
     
+    func completePrayerTimeLaunch() {
+        let prayerTimeVC = PrayerTimeViewController(nibName: "PrayerTimeViewController", bundle: nil)
+        prayerTimeVC.delegate = self
+        present(prayerTimeVC, animated: true, completion: nil)
+    }
+    
     //Set Timer Length
     private func launchPrayerTime() {
+        
         let timePickerVC = TimePickerViewController(nibName: "TimePickerViewController", bundle: nil)
         timePickerVC.modalPresentationStyle = .overCurrentContext
-        timePickerVC.prayer = prayer
+        timePickerVC.completion = completePrayerTimeLaunch
         present(timePickerVC, animated: true, completion: nil)
     }
 }
