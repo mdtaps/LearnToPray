@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:LearnToPray/CoreData/ManagedObjects/Details+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:LearnToPray/CoreData/ManagedObjects/Details+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:LearnToPray.xcodeproj">
    </FileRef>
    <FileRef

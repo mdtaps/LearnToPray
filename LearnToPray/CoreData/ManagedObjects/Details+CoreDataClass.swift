@@ -1,9 +1,8 @@
 //
 //  Details+CoreDataClass.swift
-//  LearnToPray
+//  
 //
-//  Created by Mark Tapia on 12/11/17.
-//  Copyright © 2017 Mark Tapia. All rights reserved.
+//  Created by Mark Tapia on 3/17/18.
 //
 //
 

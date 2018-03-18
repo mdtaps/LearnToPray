@@ -32,6 +32,13 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STO-bG-z0z">
+                    <rect key="frame" x="0.0" y="153" width="375" height="453"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CwW-HY-fgC">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <subviews>
@@ -53,9 +60,9 @@
                             <rect key="frame" x="0.0" y="133.5" width="375" height="453"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1DI-Ud-ggo" customClass="PaddedLabel" customModule="LearnToPray" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="226.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="264"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                     <userDefinedRuntimeAttributes>
@@ -68,9 +75,9 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJw-7v-gac" customClass="PaddedLabel" customModule="LearnToPray" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="226.5" width="375" height="226.5"/>
+                                    <rect key="frame" x="0.0" y="264" width="375" height="189"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                     <userDefinedRuntimeAttributes>
@@ -182,13 +189,17 @@
                 <constraint firstItem="CwW-HY-fgC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="LNr-1i-4ZW"/>
                 <constraint firstItem="VV1-5s-d0Z" firstAttribute="centerY" secondItem="syX-vu-Ntu" secondAttribute="centerY" id="NQG-sk-QBq"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ZVB-Cj-AJK" secondAttribute="trailing" id="OKH-ig-z2b"/>
+                <constraint firstItem="STO-bG-z0z" firstAttribute="top" secondItem="cYN-VS-mCA" secondAttribute="bottom" id="RuM-eN-Tc5"/>
                 <constraint firstItem="syX-vu-Ntu" firstAttribute="bottom" secondItem="3J6-og-uK8" secondAttribute="top" id="S2k-N1-jRn"/>
                 <constraint firstItem="J0n-Bw-3Py" firstAttribute="centerY" secondItem="ZVB-Cj-AJK" secondAttribute="centerY" id="SVS-bV-tkY"/>
+                <constraint firstItem="STO-bG-z0z" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="TOs-fG-Lx4"/>
                 <constraint firstItem="syX-vu-Ntu" firstAttribute="top" secondItem="cYN-VS-mCA" secondAttribute="bottom" id="W9r-xj-xVv"/>
                 <constraint firstItem="syX-vu-Ntu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="WL6-q0-MVp"/>
                 <constraint firstItem="cYN-VS-mCA" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.2" id="d2a-Jf-RdV"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="J0n-Bw-3Py" secondAttribute="trailing" constant="8" id="fcP-b4-KTC"/>
+                <constraint firstItem="STO-bG-z0z" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="iu4-68-Sf2"/>
                 <constraint firstItem="CwW-HY-fgC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="k0N-Gf-3gb"/>
+                <constraint firstItem="STO-bG-z0z" firstAttribute="bottom" secondItem="3J6-og-uK8" secondAttribute="top" id="kPk-Ph-YbE"/>
                 <constraint firstItem="VV1-5s-d0Z" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="lIi-Hl-Elm"/>
                 <constraint firstItem="CwW-HY-fgC" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="n8u-Vp-RcE"/>
                 <constraint firstItem="ZVB-Cj-AJK" firstAttribute="top" secondItem="cYN-VS-mCA" secondAttribute="bottom" id="sS5-ei-LqN"/>

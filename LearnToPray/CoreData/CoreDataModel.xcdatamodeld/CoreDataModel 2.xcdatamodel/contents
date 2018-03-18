@@ -5,6 +5,7 @@
         <relationship name="prayer" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Prayer" inverseName="category" inverseEntity="Prayer" syncable="YES"/>
     </entity>
     <entity name="Details" representedClassName="Details" syncable="YES">
+        <attribute name="dateAdded" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="prayer" maxCount="1" deletionRule="Nullify" destinationEntity="Prayer" inverseName="details" inverseEntity="Prayer" syncable="YES"/>
@@ -17,7 +18,7 @@
     </entity>
     <elements>
         <element name="Category" positionX="-63" positionY="-18" width="128" height="75"/>
-        <element name="Details" positionX="-54" positionY="9" width="128" height="30"/>
+        <element name="Details" positionX="-54" positionY="9" width="128" height="105"/>
         <element name="Prayer" positionX="-63" positionY="-9" width="128" height="105"/>
     </elements>
 </model>

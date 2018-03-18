@@ -11,6 +11,18 @@ import UIKit
 
 extension UILabel {
     
+    func fadeInFadeOutWith(text: String) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.alpha = 0.0
+        }) { (true) in
+            UIView.animate(withDuration: 0.5, animations: {
+                self.text = text
+                self.alpha = 1.0
+                
+            })
+        }
+    }
+    
     func createLabelOnLeft() -> UILabel {
         let frame = self.frame.offsetBy(dx: -(self.frame.width),
                                         dy: 0)

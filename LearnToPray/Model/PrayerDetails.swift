@@ -10,9 +10,17 @@ import Foundation
 
 struct PrayerDetails {
     var prayer: Prayer?
-    var detailsArray = [String]()
+    var detailsTitleArray = [String]()
     var detailsTextArray = [String]()
     var arrayPosition = 0
+    
+    var title: String {
+        return self.detailsTitleArray[self.arrayPosition]
+    }
+    
+    var text: String {
+        return self.detailsTextArray[self.arrayPosition]
+    }
     
     init() { }
     
@@ -28,7 +36,7 @@ struct PrayerDetails {
         }
         
         for detail in details {
-            detailsArray.append(detail.title!)
+            detailsTitleArray.append(detail.title!)
             //TODO: Fix detail.text
             detailsTextArray.append(detail.text!)
         }

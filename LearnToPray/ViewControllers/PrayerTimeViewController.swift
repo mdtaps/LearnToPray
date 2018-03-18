@@ -25,8 +25,10 @@ class PrayerTimeViewController: UIViewController {
     init(prayer: Prayer?) {
         if let prayer = prayer {
             self.prayerDetails = PrayerDetails(prayer: prayer)
+            
         } else {
             self.prayerDetails = PrayerDetails()
+            
         }
         
         super.init(nibName: nil, bundle: nil)
@@ -45,32 +47,32 @@ class PrayerTimeViewController: UIViewController {
         
         if let _ = prayerDetails.prayer {
             setUpLabels()
+            
         }
     }
     
     @IBAction func pauseButtonPressed() {
-        
         PrayerTimer.toggleTimer()
         pauseTimerButton.setTitle(PrayerTimer.timerState.rawValue, for: .normal)
+        
     }
     
     @IBAction func finishButtonPressed() {
         PrayerTimer.stop()
         dismiss(animated: true, completion: nil)
+        
     }
     
     @IBAction func rightButtonPressed() {
-        guard prayerDetails.arrayPosition < prayerDetails.detailsArray.count - 1 else {
+        guard prayerDetails.arrayPosition < prayerDetails.detailsTitleArray.count - 1 else {
             return
         }
         
         prayerDetails.arrayPosition += 1
         
-        let newPrayerDetailLabel = prayerDetailLabel.createLabelOnRight()
-        prayerTimeStackView.addSubview(newPrayerDetailLabel)
-        newPrayerDetailLabel.text = prayerDetails.detailsArray[prayerDetails.arrayPosition]
-        
-        shiftLabelsLeft(label: newPrayerDetailLabel)
+        prayerDetailTitleLabel.fadeInFadeOutWith(text: prayerDetails.title)
+        prayerDetailTextLabel.fadeInFadeOutWith(text: prayerDetails.text)
+
     }
     
     @IBAction func leftButtonPressed() {
@@ -79,56 +81,14 @@ class PrayerTimeViewController: UIViewController {
         }
         
         prayerDetails.arrayPosition -= 1
-
-        let newPrayerDetailLabel = prayerDetailLabel.createLabelOnLeft()
-        prayerTimeStackView.addSubview(newPrayerDetailLabel)
-        newPrayerDetailLabel.text = prayerDetails.detailsArray[prayerDetails.arrayPosition]
         
-        shiftLabelsRight(label: newPrayerDetailLabel)
+        prayerDetailTitleLabel.fadeInFadeOutWith(text: prayerDetails.title)
+        prayerDetailTextLabel.fadeInFadeOutWith(text: prayerDetails.text)
     }
     
     @IBAction func finishButton(_ sender: UIButton) {
-        
         dismiss(animated: true, completion: nil)
-    }
-}
-
-extension PrayerTimeViewController {
-    func shiftLabelsLeft(label: UILabel) {
-        UIView.animate(withDuration: 0.7, delay: 0.0, options: .curveEaseOut, animations: {
-            let newLabelOriginEndPosition = CGPoint(x: 0.0, y: label.frame.minY)
-            let currentLabelOriginEndPosition = CGPoint(x: self.prayerDetailLabel.frame.minX - (self.prayerDetailLabel.frame.width),
-                                                        y: self.prayerDetailLabel.frame.minY)
-            
-            self.view.layoutIfNeeded()
-            self.prayerDetailLabel.frame.origin = currentLabelOriginEndPosition
-            label.frame.origin = newLabelOriginEndPosition
-            
-        }, completion: { finished in
-            if finished {
-                self.prayerDetailLabel.removeFromSuperview()
-                self.prayerDetailLabel = label
-            }
-        })
-    }
-    
-    func shiftLabelsRight(label: UILabel) {
-        UIView.animate(withDuration: 0.7, delay: 0.0, options: .curveEaseOut, animations: {
-            let newLabelOriginEndPosition = CGPoint(x: 0.0,
-                                                    y: label.frame.minY)
-            let currentLabelOriginEndPosition = CGPoint(x: self.prayerDetailLabel.frame.width,
-                                                        y: self.prayerDetailLabel.frame.minY)
-            
-            self.view.layoutIfNeeded()
-            self.prayerDetailLabel.frame.origin = currentLabelOriginEndPosition
-            label.frame.origin = newLabelOriginEndPosition
-            
-        }, completion: { finished in
-            if finished {
-                self.prayerDetailLabel.removeFromSuperview()
-                self.prayerDetailLabel = label
-            }
-        })
+        
     }
 }
 
@@ -136,18 +96,21 @@ extension PrayerTimeViewController {
     
     fileprivate func setUpLabels() {
         prayerTitleLabel.text = prayerDetails.prayer?.name
-        prayerDetailTitleLabel.text = prayerDetails.detailsArray.first!
-        prayerDetailTextLabel.text = prayerDetails.detailsTextArray.first!
-            }
+        prayerDetailTitleLabel.text = prayerDetails.title
+        prayerDetailTextLabel.text = prayerDetails.text
+        
+    }
     
     private func setupTimerLabel() {
         prayerTimerLabel.text = timeString(time: TimeInterval(PrayerTimer.timerCounter))
         pauseTimerButton.setTitle(PrayerTimer.timerState.rawValue, for: .normal)
+        
     }
 }
 
 extension PrayerTimeViewController: TimerDelegate {
     func timerCounterDidUpdate() {
         prayerTimerLabel.text = timeString(time: TimeInterval(PrayerTimer.timerCounter))
+        
     }
 }

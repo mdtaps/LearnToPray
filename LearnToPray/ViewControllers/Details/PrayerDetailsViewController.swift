@@ -51,7 +51,7 @@ extension PrayerDetailsViewController {
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Details.fetchRequest()
         
         var descriptors = [NSSortDescriptor]()
-        descriptors.append(NSSortDescriptor(key: "title", ascending: true))
+        descriptors.append(NSSortDescriptor(key: "dateAdded", ascending: true))
         
         let predicate = NSPredicate(format: "prayer = %@", argumentArray: [prayer as Any])
         

@@ -22,6 +22,8 @@
 		F451FD0D1FFF561700540B31 /* PrayerTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F451FD0C1FFF561700540B31 /* PrayerTimeViewController.xib */; };
 		F451FD0F1FFF669200540B31 /* PrayerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451FD0E1FFF669200540B31 /* PrayerDetails.swift */; };
 		F4541222205661A500A305F5 /* UIStackView+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4541221205661A500A305F5 /* UIStackView+Styling.swift */; };
+		F4541236205E1BC700A305F5 /* Details+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4541234205E1BC700A305F5 /* Details+CoreDataProperties.swift */; };
+		F4541237205E1BC700A305F5 /* Details+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4541235205E1BC700A305F5 /* Details+CoreDataClass.swift */; };
 		F45D74BA20244B6E00A9C9CD /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D74B820244B6E00A9C9CD /* DonationViewController.swift */; };
 		F45D74BB20244B6E00A9C9CD /* DonationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45D74B920244B6E00A9C9CD /* DonationViewController.xib */; };
 		F45D74BE202AC78400A9C9CD /* ApplePaySetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D74BD202AC78400A9C9CD /* ApplePaySetUp.swift */; };
@@ -34,8 +36,6 @@
 		F46A3ADB203BE46800616BAF /* TimePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46A3AD9203BE46800616BAF /* TimePickerViewController.xib */; };
 		F485D11A20146BB200304DBE /* PrayerTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485D11920146BB200304DBE /* PrayerTimer.swift */; };
 		F48FB6B91FD67C3E009318F9 /* DetailsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48FB6B81FD67C3E009318F9 /* DetailsContainerViewController.swift */; };
-		F4A8FDBF1FDE8A170058DF97 /* Details+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8FDB91FDE8A170058DF97 /* Details+CoreDataClass.swift */; };
-		F4A8FDC01FDE8A170058DF97 /* Details+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8FDBA1FDE8A170058DF97 /* Details+CoreDataProperties.swift */; };
 		F4A8FDC11FDE8A170058DF97 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8FDBB1FDE8A170058DF97 /* Category+CoreDataClass.swift */; };
 		F4A8FDC21FDE8A170058DF97 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8FDBC1FDE8A170058DF97 /* Category+CoreDataProperties.swift */; };
 		F4A8FDC31FDE8A170058DF97 /* Prayer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8FDBD1FDE8A170058DF97 /* Prayer+CoreDataClass.swift */; };
@@ -103,6 +103,9 @@
 		F451FD0C1FFF561700540B31 /* PrayerTimeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrayerTimeViewController.xib; sourceTree = "<group>"; };
 		F451FD0E1FFF669200540B31 /* PrayerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerDetails.swift; sourceTree = "<group>"; };
 		F4541221205661A500A305F5 /* UIStackView+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Styling.swift"; sourceTree = "<group>"; };
+		F4541223205E153F00A305F5 /* CoreDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CoreDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
+		F4541234205E1BC700A305F5 /* Details+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Details+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F4541235205E1BC700A305F5 /* Details+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Details+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F45D74B820244B6E00A9C9CD /* DonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
 		F45D74B920244B6E00A9C9CD /* DonationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationViewController.xib; sourceTree = "<group>"; };
 		F45D74BC2024548B00A9C9CD /* LearnToPray.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LearnToPray.entitlements; sourceTree = "<group>"; };
@@ -116,8 +119,6 @@
 		F46A3AD9203BE46800616BAF /* TimePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimePickerViewController.xib; sourceTree = "<group>"; };
 		F485D11920146BB200304DBE /* PrayerTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimer.swift; sourceTree = "<group>"; };
 		F48FB6B81FD67C3E009318F9 /* DetailsContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsContainerViewController.swift; sourceTree = "<group>"; };
-		F4A8FDB91FDE8A170058DF97 /* Details+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Details+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F4A8FDBA1FDE8A170058DF97 /* Details+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Details+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F4A8FDBB1FDE8A170058DF97 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F4A8FDBC1FDE8A170058DF97 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F4A8FDBD1FDE8A170058DF97 /* Prayer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Prayer+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -237,12 +238,12 @@
 		F408DB4A1FDDFFFE00C93434 /* ManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
-				F4A8FDB91FDE8A170058DF97 /* Details+CoreDataClass.swift */,
-				F4A8FDBA1FDE8A170058DF97 /* Details+CoreDataProperties.swift */,
 				F4A8FDBB1FDE8A170058DF97 /* Category+CoreDataClass.swift */,
 				F4A8FDBC1FDE8A170058DF97 /* Category+CoreDataProperties.swift */,
 				F4A8FDBD1FDE8A170058DF97 /* Prayer+CoreDataClass.swift */,
 				F4A8FDBE1FDE8A170058DF97 /* Prayer+CoreDataProperties.swift */,
+				F4541235205E1BC700A305F5 /* Details+CoreDataClass.swift */,
+				F4541234205E1BC700A305F5 /* Details+CoreDataProperties.swift */,
 			);
 			path = ManagedObjects;
 			sourceTree = "<group>";
@@ -638,7 +639,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4A8FDBF1FDE8A170058DF97 /* Details+CoreDataClass.swift in Sources */,
 				F4C51EB71FE63281007F2195 /* DateFunctions.swift in Sources */,
 				F4D3D4AB1FD1201D0035F860 /* PrayerData.swift in Sources */,
 				F4F27A3120451BB80043CF3C /* UIView+Designable.swift in Sources */,
@@ -655,6 +655,8 @@
 				F408DB431FDDF70300C93434 /* GuidedPrayersViewController.swift in Sources */,
 				F4E716A72032CA930066A20A /* StripeClient.swift in Sources */,
 				F408DB451FDDF93200C93434 /* PrayerDetailsHeaderTableViewCell.swift in Sources */,
+				F4541236205E1BC700A305F5 /* Details+CoreDataProperties.swift in Sources */,
+				F4541237205E1BC700A305F5 /* Details+CoreDataClass.swift in Sources */,
 				F4D3D4A51FCBD1DD0035F860 /* CoreDataViewController.swift in Sources */,
 				F4A8FDC21FDE8A170058DF97 /* Category+CoreDataProperties.swift in Sources */,
 				F45D74C5202C324800A9C9CD /* KeyboardLayoutConstraint.swift in Sources */,
@@ -662,7 +664,6 @@
 				F4A8FDC41FDE8A170058DF97 /* Prayer+CoreDataProperties.swift in Sources */,
 				F4C51EB91FE78D6B007F2195 /* JoshuaProjectsConvenienceFunctions.swift in Sources */,
 				F4C51EBF1FF06734007F2195 /* PrayerTimeViewController.swift in Sources */,
-				F4A8FDC01FDE8A170058DF97 /* Details+CoreDataProperties.swift in Sources */,
 				F4C51EB31FE50957007F2195 /* Constants.swift in Sources */,
 				F408DB4D1FDE68DA00C93434 /* PrayerDetailsViewController.swift in Sources */,
 				F4A8FDC11FDE8A170058DF97 /* Category+CoreDataClass.swift in Sources */,
@@ -991,9 +992,10 @@
 		F43ED61E1FB57234008E6078 /* CoreDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				F4541223205E153F00A305F5 /* CoreDataModel 2.xcdatamodel */,
 				F43ED61F1FB57234008E6078 /* CoreDataModel.xcdatamodel */,
 			);
-			currentVersion = F43ED61F1FB57234008E6078 /* CoreDataModel.xcdatamodel */;
+			currentVersion = F4541223205E153F00A305F5 /* CoreDataModel 2.xcdatamodel */;
 			path = CoreDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
