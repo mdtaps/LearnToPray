@@ -31,7 +31,9 @@ class PrayerDetailsViewController: CoreDataViewController, DetailsListDelegate {
     func completePrayerTimeLaunch() {
         let prayerTimeVC = PrayerTimeViewController(nibName: "PrayerTimeViewController", bundle: nil)
         prayerTimeVC.delegate = self
-        present(prayerTimeVC, animated: true, completion: nil)
+        present(prayerTimeVC, animated: true) {
+            self.navigationController?.popToRootViewController(animated: false)
+        }
         
     }
     

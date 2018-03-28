@@ -11,6 +11,7 @@
 		F407BAA6205E429C009BDF65 /* Details+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F407BAA4205E429C009BDF65 /* Details+CoreDataClass.swift */; };
 		F407BAA7205E429C009BDF65 /* Details+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F407BAA5205E429C009BDF65 /* Details+CoreDataProperties.swift */; };
 		F407BAAB2060DDBB009BDF65 /* UIButton+Enablement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F407BAAA2060DDBB009BDF65 /* UIButton+Enablement.swift */; };
+		F407BAAD206B7FC8009BDF65 /* PrayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F407BAAC206B7FC8009BDF65 /* PrayerTableViewCell.swift */; };
 		F408DB431FDDF70300C93434 /* GuidedPrayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F408DB421FDDF70300C93434 /* GuidedPrayersViewController.swift */; };
 		F408DB451FDDF93200C93434 /* PrayerDetailsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F408DB441FDDF93200C93434 /* PrayerDetailsHeaderTableViewCell.swift */; };
 		F408DB4D1FDE68DA00C93434 /* PrayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F408DB4C1FDE68DA00C93434 /* PrayerDetailsViewController.swift */; };
@@ -86,6 +87,7 @@
 		F407BAA4205E429C009BDF65 /* Details+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Details+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F407BAA5205E429C009BDF65 /* Details+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Details+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F407BAAA2060DDBB009BDF65 /* UIButton+Enablement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Enablement.swift"; sourceTree = "<group>"; };
+		F407BAAC206B7FC8009BDF65 /* PrayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTableViewCell.swift; sourceTree = "<group>"; };
 		F408DB421FDDF70300C93434 /* GuidedPrayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedPrayersViewController.swift; sourceTree = "<group>"; };
 		F408DB441FDDF93200C93434 /* PrayerDetailsHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerDetailsHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		F408DB4C1FDE68DA00C93434 /* PrayerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerDetailsViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				F4C51EAC1FE39995007F2195 /* PrayerDetailsTableViewCell.swift */,
 				F4F27A34204690890043CF3C /* SectionTableViewCell.swift */,
 				F4F27A3A2047C3600043CF3C /* PaddedLabel.swift */,
+				F407BAAC206B7FC8009BDF65 /* PrayerTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -671,6 +674,7 @@
 				F45D74C5202C324800A9C9CD /* KeyboardLayoutConstraint.swift in Sources */,
 				F4A8FDC41FDE8A170058DF97 /* Prayer+CoreDataProperties.swift in Sources */,
 				F4C51EB91FE78D6B007F2195 /* JoshuaProjectsConvenienceFunctions.swift in Sources */,
+				F407BAAD206B7FC8009BDF65 /* PrayerTableViewCell.swift in Sources */,
 				F4C51EBF1FF06734007F2195 /* PrayerTimeViewController.swift in Sources */,
 				F4C51EB31FE50957007F2195 /* Constants.swift in Sources */,
 				F408DB4D1FDE68DA00C93434 /* PrayerDetailsViewController.swift in Sources */,

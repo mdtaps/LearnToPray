@@ -10,6 +10,7 @@ import UIKit
 
 protocol PrayersListDelegate {
     func didSelectPrayer(prayer: Prayer)
+    var activityIndicator: UIActivityIndicatorView? { get set }
 }
 
 class PrayersListContainerViewController: CoreDataViewController {    
@@ -70,13 +71,13 @@ extension PrayersListContainerViewController: UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! PrayerTableViewCell
        
         guard let prayer = fetchedResultsController?.object(at: indexPath) as? Prayer else {
             fatalError("Could not get an object for indexPath \(indexPath)")
             
         }
-        cell.textLabel?.text = prayer.name
+        cell.prayerTitleLabel.text = prayer.name
         
         return cell
 
@@ -87,7 +88,11 @@ extension PrayersListContainerViewController: UITableViewDelegate, UITableViewDa
             fatalError("Could not get an object for indexPath \(indexPath)")
 
         }
+        
+        let cell = tableView.cellForRow(at: indexPath) as! PrayerTableViewCell
+        delegate?.activityIndicator = cell.loadingIndicator
         delegate?.didSelectPrayer(prayer: prayer)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }

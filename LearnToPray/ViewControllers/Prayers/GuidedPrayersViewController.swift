@@ -12,6 +12,8 @@ import MapKit
 
 class GuidedPrayersViewController: CoreDataViewController, PrayersListDelegate {
     
+    var activityIndicator: UIActivityIndicatorView?
+    
     fileprivate var prayersListViewController: PrayersListContainerViewController?
 
     override func viewDidLoad() {
@@ -26,16 +28,21 @@ class GuidedPrayersViewController: CoreDataViewController, PrayersListDelegate {
     
     func didSelectPrayer(prayer: Prayer) {
         if prayer.name == "People Groups" {
+           activityIndicator?.startAnimating()
+            activityIndicator?.isHidden = false
             JoshuaProjectClient.shared.retreivePeopleGroupOfTheDay { (joshuaProjectResponse) in
                 switch joshuaProjectResponse {
                     
                 case .Failure(let failureString):
                     //TODO: Show error
+                    self.activityIndicator?.stopAnimating()
                     fatalError(failureString)
         
                 case .Success(let response):
                     DispatchQueue.main.async {
+                       self.activityIndicator?.stopAnimating()
                         self.launchPeopleGroupViewController(response)
+                        
 
                     }
                 }

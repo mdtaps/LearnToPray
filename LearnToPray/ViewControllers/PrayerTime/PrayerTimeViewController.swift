@@ -85,11 +85,6 @@ class PrayerTimeViewController: CoreDataViewController {
         prayerDetailTextLabel.fadeInFadeOutWith(text: detail.text!)
         
     }
-    
-    @IBAction func finishButton(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-        
-    }
 }
 
 extension PrayerTimeViewController {
