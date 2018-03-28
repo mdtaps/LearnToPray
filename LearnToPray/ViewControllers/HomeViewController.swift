@@ -26,8 +26,15 @@ class HomeViewController: UIViewController {
 extension HomeViewController {
     
     private func launchPrayerTime() {
+        func completion() {
+            let prayerTimeVC = PrayerTimeViewController(nibName: "PrayerTimeViewController", bundle: nil)
+            present(prayerTimeVC, animated: true, completion: nil)
+            
+        }
+        
         let timePickerVC = TimePickerViewController(nibName: "TimePickerViewController", bundle: nil)
         timePickerVC.modalPresentationStyle = .overCurrentContext
+        timePickerVC.completion = completion
         present(timePickerVC, animated: true, completion: nil)
     }
     

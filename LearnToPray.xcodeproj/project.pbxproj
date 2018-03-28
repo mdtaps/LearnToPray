@@ -10,6 +10,7 @@
 		D416445123336A853B2B5113 /* libPods-LearnToPray.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 837E30E05137A9AB63AF3BE2 /* libPods-LearnToPray.a */; };
 		F407BAA6205E429C009BDF65 /* Details+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F407BAA4205E429C009BDF65 /* Details+CoreDataClass.swift */; };
 		F407BAA7205E429C009BDF65 /* Details+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F407BAA5205E429C009BDF65 /* Details+CoreDataProperties.swift */; };
+		F407BAAB2060DDBB009BDF65 /* UIButton+Enablement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F407BAAA2060DDBB009BDF65 /* UIButton+Enablement.swift */; };
 		F408DB431FDDF70300C93434 /* GuidedPrayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F408DB421FDDF70300C93434 /* GuidedPrayersViewController.swift */; };
 		F408DB451FDDF93200C93434 /* PrayerDetailsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F408DB441FDDF93200C93434 /* PrayerDetailsHeaderTableViewCell.swift */; };
 		F408DB4D1FDE68DA00C93434 /* PrayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F408DB4C1FDE68DA00C93434 /* PrayerDetailsViewController.swift */; };
@@ -84,6 +85,7 @@
 		D2269D9722178C2077145CEF /* Pods-LearnToPray.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnToPray.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnToPray/Pods-LearnToPray.debug.xcconfig"; sourceTree = "<group>"; };
 		F407BAA4205E429C009BDF65 /* Details+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Details+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F407BAA5205E429C009BDF65 /* Details+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Details+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F407BAAA2060DDBB009BDF65 /* UIButton+Enablement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Enablement.swift"; sourceTree = "<group>"; };
 		F408DB421FDDF70300C93434 /* GuidedPrayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedPrayersViewController.swift; sourceTree = "<group>"; };
 		F408DB441FDDF93200C93434 /* PrayerDetailsHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerDetailsHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		F408DB4C1FDE68DA00C93434 /* PrayerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerDetailsViewController.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				F4D3D4AA1FD1201D0035F860 /* PrayerData.swift */,
 				F4C51EB61FE63281007F2195 /* DateFunctions.swift */,
 				F485D11920146BB200304DBE /* PrayerTimer.swift */,
+				F407BAAA2060DDBB009BDF65 /* UIButton+Enablement.swift */,
 				F45D74C1202AD53500A9C9CD /* Extensions */,
 				F4B864822022DC7400735337 /* Networking */,
 			);
@@ -659,6 +662,7 @@
 				F4C51EBB1FEB491D007F2195 /* PeopleGroupsViewController.swift in Sources */,
 				F408DB431FDDF70300C93434 /* GuidedPrayersViewController.swift in Sources */,
 				F4E716A72032CA930066A20A /* StripeClient.swift in Sources */,
+				F407BAAB2060DDBB009BDF65 /* UIButton+Enablement.swift in Sources */,
 				F407BAA6205E429C009BDF65 /* Details+CoreDataClass.swift in Sources */,
 				F407BAA7205E429C009BDF65 /* Details+CoreDataProperties.swift in Sources */,
 				F408DB451FDDF93200C93434 /* PrayerDetailsHeaderTableViewCell.swift in Sources */,

@@ -19,8 +19,10 @@
             <connections>
                 <outlet property="detailsStackView" destination="0Kz-kd-hlu" id="KCy-ev-bBR"/>
                 <outlet property="pauseTimerButton" destination="Vv6-Mv-L39" id="2wx-vT-StE"/>
+                <outlet property="prayerBackButton" destination="VV1-5s-d0Z" id="hBt-Cd-fbN"/>
                 <outlet property="prayerDetailTextLabel" destination="FJw-7v-gac" id="KvV-N7-wMA"/>
                 <outlet property="prayerDetailTitleLabel" destination="1DI-Ud-ggo" id="2p4-8I-AMs"/>
+                <outlet property="prayerForwardButton" destination="J0n-Bw-3Py" id="ySR-gp-qha"/>
                 <outlet property="prayerTimeStackView" destination="CwW-HY-fgC" id="t6u-FH-OiU"/>
                 <outlet property="prayerTimerLabel" destination="KEQ-hX-Kvw" id="fKx-vb-oVB"/>
                 <outlet property="prayerTitleLabel" destination="cYN-VS-mCA" id="ZE6-ng-5Er"/>
@@ -59,8 +61,8 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="0Kz-kd-hlu">
                             <rect key="frame" x="0.0" y="133.5" width="375" height="453"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1DI-Ud-ggo" customClass="PaddedLabel" customModule="LearnToPray" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="264"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Ask and it will be given to you; seek and you will find; knock and the door will be opened to you.&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1DI-Ud-ggo" customClass="PaddedLabel" customModule="LearnToPray" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="236"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                     <nil key="textColor"/>
@@ -74,8 +76,8 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJw-7v-gac" customClass="PaddedLabel" customModule="LearnToPray" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="264" width="375" height="189"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJw-7v-gac" customClass="PaddedLabel" customModule="LearnToPray" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="236" width="375" height="217"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <nil key="textColor"/>
@@ -150,7 +152,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VV1-5s-d0Z" userLabel="Left Button">
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VV1-5s-d0Z" userLabel="Left Button" customClass="NextButton" customModule="LearnToPray" customModuleProvider="target">
                     <rect key="frame" x="8" y="356" width="48" height="48"/>
                     <accessibility key="accessibilityConfiguration">
                         <accessibilityTraits key="traits" button="YES" image="YES"/>
@@ -164,7 +166,7 @@
                         <action selector="leftButtonPressed" destination="-1" eventType="touchUpInside" id="mqt-Na-8Lo"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0n-Bw-3Py" userLabel="Right Button">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0n-Bw-3Py" userLabel="Right Button" customClass="NextButton" customModule="LearnToPray" customModuleProvider="target">
                     <rect key="frame" x="319" y="356" width="48" height="48"/>
                     <accessibility key="accessibilityConfiguration">
                         <accessibilityTraits key="traits" button="YES" image="YES"/>

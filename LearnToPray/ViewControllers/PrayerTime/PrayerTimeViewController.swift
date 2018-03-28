@@ -17,9 +17,15 @@ class PrayerTimeViewController: CoreDataViewController {
     @IBOutlet weak var detailsStackView: UIStackView!
     @IBOutlet weak var prayerDetailTitleLabel: UILabel!
     @IBOutlet weak var prayerDetailTextLabel: UILabel!
+    @IBOutlet weak var prayerBackButton: NextButton!
+    @IBOutlet weak var prayerForwardButton: NextButton!
     
     var prayerDetailLabel = UILabel()
-    var row = 0
+    var row = 0 {
+        didSet {
+            updateButtons()
+        }
+    }
     
     //Delegate for FRC and chosen Prayer object
     var delegate: DetailsListDelegate?
@@ -31,6 +37,7 @@ class PrayerTimeViewController: CoreDataViewController {
         
         setupTimerLabel()
         setUpLabels()
+        setUpButtons()
         
     }
     
@@ -48,8 +55,8 @@ class PrayerTimeViewController: CoreDataViewController {
     
     @IBAction func rightButtonPressed() {
         
-        guard let count = delegate?.fetchedResultsController?.fetchedObjects?.count,
-            row < count - 1 else {
+        guard let objectsCount = delegate?.fetchedResultsController?.fetchedObjects?.count,
+            row < objectsCount - 1 else {
             return
         }
         
@@ -61,7 +68,6 @@ class PrayerTimeViewController: CoreDataViewController {
         }
         prayerDetailTitleLabel.fadeInFadeOutWith(text: detail.title!)
         prayerDetailTextLabel.fadeInFadeOutWith(text: detail.text!)
-
     }
     
     @IBAction func leftButtonPressed() {
@@ -77,6 +83,7 @@ class PrayerTimeViewController: CoreDataViewController {
         }
         prayerDetailTitleLabel.fadeInFadeOutWith(text: detail.title!)
         prayerDetailTextLabel.fadeInFadeOutWith(text: detail.text!)
+        
     }
     
     @IBAction func finishButton(_ sender: UIButton) {
@@ -101,6 +108,24 @@ extension PrayerTimeViewController {
     private func setupTimerLabel() {
         prayerTimerLabel.text = timeString(time: TimeInterval(PrayerTimer.timerCounter))
         pauseTimerButton.setTitle(PrayerTimer.timerState.rawValue, for: .normal)
+        
+    }
+    
+    private func setUpButtons() {
+        if let objectsCount = delegate?.fetchedResultsController?.fetchedObjects?.count {
+            prayerForwardButton.disableValue = objectsCount - 1
+            
+        }
+        
+        if delegate == nil {
+            prayerBackButton.isHidden = true
+            prayerForwardButton.isHidden = true
+        }
+    }
+    
+    private func updateButtons() {
+        prayerBackButton.setStatusFor(currentValueOf: row)
+        prayerForwardButton.setStatusFor(currentValueOf: row)
         
     }
 }

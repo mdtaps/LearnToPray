@@ -20,25 +20,28 @@ class PrayerDetailsViewController: CoreDataViewController, DetailsListDelegate {
 
         setupChildViewControllers()
         setupFetchedResultsController()
+        
     }
     
     @IBAction func prayingButtonPressed(_ sender: UIButton) {
         launchPrayerTime()
+        
     }
     
     func completePrayerTimeLaunch() {
         let prayerTimeVC = PrayerTimeViewController(nibName: "PrayerTimeViewController", bundle: nil)
         prayerTimeVC.delegate = self
         present(prayerTimeVC, animated: true, completion: nil)
+        
     }
     
     //Set Timer Length
     private func launchPrayerTime() {
-        
         let timePickerVC = TimePickerViewController(nibName: "TimePickerViewController", bundle: nil)
         timePickerVC.modalPresentationStyle = .overCurrentContext
         timePickerVC.completion = completePrayerTimeLaunch
         present(timePickerVC, animated: true, completion: nil)
+        
     }
 }
 
@@ -46,8 +49,8 @@ extension PrayerDetailsViewController {
     fileprivate func setupChildViewControllers() {
         guard let detailsListViewController = childViewControllers.first as? DetailsContainerViewController else {
             fatalError("Check storyboard for missing DetailsContainerViewController")
+            
         }
-        
         self.detailsListViewController = detailsListViewController
         self.detailsListViewController?.delegate = self
         
