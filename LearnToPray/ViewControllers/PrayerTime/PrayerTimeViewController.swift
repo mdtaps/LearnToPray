@@ -19,13 +19,10 @@ class PrayerTimeViewController: CoreDataViewController {
     @IBOutlet weak var prayerDetailTextLabel: UILabel!
     @IBOutlet weak var prayerBackButton: NextButton!
     @IBOutlet weak var prayerForwardButton: NextButton!
+    @IBOutlet weak var progressBarView: UIProgressView!
     
     var prayerDetailLabel = UILabel()
-    var row = 0 {
-        didSet {
-            updateButtons()
-        }
-    }
+    var progress = Progress()
     
     //Delegate for FRC and chosen Prayer object
     var delegate: DetailsListDelegate?
@@ -55,36 +52,34 @@ class PrayerTimeViewController: CoreDataViewController {
     
     @IBAction func rightButtonPressed() {
         
-        guard let objectsCount = delegate?.fetchedResultsController?.fetchedObjects?.count,
-            row < objectsCount - 1 else {
+        progress.increment()
+        
+        guard let detail = delegate?.fetchedResultsController?.object(at: IndexPath(row: progress.count, section: 0)) as? Details else {
+            print("Failed to get detail from row \(progress.count) FRC in PrayerTimeVC")
             return
         }
         
-        row += 1
-        
-        guard let detail = delegate?.fetchedResultsController?.object(at: IndexPath(row: row, section: 0)) as? Details else {
-            print("Failed to get detail from row \(row) FRC in PrayerTimeVC")
-            return
-        }
-        prayerDetailTitleLabel.fadeInFadeOutWith(text: detail.title!)
-        prayerDetailTextLabel.fadeInFadeOutWith(text: detail.text!)
+        updateLabels(with: detail)
+        updateButtons()
+        progressBarView.setProgress(progress.fractionComplete, animated: true)
+
     }
     
     @IBAction func leftButtonPressed() {
-        guard row > 0 else {
+        
+        progress.decrement()
+        
+        guard let detail = delegate?.fetchedResultsController?.object(at: IndexPath(row: progress.count, section: 0)) as? Details else {
+            print("Failed to get detail from row \(progress.count) FRC in PrayerTimeVC")
             return
         }
         
-        row -= 1
-        
-        guard let detail = delegate?.fetchedResultsController?.object(at: IndexPath(row: row, section: 0)) as? Details else {
-            print("Failed to get detail from row \(row) FRC in PrayerTimeVC")
-            return
-        }
-        prayerDetailTitleLabel.fadeInFadeOutWith(text: detail.title!)
-        prayerDetailTextLabel.fadeInFadeOutWith(text: detail.text!)
-        
+        updateLabels(with: detail)
+        updateButtons()
+        progressBarView.setProgress(progress.fractionComplete, animated: true)
+
     }
+    
 }
 
 extension PrayerTimeViewController {
@@ -97,6 +92,10 @@ extension PrayerTimeViewController {
         prayerTitleLabel.text = detail.prayer?.name
         prayerDetailTitleLabel.text = detail.title
         prayerDetailTextLabel.text = detail.text
+        
+        if let count = delegate?.fetchedResultsController?.fetchedObjects?.count {
+            progress.max = count - 1
+        }
         
     }
     
@@ -115,12 +114,19 @@ extension PrayerTimeViewController {
         if delegate == nil {
             prayerBackButton.isHidden = true
             prayerForwardButton.isHidden = true
+            progressBarView.isHidden = true
         }
     }
     
     private func updateButtons() {
-        prayerBackButton.setStatusFor(currentValueOf: row)
-        prayerForwardButton.setStatusFor(currentValueOf: row)
+        prayerBackButton.setStatusFor(currentValueOf: progress.count)
+        prayerForwardButton.setStatusFor(currentValueOf: progress.count)
+        
+    }
+    
+    private func updateLabels(with detail: Details) {
+        prayerDetailTitleLabel.fadeInFadeOutWith(text: detail.title!)
+        prayerDetailTextLabel.fadeInFadeOutWith(text: detail.text!)
         
     }
 }

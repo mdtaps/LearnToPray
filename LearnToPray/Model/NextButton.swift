@@ -11,9 +11,9 @@ class NextButton: UIButton {
     
     func setStatusFor(currentValueOf rowValue: Int) {
         if disableValue == rowValue {
-            self.isEnabled = false
+            self.isHidden = true
         } else {
-            self.isEnabled = true
+            self.isHidden = false
         }
     }
 }

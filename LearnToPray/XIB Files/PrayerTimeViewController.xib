@@ -26,6 +26,7 @@
                 <outlet property="prayerTimeStackView" destination="CwW-HY-fgC" id="t6u-FH-OiU"/>
                 <outlet property="prayerTimerLabel" destination="KEQ-hX-Kvw" id="fKx-vb-oVB"/>
                 <outlet property="prayerTitleLabel" destination="cYN-VS-mCA" id="ZE6-ng-5Er"/>
+                <outlet property="progressBarView" destination="gln-P0-qaE" id="6dE-ZT-dee"/>
                 <outlet property="view" destination="iN0-l3-epB" id="t5f-Kp-x9g"/>
             </connections>
         </placeholder>
@@ -35,7 +36,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STO-bG-z0z">
-                    <rect key="frame" x="0.0" y="153" width="375" height="453"/>
+                    <rect key="frame" x="0.0" y="153.5" width="375" height="453"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
@@ -151,7 +152,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VV1-5s-d0Z" userLabel="Left Button" customClass="NextButton" customModule="LearnToPray" customModuleProvider="target">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VV1-5s-d0Z" userLabel="Left Button" customClass="NextButton" customModule="LearnToPray" customModuleProvider="target">
                     <rect key="frame" x="8" y="356" width="48" height="48"/>
                     <accessibility key="accessibilityConfiguration">
                         <accessibilityTraits key="traits" button="YES" image="YES"/>
@@ -189,9 +190,22 @@
                         <action selector="finishButtonPressed" destination="-1" eventType="touchUpInside" id="m7I-uP-BaN"/>
                     </connections>
                 </button>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gln-P0-qaE">
+                    <rect key="frame" x="75" y="169.5" width="225" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="S8D-Q3-Jua"/>
+                    </constraints>
+                    <color key="progressTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </progressView>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="gln-P0-qaE" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="1RF-pY-g9n"/>
                 <constraint firstItem="CwW-HY-fgC" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="1Wl-iF-2vy"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CwW-HY-fgC" secondAttribute="trailing" id="4xx-8z-exr"/>
                 <constraint firstItem="KEQ-hX-Kvw" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.34" id="CH0-G8-yBe"/>
@@ -203,6 +217,7 @@
                 <constraint firstItem="STO-bG-z0z" firstAttribute="top" secondItem="cYN-VS-mCA" secondAttribute="bottom" id="RuM-eN-Tc5"/>
                 <constraint firstItem="syX-vu-Ntu" firstAttribute="bottom" secondItem="3J6-og-uK8" secondAttribute="top" id="S2k-N1-jRn"/>
                 <constraint firstItem="J0n-Bw-3Py" firstAttribute="centerY" secondItem="ZVB-Cj-AJK" secondAttribute="centerY" id="SVS-bV-tkY"/>
+                <constraint firstItem="gln-P0-qaE" firstAttribute="top" secondItem="cYN-VS-mCA" secondAttribute="bottom" constant="16" id="TLa-qY-adq"/>
                 <constraint firstItem="STO-bG-z0z" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="TOs-fG-Lx4"/>
                 <constraint firstItem="syX-vu-Ntu" firstAttribute="top" secondItem="cYN-VS-mCA" secondAttribute="bottom" id="W9r-xj-xVv"/>
                 <constraint firstItem="syX-vu-Ntu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="WL6-q0-MVp"/>
@@ -213,6 +228,7 @@
                 <constraint firstItem="STO-bG-z0z" firstAttribute="bottom" secondItem="3J6-og-uK8" secondAttribute="top" id="kPk-Ph-YbE"/>
                 <constraint firstItem="VV1-5s-d0Z" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="lIi-Hl-Elm"/>
                 <constraint firstItem="CwW-HY-fgC" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="n8u-Vp-RcE"/>
+                <constraint firstItem="gln-P0-qaE" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.6" id="s00-g2-N8w"/>
                 <constraint firstItem="ZVB-Cj-AJK" firstAttribute="top" secondItem="cYN-VS-mCA" secondAttribute="bottom" id="sS5-ei-LqN"/>
                 <constraint firstItem="yYG-mp-CDb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-8" id="vwp-E4-BqV"/>
                 <constraint firstItem="yYG-mp-CDb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yYx-Ll-AuI"/>
