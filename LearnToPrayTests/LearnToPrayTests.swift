@@ -6,6 +6,8 @@
 //  Copyright © 2017 Mark Tapia. All rights reserved.
 //
 
+/*
+ 
 import XCTest
 @testable import LearnToPray
 
@@ -34,3 +36,5 @@ class LearnToPrayTests: XCTestCase {
     }
     
 }
+
+*/

@@ -52,7 +52,6 @@ public class KeyboardLayoutConstraint: NSLayoutConstraint {
             self.updateConstant()
             switch (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber, userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber) {
             case let (.some(duration), .some(curve)):
-                print(self.firstItem.debugDescription)
                 let options = UIViewAnimationOptions(rawValue: curve.uintValue)
                 
                 UIView.animate(

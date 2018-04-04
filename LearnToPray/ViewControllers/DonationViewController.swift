@@ -99,8 +99,8 @@ extension DonationViewController: UITextFieldDelegate {
 extension DonationViewController: PKPaymentAuthorizationViewControllerDelegate {
     func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, handler completion: @escaping (PKPaymentAuthorizationResult) -> Void) {
         
-        StripeNetworkingClient.shared.stripeRequest(payment: payment, amount: ApplePaySetUp.donationAmount) { (payment) in
-            let result = PKPaymentAuthorizationResult(status: payment, errors: nil)
+        StripeNetworkingClient.shared.stripeRequest(payment: payment, amount: ApplePaySetUp.donationAmount) { (paymentStatus) in
+            let result = PKPaymentAuthorizationResult(status: paymentStatus, errors: nil)
             completion(result)
         }
     }
