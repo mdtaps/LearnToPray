@@ -46,6 +46,7 @@ class PrayerTimeViewController: CoreDataViewController {
     
     @IBAction func finishButtonPressed() {
         PrayerTimer.stop()
+        Audio.StopChimes()
         dismiss(animated: true, completion: nil)
         
     }

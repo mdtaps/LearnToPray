@@ -16,8 +16,9 @@ protocol TimerDelegate {
 struct PrayerTimer {
     static var timerCounter: Int = 65 {
         didSet {
-            if timerCounter < 1 {
+            if timerCounter < 0 {
                 timer.invalidate()
+                Audio.PlayChimes()
             } else {
                 delegate?.timerCounterDidUpdate()
             }

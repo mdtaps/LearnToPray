@@ -62,6 +62,8 @@
 		F4F27A35204690890043CF3C /* SectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F27A34204690890043CF3C /* SectionTableViewCell.swift */; };
 		F4F27A392046AF0F0043CF3C /* PrayerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F27A382046AF0F0043CF3C /* PrayerNavigationController.swift */; };
 		F4F27A3B2047C3600043CF3C /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F27A3A2047C3600043CF3C /* PaddedLabel.swift */; };
+		F4F718EE2075D03D00099078 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F718ED2075D03D00099078 /* Audio.swift */; };
+		F4F718F02075D0E100099078 /* chimes.wav in Resources */ = {isa = PBXBuildFile; fileRef = F4F718EF2075D0E000099078 /* chimes.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +150,8 @@
 		F4F27A34204690890043CF3C /* SectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewCell.swift; sourceTree = "<group>"; };
 		F4F27A382046AF0F0043CF3C /* PrayerNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PrayerNavigationController.swift; path = LearnToPray/View/PrayerNavigationController.swift; sourceTree = SOURCE_ROOT; };
 		F4F27A3A2047C3600043CF3C /* PaddedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedLabel.swift; sourceTree = "<group>"; };
+		F4F718ED2075D03D00099078 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Audio.swift; path = LearnToPray/Model/Audio.swift; sourceTree = SOURCE_ROOT; };
+		F4F718EF2075D0E000099078 /* chimes.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chimes.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +239,7 @@
 				F4C51EB61FE63281007F2195 /* DateFunctions.swift */,
 				F485D11920146BB200304DBE /* PrayerTimer.swift */,
 				F407BAAA2060DDBB009BDF65 /* NextButton.swift */,
+				F4F718ED2075D03D00099078 /* Audio.swift */,
 				F45D74C1202AD53500A9C9CD /* Extensions */,
 				F4B864822022DC7400735337 /* Networking */,
 			);
@@ -303,6 +308,7 @@
 				F43ED5FC1FB5719F008E6078 /* Info.plist */,
 				F4C51EB41FE512D1007F2195 /* APIKey.plist */,
 				F4A8FDC71FE0F81A0058DF97 /* PrayerList.json */,
+				F4F718EF2075D0E000099078 /* chimes.wav */,
 				F4D3D4A31FCBD1590035F860 /* CoreData */,
 				F408DB461FDDF95900C93434 /* View */,
 				F4E716A52032CA190066A20A /* ApplePaySwag-Bridging-Header.h */,
@@ -515,6 +521,7 @@
 				F4A8FDC81FE0F81A0058DF97 /* PrayerList.json in Resources */,
 				F46A3AD32036C5FB00616BAF /* HomeViewController.xib in Resources */,
 				F43ED5F61FB5719F008E6078 /* Main.storyboard in Resources */,
+				F4F718F02075D0E100099078 /* chimes.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,6 +684,7 @@
 				F4A8FDC21FDE8A170058DF97 /* Category+CoreDataProperties.swift in Sources */,
 				F45D74C5202C324800A9C9CD /* KeyboardLayoutConstraint.swift in Sources */,
 				F4A8FDC41FDE8A170058DF97 /* Prayer+CoreDataProperties.swift in Sources */,
+				F4F718EE2075D03D00099078 /* Audio.swift in Sources */,
 				F4C51EB91FE78D6B007F2195 /* JoshuaProjectsConvenienceFunctions.swift in Sources */,
 				F407BAAD206B7FC8009BDF65 /* PrayerTableViewCell.swift in Sources */,
 				F4C51EBF1FF06734007F2195 /* PrayerTimeViewController.swift in Sources */,
