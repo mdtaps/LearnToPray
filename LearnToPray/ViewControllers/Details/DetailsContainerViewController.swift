@@ -9,14 +9,14 @@
 import UIKit
 import CoreData
 
-protocol DetailsListDelegate {
+protocol DetailsListDelegate: NSObjectProtocol {
     var prayer: Prayer? { get set }
     var fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>? { get set }
 }
 
 class DetailsContainerViewController: CoreDataViewController {
     
-    var delegate: DetailsListDelegate?
+    weak var delegate: DetailsListDelegate?
 
     @IBOutlet weak var prayerTableView: UITableView!
     

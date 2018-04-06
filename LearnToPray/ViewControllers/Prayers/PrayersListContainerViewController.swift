@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol PrayersListDelegate {
+protocol PrayersListDelegate: NSObjectProtocol {
     func didSelectPrayer(prayer: Prayer)
     var activityIndicator: UIActivityIndicatorView? { get set }
 }
@@ -17,7 +17,7 @@ class PrayersListContainerViewController: CoreDataViewController {
 
     @IBOutlet weak var prayersTableView: UITableView!
     
-    var delegate: PrayersListDelegate?
+    weak var delegate: PrayersListDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
