@@ -84,16 +84,20 @@ extension DonationViewController: UITextFieldDelegate {
         
         if string.isEmpty {
             return true
+            
         }
+        
         let regex = try! NSRegularExpression(pattern: "[0-9]", options: .caseInsensitive)
         let match = regex.matches(in: string, options: .init(rawValue: 0), range: NSMakeRange(0, string.count))
         
         if match.isEmpty {
             return false
+            
         }
-        
         return true
+        
     }
+    
 }
 
 extension DonationViewController: PKPaymentAuthorizationViewControllerDelegate {

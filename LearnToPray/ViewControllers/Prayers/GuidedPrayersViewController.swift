@@ -27,15 +27,15 @@ class GuidedPrayersViewController: CoreDataViewController, PrayersListDelegate {
     }
     
     func didSelectPrayer(prayer: Prayer) {
+        //If "People Groups" tapped, launch custom view controller
         if prayer.name == "People Groups" {
+            //Show activity indicator while retrieving People Group data
            activityIndicator?.startAnimating()
             activityIndicator?.isHidden = false
             JoshuaProjectClient.shared.retreivePeopleGroupOfTheDay { (joshuaProjectResponse) in
                 switch joshuaProjectResponse {
                     
                 case .Failure(let failureString):
-                    //TODO: Show error
-                    self.activityIndicator?.stopAnimating()
                     fatalError(failureString)
         
                 case .Success(let response):
@@ -43,43 +43,51 @@ class GuidedPrayersViewController: CoreDataViewController, PrayersListDelegate {
                        self.activityIndicator?.stopAnimating()
                         self.launchPeopleGroupViewController(response)
                         
-
                     }
+                    
                 }
+                
             }
-            
+        //Otherwise, launch Prayer Details VC
         } else {
             guard let vc = storyboard?.instantiateViewController(withIdentifier: "PrayerDetailsViewController") as? PrayerDetailsViewController else {
                 fatalError("Check storyboard for missing PrayerDetailsViewController")
+                
             }
             
             vc.prayer = prayer
             show(vc, sender: self)
+            
         }
+        
     }
     
     private func setupChildViewControllers() {
         guard let prayersListViewController = childViewControllers.first as? PrayersListContainerViewController else {
             fatalError("Check storyboard for missing PrayersListContainerViewController")
+            
         }
         
+        //
         self.prayersListViewController = prayersListViewController
         self.prayersListViewController?.delegate = self
         
     }
+    
 }
 
 extension GuidedPrayersViewController {
     func launchPeopleGroupViewController(_ response: JoshuaProjectObject) {
-        
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "PeopleGroupsViewController") as? PeopleGroupsViewController else {
             fatalError("Check stroyboard for missing PeopleGroupsViewController")
+            
         }
         
         let data = response.data!.first!
         //Called to get view to load
         let _ = vc.view
         
+        //Set people group data
         vc.peopleGroupNameLabel.text = data.peopleNameInCountry
         vc.peopleGroupImage.image = getImage(from: data.photoAddress)
         vc.peopleGroupPopulation.text = "Population: \(data.worldPopulation)"
@@ -88,26 +96,33 @@ extension GuidedPrayersViewController {
         vc.peopleGroupsMapView.addAnnotation(MapPin(coordinate: coordiante))
         
         show(vc, sender: self)
+        
     }
     
     private func getImage(from urlString: String) -> UIImage {
         guard let url = URL(string: urlString) else {
             return UIImage()
+            
         }
         
         let urlData: Data
         do {
             urlData = try Data(contentsOf: url)
+            
         } catch {
             return UIImage()
+            
         }
         
         guard let image = UIImage(data: urlData) else {
             return UIImage()
+            
         }
         
         return image
+        
     }
+    
 }
 
 class MapPin : NSObject, MKAnnotation {

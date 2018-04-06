@@ -34,10 +34,12 @@ public class KeyboardLayoutConstraint: NSLayoutConstraint {
         
         NotificationCenter.default.addObserver(self, selector: #selector(KeyboardLayoutConstraint.keyboardWillShowNotification(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(KeyboardLayoutConstraint.keyboardWillHideNotification(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
     }
     
     deinit {
         NotificationCenter.default.removeObserver(self)
+        
     }
     
     // MARK: Notification
@@ -61,11 +63,10 @@ public class KeyboardLayoutConstraint: NSLayoutConstraint {
                     animations: {
                         UIApplication.shared.keyWindow?.layoutIfNeeded()
                         return
-                }, completion: { finished in
-                })
+                }, completion: nil)
             default:
-                
                 break
+                
             }
             
         }
@@ -90,16 +91,19 @@ public class KeyboardLayoutConstraint: NSLayoutConstraint {
                     animations: {
                         UIApplication.shared.keyWindow?.layoutIfNeeded()
                         return
-                }, completion: { finished in
-                })
+                }, completion: nil)
             default:
                 break
+                
             }
+            
         }
+        
     }
     
     func updateConstant() {
         self.constant = offset + keyboardVisibleHeight
+        
     }
     
 }

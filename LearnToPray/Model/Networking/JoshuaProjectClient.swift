@@ -27,6 +27,7 @@ class JoshuaProjectClient {
         guard let url = unreachedPeopleGroupURL() else {
             completionHandler(.Failure(with: "Invalid URL"))
             return
+            
         }
                 
         let urlTask = session.dataTask(with: url) { (data, response, error) in
@@ -40,11 +41,13 @@ class JoshuaProjectClient {
             guard let response = response as? HTTPURLResponse else {
                 completionHandler(.Failure(with: "No response from server"))
                 return
+                
             }
             
             if response.statusCode != 200 {
                 completionHandler(.Failure(with: "Invalid response from server: \(response.statusCode)"))
                 return
+                
             }
             
             guard let data = data else {
@@ -54,9 +57,11 @@ class JoshuaProjectClient {
             }
             
             completionHandler(.Success(with: data))
+            
         }
         
         urlTask.resume()
+        
     }
 
     func unreachedPeopleGroupURL() -> URL? {
@@ -68,7 +73,9 @@ class JoshuaProjectClient {
         components.queryItems = getQueryItems()
         
         return components.url
+        
     }
+    
 }
 
 extension JoshuaProjectClient {
@@ -86,7 +93,9 @@ extension JoshuaProjectClient {
                                        value: String(dayOfTodayAsInt())))
         
         return queryItems
+        
     }
+    
 }
 
 

@@ -11,6 +11,7 @@ import UIKit
 protocol PrayersListDelegate: NSObjectProtocol {
     func didSelectPrayer(prayer: Prayer)
     var activityIndicator: UIActivityIndicatorView? { get set }
+    
 }
 
 class PrayersListContainerViewController: CoreDataViewController {    
@@ -29,6 +30,7 @@ class PrayersListContainerViewController: CoreDataViewController {
         fetchedResultsController = createFetchedResultsController(for: Prayer.self)
         
     }
+    
 }
 
 extension PrayersListContainerViewController: UITableViewDelegate, UITableViewDataSource {
@@ -53,13 +55,12 @@ extension PrayersListContainerViewController: UITableViewDelegate, UITableViewDa
     //MARK: Section Header Functions
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let sectionHeader = tableView.dequeueReusableCell(withIdentifier: "section")! as! SectionTableViewCell
+        
+        //Set section header title for Prayer
         guard let prayer = fetchedResultsController?.object(at: IndexPath(row: 0, section: section)) as? Prayer else {
             fatalError("Could not get an object for section \(section)")
             
         }
-        
-        //TODO: Wire up custom cell for center aligned spacing
-        
         sectionHeader.sectionTitleLabel.text = prayer.category.name
         return sectionHeader
         
@@ -73,6 +74,7 @@ extension PrayersListContainerViewController: UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! PrayerTableViewCell
        
+        //Set prayer names in each section
         guard let prayer = fetchedResultsController?.object(at: indexPath) as? Prayer else {
             fatalError("Could not get an object for indexPath \(indexPath)")
             
@@ -92,6 +94,7 @@ extension PrayersListContainerViewController: UITableViewDelegate, UITableViewDa
         let cell = tableView.cellForRow(at: indexPath) as! PrayerTableViewCell
         delegate?.activityIndicator = cell.loadingIndicator
         delegate?.didSelectPrayer(prayer: prayer)
+        //Deselect row to get row to un-highlight
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

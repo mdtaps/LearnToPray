@@ -16,15 +16,19 @@ class TimePickerViewController: UIViewController {
     
     @IBAction func dismissButtonPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+        
     }
 
     @IBAction func prayPressed(_ sender: UIButton) {
         PrayerTimer.timerCounter = Int(timePicker.countDownDuration)
-        
         dismiss(animated: true) {
             if let completion = self.completion {
                 completion()
+                
             }
+            
         }
+        
     }
+    
 }

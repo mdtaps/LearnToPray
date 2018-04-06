@@ -11,6 +11,9 @@ import UIKit
 class PrayerNavigationController: UINavigationController {
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         self.navigationBar.backgroundColor = .blue
+        
     }
+    
 }

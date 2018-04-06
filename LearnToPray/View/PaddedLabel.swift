@@ -25,10 +25,13 @@ import UIKit
         self.init()
         self.leftPadding = sidePadding
         self.rightPadding = sidePadding
+        
     }
 
     override func drawText(in rect: CGRect) {
         let insets = UIEdgeInsets(top: 0, left: leftPadding, bottom: 0, right: rightPadding)
         super.drawText(in: UIEdgeInsetsInsetRect(rect, insets))
+        
     }
+    
 }

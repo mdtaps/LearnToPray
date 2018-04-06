@@ -19,7 +19,9 @@ class PeopleGroupsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setMapRegion()
+        
     }
+    
 }
 
 extension PeopleGroupsViewController {
@@ -28,6 +30,9 @@ extension PeopleGroupsViewController {
         let span = MKCoordinateSpanMake(25, 25)
         let region = MKCoordinateRegion(center: peopleGroupsMapView.annotations.first!.coordinate, span: span)
         
+        //Set region for map view
         peopleGroupsMapView.setRegion(region, animated: false)
+        
     }
+    
 }

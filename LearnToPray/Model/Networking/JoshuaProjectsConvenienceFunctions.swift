@@ -24,21 +24,32 @@ extension JoshuaProjectClient {
                         completionHandler(.Failure(with: failureString))
                     case .Success(let joshuaProjectObject):
                         completionHandler(.Success(with: joshuaProjectObject))
+                        
                     }
+                    
                 }
+                
             }
+            
         }
+        
     }
     
     private func parseJoshuaProject(jsonData: Data, _ completionHandler: @escaping (Result<JoshuaProjectObject>) -> Void) {
+        
         let decoder = JSONDecoder()
+        
         do {
             let joshuaProjectObject = try decoder.decode(JoshuaProjectObject.self, from: jsonData)
             completionHandler(.Success(with: joshuaProjectObject))
+            
         } catch {
             completionHandler(.Failure(with: error.localizedDescription))
+            
         }
+        
     }
+    
 }
 
 
@@ -63,6 +74,9 @@ struct JoshuaProjectObject: Codable {
             case longitude = "Longitude"
             case latitude = "Latitude"
             case primaryReligion = "PrimaryReligion"
+            
         }
+        
     }
+    
 }

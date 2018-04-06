@@ -12,15 +12,20 @@ import UIKit
 extension UILabel {
     
     func fadeInFadeOutWith(text: String) {
+        //Fade out
         UIView.animate(withDuration: 0.5, animations: {
             self.alpha = 0.0
+        
+            //When fade out complete, set text and fade in
         }) { (true) in
             UIView.animate(withDuration: 0.5, animations: {
                 self.text = text
                 self.alpha = 1.0
                 
             })
+            
         }
+        
     }
     
     func createLabelOnLeft() -> UILabel {
@@ -30,6 +35,7 @@ extension UILabel {
         let label = PaddedLabel(frame: frame, sidePadding: 72)
         label.applyPrayerDetailStyling()
         return label
+        
     }
     
     func createLabelOnRight() -> UILabel {
@@ -39,9 +45,6 @@ extension UILabel {
         let label = PaddedLabel(frame: frame, sidePadding: 72)
         label.applyPrayerDetailStyling()
         return label
-    }
-    
-    func addPadding() {
         
     }
     
@@ -52,4 +55,5 @@ extension UILabel {
         self.translatesAutoresizingMaskIntoConstraints = true
         
     }
+    
 }

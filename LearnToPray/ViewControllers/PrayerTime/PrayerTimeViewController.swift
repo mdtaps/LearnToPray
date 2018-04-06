@@ -55,9 +55,11 @@ class PrayerTimeViewController: CoreDataViewController {
         
         progress.increment()
         
+        //Get detail at current progress count
         guard let detail = delegate?.fetchedResultsController?.object(at: IndexPath(row: progress.count, section: 0)) as? Details else {
             print("Failed to get detail from row \(progress.count) FRC in PrayerTimeVC")
             return
+            
         }
         
         updateLabels(with: detail)
@@ -70,9 +72,11 @@ class PrayerTimeViewController: CoreDataViewController {
         
         progress.decrement()
         
+        //Get detail at current progress count
         guard let detail = delegate?.fetchedResultsController?.object(at: IndexPath(row: progress.count, section: 0)) as? Details else {
             print("Failed to get detail from row \(progress.count) FRC in PrayerTimeVC")
             return
+            
         }
         
         updateLabels(with: detail)
@@ -86,16 +90,21 @@ class PrayerTimeViewController: CoreDataViewController {
 extension PrayerTimeViewController {
     
     fileprivate func setUpLabels() {
+        //Get first detail from FRC
         guard let detail =
             delegate?.fetchedResultsController?.object(at: IndexPath(row: 0, section: 0)) as? Details else {
                 return
+                
                 }
+        
         prayerTitleLabel.text = detail.prayer?.name
         prayerDetailTitleLabel.text = detail.title
         prayerDetailTextLabel.text = detail.text
         
+        //Set the max progress as the amount of Prayer Detail objects (minus one, for 0 index)
         if let count = delegate?.fetchedResultsController?.fetchedObjects?.count {
             progress.max = count - 1
+            
         }
         
     }
@@ -108,10 +117,12 @@ extension PrayerTimeViewController {
     
     private func setUpButtons() {
         if let objectsCount = delegate?.fetchedResultsController?.fetchedObjects?.count {
+            //Set value that button becomes disabled as the number of prayer detail objects (minus one, for 0 index)
             prayerForwardButton.disableValue = objectsCount - 1
             
         }
         
+        //If no delegate is set to display prayer details text, hide forward/back buttons and progress bar
         if delegate == nil {
             prayerBackButton.isHidden = true
             prayerForwardButton.isHidden = true
@@ -119,17 +130,20 @@ extension PrayerTimeViewController {
         }
     }
     
+    //Hide/show buttons based on current progress through prayer details
     private func updateButtons() {
         prayerBackButton.setStatusFor(currentValueOf: progress.count)
         prayerForwardButton.setStatusFor(currentValueOf: progress.count)
         
     }
     
+    //Update labels with new text
     private func updateLabels(with detail: Details) {
         prayerDetailTitleLabel.fadeInFadeOutWith(text: detail.title!)
         prayerDetailTextLabel.fadeInFadeOutWith(text: detail.text!)
         
     }
+    
 }
 
 extension PrayerTimeViewController: TimerDelegate {
@@ -137,4 +151,5 @@ extension PrayerTimeViewController: TimerDelegate {
         prayerTimerLabel.text = timeString(time: TimeInterval(PrayerTimer.timerCounter))
         
     }
+    
 }
