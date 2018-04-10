@@ -5,7 +5,7 @@
 //  Created by Mark Tapia on 2/12/18.
 //  Copyright © 2018 Mark Tapia. All rights reserved.
 //
-//  Copied from raywenderlich.com
+//  Copied from raywenderlich.com tutorial
 
 import Foundation
 import PassKit
@@ -18,7 +18,7 @@ class StripeNetworkingClient {
     
     func stripeRequest(payment: PKPayment, amount: NSDecimalNumber, completion: @escaping (PKPaymentAuthorizationStatus) -> Void) {
         
-        Stripe.setDefaultPublishableKey("pk_test_5Frs18EDxBxYs8PpJNjqPhOd")
+        Stripe.setDefaultPublishableKey("Insert Your Key Here")
         
         STPAPIClient.shared().createToken(with: payment) {
             (token, error) -> Void in
@@ -37,7 +37,7 @@ class StripeNetworkingClient {
                 
             }
             
-            let url = URL(string: "http://99.74.218.238:5000/pay")  // Replace with computers local IP Address!
+            let url = URL(string: "Enter Server IP and path here")  // Replace with computers local IP Address!
             let request = NSMutableURLRequest(url: url!)
             request.httpMethod = "POST"
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,10 +21,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="253" axis="vertical" distribution="fillProportionally" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="Z7w-Q8-5RC">
-                    <rect key="frame" x="19" y="26.5" width="337.5" height="634"/>
+                    <rect key="frame" x="19" y="76.5" width="337.5" height="534"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQz-V4-8zN" userLabel="Body">
-                            <rect key="frame" x="0.0" y="0.0" width="337.5" height="510"/>
+                            <rect key="frame" x="0.0" y="0.0" width="337.5" height="410"/>
                             <string key="text">Learn to Pray was created to help give structure to people as they pray. The Guided Prayers are pulled from sources including The Bible and Christian tradition, but they are simply guide rails to help direct and focus the mind while praying.
 
 I wrote this app because I have trouble praying, but I want to do better! If you have any suggestions or feedback for the app, please contact me, I'd love to hear them!
@@ -35,7 +35,7 @@ Thank you for downloading my app!</string>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBY-S2-IrK">
-                            <rect key="frame" x="0.0" y="528" width="337.5" height="44"/>
+                            <rect key="frame" x="0.0" y="428" width="337.5" height="44"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="ZIO-lK-qfz"/>
@@ -52,7 +52,7 @@ Thank you for downloading my app!</string>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elN-d2-ZA0">
-                            <rect key="frame" x="0.0" y="590" width="337.5" height="44"/>
+                            <rect key="frame" x="0.0" y="490" width="337.5" height="44"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="rfM-IE-LXr"/>
@@ -74,7 +74,7 @@ Thank you for downloading my app!</string>
             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Z7w-Q8-5RC" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="4za-Db-SXp"/>
-                <constraint firstItem="Z7w-Q8-5RC" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.95" id="52E-bl-O6g"/>
+                <constraint firstItem="Z7w-Q8-5RC" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.8" id="52E-bl-O6g"/>
                 <constraint firstItem="Z7w-Q8-5RC" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="pSK-Kn-2hu"/>
                 <constraint firstItem="Z7w-Q8-5RC" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="uqg-On-ShG"/>
             </constraints>

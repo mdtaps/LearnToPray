@@ -15,25 +15,28 @@ struct PrayerData {
         if let url = Bundle.main.url(forResource: "PrayerList", withExtension: "json") {
             do {
                 data = try Data(contentsOf: url, options: .mappedIfSafe)
+                
             } catch {
                 print("URL Error")
                 print(error)
+                
             }
+            
         }
+        
     }
     
     static func parseJSON(completionHandler: @escaping(JSONPrayersList?, Error?) -> Void) {
         let decoder = JSONDecoder()
         do {
             let prayerList = try decoder.decode(JSONPrayersList.self, from: data)
-            print("data correct")
             completionHandler(prayerList, nil)
             
         } catch {
-            print("data wrong")
             completionHandler(nil, error)
             
         }
         
     }
+    
 }

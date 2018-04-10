@@ -114,7 +114,6 @@
 		F4541223205E153F00A305F5 /* CoreDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CoreDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		F45D74B820244B6E00A9C9CD /* DonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
 		F45D74B920244B6E00A9C9CD /* DonationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationViewController.xib; sourceTree = "<group>"; };
-		F45D74BC2024548B00A9C9CD /* LearnToPray.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LearnToPray.entitlements; sourceTree = "<group>"; };
 		F45D74BD202AC78400A9C9CD /* ApplePaySetUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePaySetUp.swift; sourceTree = "<group>"; };
 		F45D74C4202C324700A9C9CD /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
 		F46A3ACE20369E5400616BAF /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
@@ -266,7 +265,7 @@
 			children = (
 				F4D3D4A41FCBD1DD0035F860 /* CoreDataViewController.swift */,
 				F46A3AD42036D0F800616BAF /* HomeViewController.swift */,
-				F45D74B820244B6E00A9C9CD /* DonationViewController.swift */,
+				F4F718F1207B199C00099078 /* AboutViewController.swift */,
 				F408DB471FDDFF9F00C93434 /* Prayers */,
 				F408DB481FDDFFB600C93434 /* Details */,
 				F4C51EBC1FEB494C007F2195 /* People Groups */,
@@ -300,7 +299,6 @@
 		F43ED5EF1FB5719F008E6078 /* LearnToPray */ = {
 			isa = PBXGroup;
 			children = (
-				F45D74BC2024548B00A9C9CD /* LearnToPray.entitlements */,
 				F43ED5F01FB5719F008E6078 /* AppDelegate.swift */,
 				F4A8FDC51FDF93E20058DF97 /* UserDefaultsManager.swift */,
 				F408DB4B1FDE002200C93434 /* ViewControllers */,
@@ -314,6 +312,7 @@
 				F4D3D4A31FCBD1590035F860 /* CoreData */,
 				F408DB461FDDF95900C93434 /* View */,
 				F4E716A52032CA190066A20A /* ApplePaySwag-Bridging-Header.h */,
+				F459DC74207CA28B00657881 /* For Future  */,
 			);
 			path = LearnToPray;
 			sourceTree = "<group>";
@@ -336,6 +335,16 @@
 			path = LearnToPrayUITests;
 			sourceTree = "<group>";
 		};
+		F459DC74207CA28B00657881 /* For Future  */ = {
+			isa = PBXGroup;
+			children = (
+				F4E716A62032CA930066A20A /* StripeClient.swift */,
+				F45D74B820244B6E00A9C9CD /* DonationViewController.swift */,
+				F45D74B920244B6E00A9C9CD /* DonationViewController.xib */,
+			);
+			path = "For Future ";
+			sourceTree = "<group>";
+		};
 		F45D74C1202AD53500A9C9CD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,7 +362,6 @@
 				F4C51EAE1FE4F833007F2195 /* JoshuaProjectClient.swift */,
 				F4C51EB81FE78D6B007F2195 /* JoshuaProjectsConvenienceFunctions.swift */,
 				F4C51EB21FE50957007F2195 /* Constants.swift */,
-				F4E716A62032CA930066A20A /* StripeClient.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -374,8 +382,6 @@
 				F46A3AD22036C5FB00616BAF /* HomeViewController.xib */,
 				F46A3AD9203BE46800616BAF /* TimePickerViewController.xib */,
 				F451FD0C1FFF561700540B31 /* PrayerTimeViewController.xib */,
-				F45D74B920244B6E00A9C9CD /* DonationViewController.xib */,
-				F4F718F1207B199C00099078 /* AboutViewController.swift */,
 				F4F718F2207B199C00099078 /* AboutViewController.xib */,
 			);
 			path = "XIB Files";
@@ -466,7 +472,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Mark Tapia";
 				TargetAttributes = {
 					F43ED5EC1FB5719F008E6078 = {
@@ -768,6 +774,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -775,6 +782,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -825,6 +833,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -832,6 +841,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -866,7 +876,7 @@
 			baseConfigurationReference = D2269D9722178C2077145CEF /* Pods-LearnToPray.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = LearnToPray/LearnToPray.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7W4UP5Q55U;
@@ -890,7 +900,7 @@
 			baseConfigurationReference = 1232BCA1A7408CF9AA58B349 /* Pods-LearnToPray.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = LearnToPray/LearnToPray.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7W4UP5Q55U;

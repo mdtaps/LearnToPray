@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -103,7 +103,7 @@
 		2F128CE5318ABE4A3CE7CBF77CD45841 /* STPPaymentCardTextFieldViewModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STPPaymentCardTextFieldViewModel.m; path = Stripe/UI/STPPaymentCardTextFieldViewModel.m; sourceTree = "<group>"; };
 		3280A5A7C04B3D2B1B2FDE7EB3886C6D /* stp_card_jcb@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "stp_card_jcb@3x.png"; path = "Stripe/Resources/Images/stp_card_jcb@3x.png"; sourceTree = "<group>"; };
 		33AB24F268F44FEBAF65C87274C8FF8F /* stp_card_cvc_amex.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = stp_card_cvc_amex.png; path = Stripe/Resources/Images/stp_card_cvc_amex.png; sourceTree = "<group>"; };
-		3619A08A323EDA3D4B665EE15D514764 /* libPods-LearnToPray.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-LearnToPray.a"; path = "libPods-LearnToPray.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3619A08A323EDA3D4B665EE15D514764 /* libPods-LearnToPray.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnToPray.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3985E3A65815C4ECCC62EC333E595BF4 /* Pods-LearnToPray.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LearnToPray.debug.xcconfig"; sourceTree = "<group>"; };
 		3B0C924B152A6A83D534ADD00D457230 /* NSDictionary+Stripe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+Stripe.m"; path = "Stripe/NSDictionary+Stripe.m"; sourceTree = "<group>"; };
 		3FC9262A9858D1A1A4E3CA6EEE520243 /* STPAPIPostRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STPAPIPostRequest.m; path = Stripe/STPAPIPostRequest.m; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 		5F82821CC0B4D612C9C291DFE22EF6B7 /* STPBankAccountParams.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STPBankAccountParams.m; path = Stripe/STPBankAccountParams.m; sourceTree = "<group>"; };
 		5FCE53F44A749CDC949D7D8BCE67F8E2 /* Pods-LearnToPray-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LearnToPray-frameworks.sh"; sourceTree = "<group>"; };
 		60A70177335C1FFAE044A516FBDFBD89 /* stp_card_jcb@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "stp_card_jcb@2x.png"; path = "Stripe/Resources/Images/stp_card_jcb@2x.png"; sourceTree = "<group>"; };
-		62850DD3FC41C63CAFBB337B3CC3BF9D /* libStripe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libStripe.a; path = libStripe.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		62850DD3FC41C63CAFBB337B3CC3BF9D /* libStripe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStripe.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		66045AC93E4915AF7D864590F0E81C9C /* STPFormEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPFormEncoder.h; path = Stripe/STPFormEncoder.h; sourceTree = "<group>"; };
 		664DCBC275818AA636C5F9972D4B2784 /* stp_card_amex.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = stp_card_amex.png; path = Stripe/Resources/Images/stp_card_amex.png; sourceTree = "<group>"; };
 		679EA66EC58250B030C7D4B4A1D40CBC /* STPPhoneNumberValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPPhoneNumberValidator.h; path = Stripe/STPPhoneNumberValidator.h; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 		8BEDCF8BE946CA1C86B7D732AA8536E6 /* StripeError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = StripeError.m; path = Stripe/StripeError.m; sourceTree = "<group>"; };
 		913DBFC893550AE552879E9FD263576C /* STPCategoryLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPCategoryLoader.h; path = Stripe/STPCategoryLoader.h; sourceTree = "<group>"; };
 		9358BB5928624235A9B6AC7CC6D82AEA /* Stripe-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Stripe-prefix.pch"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95EDC1C2E1D52561B1286D0FA2F94D75 /* stp_card_cvc.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = stp_card_cvc.png; path = Stripe/Resources/Images/stp_card_cvc.png; sourceTree = "<group>"; };
 		9702E9BC68399450E163EA05202DD06A /* stp_card_discover@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "stp_card_discover@3x.png"; path = "Stripe/Resources/Images/stp_card_discover@3x.png"; sourceTree = "<group>"; };
 		9947570188961FB5F82D097B214864C3 /* stp_card_placeholder_template@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "stp_card_placeholder_template@3x.png"; path = "Stripe/Resources/Images/stp_card_placeholder_template@3x.png"; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 		9CE18AC127B0B0C6BECDE160AE4B5CBB /* stp_card_mastercard@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "stp_card_mastercard@3x.png"; path = "Stripe/Resources/Images/stp_card_mastercard@3x.png"; sourceTree = "<group>"; };
 		9DCDF04315E1DA13D507CA090D0D537F /* Stripe-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Stripe-dummy.m"; sourceTree = "<group>"; };
 		9DD090F26C7E21481A7FCFB75E814495 /* STPCardValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STPCardValidator.m; path = Stripe/STPCardValidator.m; sourceTree = "<group>"; };
-		9F4D738917309D6BB4D8FA246B391AAB /* Images */ = {isa = PBXFileReference; includeInIndex = 1; name = Images; path = Stripe/Resources/Images; sourceTree = "<group>"; };
+		9F4D738917309D6BB4D8FA246B391AAB /* Images */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = Images; path = Stripe/Resources/Images; sourceTree = "<group>"; };
 		A113B9EEEDB1D37964FC5617D0171196 /* NSString+Stripe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Stripe.m"; path = "Stripe/NSString+Stripe.m"; sourceTree = "<group>"; };
 		A48A80D1A74257DBC9CED19703B048BC /* stp_card_cvc@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "stp_card_cvc@2x.png"; path = "Stripe/Resources/Images/stp_card_cvc@2x.png"; sourceTree = "<group>"; };
 		AB6B8BB17F1DD49A31FCE339F9AE7D01 /* Stripe+ApplePay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Stripe+ApplePay.m"; path = "Stripe/ApplePay/Stripe+ApplePay.m"; sourceTree = "<group>"; };
@@ -242,7 +242,6 @@
 				8FFD66D1C30192CE16789134882754D1 /* Core */,
 				55C98EBD081A8EBCE401F39A31124CDE /* Support Files */,
 			);
-			name = Stripe;
 			path = Stripe;
 			sourceTree = "<group>";
 		};
@@ -654,7 +653,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/Stripe/Stripe-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -735,7 +734,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/Stripe/Stripe-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
