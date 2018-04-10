@@ -18,8 +18,8 @@ class HomeViewController: UIViewController {
         launchPrayerTime()
     }
     
-    @IBAction func donationTapped() {
-        launchDonationVC()
+    @IBAction func aboutTapped() {
+        launchAboutVC()
     }
 }
 
@@ -38,9 +38,16 @@ extension HomeViewController {
         present(timePickerVC, animated: true, completion: nil)
     }
     
-    private func launchDonationVC() {
-        let donationVC = DonationViewController(nibName: nil, bundle: nil)
-        present(donationVC, animated: true, completion: nil)
+    private func launchAboutVC() {
+        let navController = UINavigationController()
+        let aboutVC = AboutViewController(nibName: nil, bundle: nil)
+        aboutVC.title = "About Learn to Pray"
+        navController.viewControllers = [aboutVC]
+        navController.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "Close",
+                                                                                 style: .done,
+                                                                                 target: aboutVC,
+                                                                                 action: #selector(aboutVC.dismissVC))
+        present(navController, animated: true, completion: nil)
     
     }
     private func launchGuidedPrayer() {

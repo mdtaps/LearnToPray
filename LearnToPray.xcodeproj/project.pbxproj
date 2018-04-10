@@ -63,6 +63,8 @@
 		F4F27A3B2047C3600043CF3C /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F27A3A2047C3600043CF3C /* PaddedLabel.swift */; };
 		F4F718EE2075D03D00099078 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F718ED2075D03D00099078 /* Audio.swift */; };
 		F4F718F02075D0E100099078 /* chimes.wav in Resources */ = {isa = PBXBuildFile; fileRef = F4F718EF2075D0E000099078 /* chimes.wav */; };
+		F4F718F3207B199C00099078 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F718F1207B199C00099078 /* AboutViewController.swift */; };
+		F4F718F4207B199C00099078 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F718F2207B199C00099078 /* AboutViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +152,8 @@
 		F4F27A3A2047C3600043CF3C /* PaddedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedLabel.swift; sourceTree = "<group>"; };
 		F4F718ED2075D03D00099078 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Audio.swift; path = LearnToPray/Model/Audio.swift; sourceTree = SOURCE_ROOT; };
 		F4F718EF2075D0E000099078 /* chimes.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chimes.wav; sourceTree = "<group>"; };
+		F4F718F1207B199C00099078 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		F4F718F2207B199C00099078 /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +375,8 @@
 				F46A3AD9203BE46800616BAF /* TimePickerViewController.xib */,
 				F451FD0C1FFF561700540B31 /* PrayerTimeViewController.xib */,
 				F45D74B920244B6E00A9C9CD /* DonationViewController.xib */,
+				F4F718F1207B199C00099078 /* AboutViewController.swift */,
+				F4F718F2207B199C00099078 /* AboutViewController.xib */,
 			);
 			path = "XIB Files";
 			sourceTree = "<group>";
@@ -518,6 +524,7 @@
 				F4A8FDC81FE0F81A0058DF97 /* PrayerList.json in Resources */,
 				F46A3AD32036C5FB00616BAF /* HomeViewController.xib in Resources */,
 				F43ED5F61FB5719F008E6078 /* Main.storyboard in Resources */,
+				F4F718F4207B199C00099078 /* AboutViewController.xib in Resources */,
 				F4F718F02075D0E100099078 /* chimes.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -659,6 +666,7 @@
 			files = (
 				F4C51EB71FE63281007F2195 /* DateFunctions.swift in Sources */,
 				F4D3D4AB1FD1201D0035F860 /* PrayerData.swift in Sources */,
+				F4F718F3207B199C00099078 /* AboutViewController.swift in Sources */,
 				F49068AE206F4F9800DCF408 /* Progress.swift in Sources */,
 				F4F27A3120451BB80043CF3C /* UIView+Designable.swift in Sources */,
 				F43ED5F31FB5719F008E6078 /* PrayersListContainerViewController.swift in Sources */,

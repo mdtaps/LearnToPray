@@ -18,7 +18,7 @@ class StripeNetworkingClient {
     
     func stripeRequest(payment: PKPayment, amount: NSDecimalNumber, completion: @escaping (PKPaymentAuthorizationStatus) -> Void) {
         
-        Stripe.setDefaultPublishableKey("pk_test_5Frs18EDxBxYs8PpJNjqPhOd")  // Replace With Your Own Key!
+        Stripe.setDefaultPublishableKey("pk_test_5Frs18EDxBxYs8PpJNjqPhOd")
         
         STPAPIClient.shared().createToken(with: payment) {
             (token, error) -> Void in

@@ -13,5 +13,7 @@ extension UIButton {
     func applyNoPaymentStyling() {
         self.frame.size = CGSize(width: 300, height: 48)
         self.setTitle("Unable to Accept Payments", for: .normal)
+        
     }
+    
 }

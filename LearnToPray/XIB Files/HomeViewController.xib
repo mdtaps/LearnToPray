@@ -75,14 +75,14 @@ Pray</string>
                                     <rect key="frame" x="19" y="140.5" width="337.5" height="46"/>
                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                    <state key="normal" title="Donation"/>
+                                    <state key="normal" title="About The App"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="10"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <action selector="donationTapped" destination="-1" eventType="touchUpInside" id="g1o-Yb-tck"/>
+                                        <action selector="aboutTapped" destination="-1" eventType="touchUpInside" id="NHK-t6-yWX"/>
                                     </connections>
                                 </button>
                             </subviews>
