@@ -36,7 +36,17 @@ class GuidedPrayersViewController: CoreDataViewController, PrayersListDelegate {
                 switch joshuaProjectResponse {
                     
                 case .Failure(let failureString):
-                    fatalError(failureString)
+                    print(failureString)
+                    let alert = UIAlertController(title: "Network Error", message: "Could not retreive People Group data", preferredStyle: .actionSheet)
+                    let dismiss = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+                    alert.addAction(dismiss)
+                    
+                    DispatchQueue.main.async {
+                        self.present(alert, animated: true) {
+                            self.activityIndicator?.isHidden = true
+                            self.activityIndicator?.stopAnimating()
+                        }
+                    }
         
                 case .Success(let response):
                     DispatchQueue.main.async {
@@ -48,6 +58,7 @@ class GuidedPrayersViewController: CoreDataViewController, PrayersListDelegate {
                 }
                 
             }
+            
         //Otherwise, launch Prayer Details VC
         } else {
             guard let vc = storyboard?.instantiateViewController(withIdentifier: "PrayerDetailsViewController") as? PrayerDetailsViewController else {
