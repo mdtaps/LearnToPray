@@ -37,7 +37,7 @@ class GuidedPrayersViewController: CoreDataViewController, PrayersListDelegate {
                     
                 case .Failure(let failureString):
                     print(failureString)
-                    let alert = UIAlertController(title: "Network Error", message: "Could not retreive People Group data", preferredStyle: .actionSheet)
+                    let alert = UIAlertController(title: "Network Error", message: "Could not retreive People Group data", preferredStyle: .alert)
                     let dismiss = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
                     alert.addAction(dismiss)
                     
@@ -45,7 +45,9 @@ class GuidedPrayersViewController: CoreDataViewController, PrayersListDelegate {
                         self.present(alert, animated: true) {
                             self.activityIndicator?.isHidden = true
                             self.activityIndicator?.stopAnimating()
+                            
                         }
+                        
                     }
         
                 case .Success(let response):
@@ -79,7 +81,6 @@ class GuidedPrayersViewController: CoreDataViewController, PrayersListDelegate {
             
         }
         
-        //
         self.prayersListViewController = prayersListViewController
         self.prayersListViewController?.delegate = self
         

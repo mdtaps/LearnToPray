@@ -12,7 +12,7 @@ import AVFoundation
 struct Audio {
     static var Player: AVAudioPlayer?
     
-    static func PlayChimes() {
+    static func playChimes() {
         guard let url = Bundle.main.url(forResource: "chimes", withExtension: "wav") else { return }
         
         do {
@@ -31,7 +31,7 @@ struct Audio {
         
     }
     
-    static func StopChimes() {
+    static func stopChimes() {
         guard let Player = Player else { return }
         Player.stop()
         

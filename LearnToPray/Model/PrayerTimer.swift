@@ -11,6 +11,7 @@ import UIKit
 
 protocol TimerDelegate {
     func timerCounterDidUpdate()
+    
 }
 
 struct PrayerTimer {
@@ -18,37 +19,49 @@ struct PrayerTimer {
         didSet {
             if timerCounter < 0 {
                 timer.invalidate()
-                Audio.PlayChimes()
+                Audio.playChimes()
+                
             } else {
                 delegate?.timerCounterDidUpdate()
+                
             }
+            
         }
+        
     }
+    
     static var timer = Timer()
     static var timerState: TimerState = .Running
     static var delegate: TimerDelegate?
+    
 }
 
 extension PrayerTimer {
     enum TimerState: String {
         case Running = "Pause"
         case Paused = "Resume"
+        
     }
     
     static func start() {
         PrayerTimer.timerState = .Running
         PrayerTimer.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-            PrayerTimer.timerCounter -= 1 }
+            PrayerTimer.timerCounter -= 1
+            
+        }
+        
     }
     
     static func stop() {
         PrayerTimer.pause()
         PrayerTimer.timerCounter = 0
+        
     }
     
     static func pause() {
         PrayerTimer.timerState = .Paused
         PrayerTimer.timer.invalidate()
+        
     }
     
     static func toggleTimer() {
@@ -57,6 +70,9 @@ extension PrayerTimer {
             pause()
         case .Paused:
             start()
+            
         }
+        
     }
+    
 }
