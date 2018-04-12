@@ -39,9 +39,10 @@ git clone https://github.com/mdtaps/LearnToPray
 
 If you don't have it installed already, install CocoaPods from Terminal
 
+More details about it at https://guides.cocoapods.org/using/getting-started.html
+
 ```
 $ sudo gem install cocoapods
-More Details at https://guides.cocoapods.org/using/getting-started.html
 ```
 
 Create a Podfile
@@ -56,12 +57,12 @@ Open your Podfile and place the following:
 pod 'Stripe'
 ```
 
-Close your XCode project. From Terminal, while still in your project directory, run:
+Close your XCode project. From Terminal, while still in your project directory, run the code below.
 
 ```
 $ pod install
-If you have trouble, you can find Stripe's install documentation here: https://stripe.com/docs/mobile/ios#getting-started
 ```
+If you have trouble, you can find Stripe's install documentation here: https://stripe.com/docs/mobile/ios#getting-started
 
 ## Deployment
 
