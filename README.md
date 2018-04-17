@@ -78,6 +78,10 @@ Use the Workspace (.xcworkspace) file to run the app
 
 If you would like to contribute to this project, please leave me a note!
 
+## License
+
+The contents of this repository is licensed under the [MIT License](https://opensource.org/licenses/MIT) 
+
 ## Acknowledgments
 
 * Thanks to my beautiful wife who put up with me staying up late many nights and waking her up when I come to bed.
