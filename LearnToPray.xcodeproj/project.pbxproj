@@ -482,6 +482,9 @@
 							com.apple.ApplePay = {
 								enabled = 1;
 							};
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 						};
 					};
 					F43ED6001FB5719F008E6078 = {

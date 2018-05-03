@@ -20,7 +20,7 @@ class TimePickerViewController: UIViewController {
     }
 
     @IBAction func prayPressed(_ sender: UIButton) {
-        PrayerTimer.timerCounter = Int(timePicker.countDownDuration)
+        PrayerTimer.timePraying = timePicker.countDownDuration
         dismiss(animated: true) {
             if let completion = self.completion {
                 completion()

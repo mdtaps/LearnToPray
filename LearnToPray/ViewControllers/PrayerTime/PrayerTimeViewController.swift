@@ -38,6 +38,12 @@ class PrayerTimeViewController: CoreDataViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+    }
+    
     @IBAction func pauseButtonPressed() {
         PrayerTimer.toggleTimer()
         pauseTimerButton.setTitle(PrayerTimer.timerState.rawValue, for: .normal)
@@ -110,7 +116,7 @@ extension PrayerTimeViewController {
     }
     
     private func setupTimerLabel() {
-        prayerTimerLabel.text = timeString(time: TimeInterval(PrayerTimer.timerCounter))
+        prayerTimerLabel.text = timeString(time: TimeInterval(PrayerTimer.timePraying))
         pauseTimerButton.setTitle(PrayerTimer.timerState.rawValue, for: .normal)
         
     }
@@ -148,8 +154,7 @@ extension PrayerTimeViewController {
 
 extension PrayerTimeViewController: TimerDelegate {
     func timerCounterDidUpdate() {
-        prayerTimerLabel.text = timeString(time: TimeInterval(PrayerTimer.timerCounter))
-        
+                prayerTimerLabel.text = timeString(time: PrayerTimer.timeLeftPraying)
     }
     
 }

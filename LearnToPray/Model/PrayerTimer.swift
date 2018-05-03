@@ -15,24 +15,27 @@ protocol TimerDelegate {
 }
 
 struct PrayerTimer {
-    static var timerCounter: Int = 65 {
+    static var timePraying: Double = 0 {
         didSet {
-            if timerCounter < 0 {
-                timer.invalidate()
-                Audio.playChimes()
-                
-            } else {
-                delegate?.timerCounterDidUpdate()
-                
-            }
-            
+            endTime = Date().timeIntervalSince1970 + timePraying
         }
-        
     }
+    
+    //For timer to run in the background, timer needs to
+    //be based off Unix time stamp. I will need to run
+    //have timer label string be based on time left
+    //between current time and end time. I also need
+    //to deal with the static variables
+    
     
     static var timer = Timer()
     static var timerState: TimerState = .Running
     static var delegate: TimerDelegate?
+    static var endTime = 0.0
+    static var timeLeftPraying: Double {
+        return (endTime - Date().timeIntervalSince1970)
+    }
+    private static var timeLeftWhilePaused = 0.0
     
 }
 
@@ -44,35 +47,49 @@ extension PrayerTimer {
     }
     
     static func start() {
-        PrayerTimer.timerState = .Running
-        PrayerTimer.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-            PrayerTimer.timerCounter -= 1
+        timerState = .Running
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+            timerDecrement()
             
         }
         
     }
     
     static func stop() {
-        PrayerTimer.pause()
-        PrayerTimer.timerCounter = 0
+        pause()
+        PrayerTimer.timePraying = 0
         
     }
     
     static func pause() {
-        PrayerTimer.timerState = .Paused
-        PrayerTimer.timer.invalidate()
+        timeLeftWhilePaused = endTime - Date().timeIntervalSince1970
+        timerState = .Paused
+        timer.invalidate()
         
     }
     
     static func toggleTimer() {
-        switch PrayerTimer.timerState {
+        switch timerState {
         case .Running:
             pause()
         case .Paused:
+            timePraying = timeLeftWhilePaused
             start()
             
         }
         
+    }
+    
+    private static func timerDecrement() {
+        if endTime < Date().timeIntervalSince1970 {
+            timePraying = 0
+            delegate?.timerCounterDidUpdate()
+            timer.invalidate()
+            Audio.playChimes()
+        } else {
+            delegate?.timerCounterDidUpdate()
+            
+        }
     }
     
 }
