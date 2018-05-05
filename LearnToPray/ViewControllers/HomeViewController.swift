@@ -21,6 +21,10 @@ class HomeViewController: UIViewController {
     @IBAction func aboutTapped() {
         launchAboutVC()
     }
+    
+    @IBAction func peopleGroupTapped() {
+        
+    }
 }
 
 extension HomeViewController {
@@ -50,6 +54,7 @@ extension HomeViewController {
         present(navController, animated: true, completion: nil)
     
     }
+    
     private func launchGuidedPrayer() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
@@ -58,6 +63,8 @@ extension HomeViewController {
         present(navigationController, animated: true, completion: nil)
     }
     
+    private func launchPeopleGroupPrayer() {
+        
+    }
     
-
 }
