@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import UserNotifications
 
 protocol TimerDelegate {
     func timerCounterDidUpdate()
@@ -17,25 +18,22 @@ protocol TimerDelegate {
 struct PrayerTimer {
     static var timePraying: Double = 0 {
         didSet {
-            endTime = Date().timeIntervalSince1970 + timePraying
+            endTime = unixTime + timePraying
         }
     }
     
-    //For timer to run in the background, timer needs to
-    //be based off Unix time stamp. I will need to run
-    //have timer label string be based on time left
-    //between current time and end time. I also need
-    //to deal with the static variables
+    static var unixTime: TimeInterval {
+        return Date().timeIntervalSince1970
+    }
     
+    static var timeLeftPraying: Double {
+        return (endTime - unixTime)
+    }
     
     static var timer = Timer()
     static var timerState: TimerState = .Running
     static var delegate: TimerDelegate?
     static var endTime = 0.0
-    static var timeLeftPraying: Double {
-        return (endTime - Date().timeIntervalSince1970)
-    }
-    private static var timeLeftWhilePaused = 0.0
     
 }
 
@@ -62,7 +60,7 @@ extension PrayerTimer {
     }
     
     static func pause() {
-        timeLeftWhilePaused = endTime - Date().timeIntervalSince1970
+        timePraying = endTime - unixTime
         timerState = .Paused
         timer.invalidate()
         
@@ -73,7 +71,7 @@ extension PrayerTimer {
         case .Running:
             pause()
         case .Paused:
-            timePraying = timeLeftWhilePaused
+            endTime = timePraying + unixTime
             start()
             
         }
@@ -81,8 +79,8 @@ extension PrayerTimer {
     }
     
     private static func timerDecrement() {
-        if endTime < Date().timeIntervalSince1970 {
-            timePraying = 0
+        if endTime < unixTime {
+            stop()
             delegate?.timerCounterDidUpdate()
             timer.invalidate()
             Audio.playChimes()

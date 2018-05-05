@@ -8,11 +8,13 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let center = UNUserNotificationCenter.current()
     
     var stack = CoreDataStack(modelName: "CoreDataModel")!
 
@@ -24,8 +26,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             setupPrayerData()
         }
         
+        let options: UNAuthorizationOptions = [.alert, .sound]
+        
+        center.requestAuthorization(options: options) { (success, error) in }
+        
         return true
         
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        if PrayerTimer.timerState == .Running {
+            
+            let request = createNotificationRequest()
+            center.add(request) { (error) in
+                if let error = error {
+                    print("Error: \(error.localizedDescription)")
+                }
+            }
+        }
+
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        center.removeAllPendingNotificationRequests()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
@@ -107,5 +130,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         stack.save()
         UserDefaultsManager.hasLaunchedPreviously = true
     }
+    
+    private func createNotificationRequest() -> UNNotificationRequest {
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: PrayerTimer.timeLeftPraying, repeats: false)
+        
+        let identifier = "PrayerTimerNotification"
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Prayer Complete"
+        content.body = "Your prayer timer has finished!"
+        content.sound = UNNotificationSound(named: "chimes.wav")
+        
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        return request
+    }
+    
 }
 
