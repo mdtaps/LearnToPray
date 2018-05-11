@@ -31,7 +31,7 @@ struct PrayerTimer {
     }
     
     static var timer = Timer()
-    static var timerState: TimerState = .Running
+    static var timerState: TimerState = .Paused
     static var delegate: TimerDelegate?
     static var endTime = 0.0
     
