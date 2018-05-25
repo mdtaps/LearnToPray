@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="LearnToPray" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicatorView" destination="n3H-xX-4Vc" id="eGa-mR-RkF"/>
                 <outlet property="view" destination="iN0-l3-epB" id="qhY-Pv-9sU"/>
             </connections>
         </placeholder>
@@ -114,9 +115,24 @@ Pray</string>
                         <action selector="aboutTapped" destination="-1" eventType="touchUpInside" id="D5h-WB-s7C"/>
                     </connections>
                 </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="n3H-xX-4Vc">
+                    <rect key="frame" x="162" y="318.5" width="50" height="50"/>
+                    <color key="backgroundColor" white="0.33333333329999998" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="0yj-BF-2PT"/>
+                        <constraint firstAttribute="width" constant="50" id="sfi-e5-ENh"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="n3H-xX-4Vc" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="9Lx-cM-bxr"/>
+                <constraint firstItem="n3H-xX-4Vc" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="eQS-Y0-bLS"/>
                 <constraint firstItem="Srd-hv-L1i" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" id="t4B-ii-Xt3"/>
                 <constraint firstItem="Srd-hv-L1i" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="wyI-9e-80U"/>
                 <constraint firstItem="Srd-hv-L1i" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="zhu-JV-3P1"/>

@@ -10,6 +10,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    
     @IBAction func guidedPrayerTapped() {
        launchGuidedPrayer()
     }
@@ -23,7 +25,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func peopleGroupTapped() {
-        
+        launchPeopleGroupPrayer()
     }
 }
 
@@ -64,7 +66,33 @@ extension HomeViewController {
     }
     
     private func launchPeopleGroupPrayer() {
-        
+        activityIndicatorView.startAnimating()
+        activityIndicatorView.isHidden = false
+        JoshuaProjectClient.shared.retreivePeopleGroupOfTheDay { (joshuaProjectResponse) in
+            switch joshuaProjectResponse {
+                
+            case .Failure(let failureString):
+                print(failureString)
+                let alert = UIAlertController(title: "Network Error", message: "Could not retreive People Group data", preferredStyle: .alert)
+                let dismiss = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+                alert.addAction(dismiss)
+                
+                DispatchQueue.main.async {
+                    self.present(alert, animated: true) {
+                        self.activityIndicatorView.isHidden = true
+                        self.activityIndicatorView.stopAnimating()
+                        
+                    }
+                    
+                }
+                
+            case .Success(let response):
+                DispatchQueue.main.async {
+                    self.activityIndicatorView.stopAnimating()
+                    self.launchPeopleGroupViewController(response)
+                    
+                }
+            }
+        }
     }
-    
 }
