@@ -34,31 +34,21 @@ class GuidedPrayersViewController: CoreDataViewController, PrayersListDelegate {
             activityIndicator?.isHidden = false
             JoshuaProjectClient.shared.retreivePeopleGroupOfTheDay { (joshuaProjectResponse) in
                 switch joshuaProjectResponse {
-                    
                 case .Failure(let failureString):
                     print(failureString)
-                    let alert = UIAlertController(title: "Network Error", message: "Could not retreive People Group data", preferredStyle: .alert)
-                    let dismiss = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
-                    alert.addAction(dismiss)
-                    
                     DispatchQueue.main.async {
-                        self.present(alert, animated: true) {
+                        self.present(Alert.NetworkFailure(), animated: true) {
                             self.activityIndicator?.isHidden = true
                             self.activityIndicator?.stopAnimating()
-                            
                         }
-                        
                     }
         
                 case .Success(let response):
                     DispatchQueue.main.async {
                        self.activityIndicator?.stopAnimating()
                         self.launchPeopleGroupViewController(response)
-                        
                     }
-                    
                 }
-                
             }
             
         //Otherwise, launch Prayer Details VC
@@ -72,7 +62,6 @@ class GuidedPrayersViewController: CoreDataViewController, PrayersListDelegate {
             show(vc, sender: self)
             
         }
-        
     }
     
     private func setupChildViewControllers() {
@@ -85,7 +74,6 @@ class GuidedPrayersViewController: CoreDataViewController, PrayersListDelegate {
         self.prayersListViewController?.delegate = self
         
     }
-    
 }
 
 extension GuidedPrayersViewController {
@@ -95,20 +83,7 @@ extension GuidedPrayersViewController {
             
         }
         
-        let data = response.data!.first!
-        //Called to get view to load
-        let _ = vc.view
-        
-        //Set people group data
-        vc.peopleGroupNameLabel.text = data.peopleNameInCountry
-        vc.peopleGroupImage.image = UIImage(fromUrl: data.photoAddress)
-        vc.peopleGroupPopulation.text = "Population: \(data.worldPopulation)"
-        vc.peopleGroupsReligion.text = "Primary Religion: \(data.primaryReligion)"
-        let coordiante = CLLocationCoordinate2D(latitude: data.latitude, longitude: data.longitude)
-    vc.peopleGroupsMapView.addAnnotation(MapPin(coordinate: coordiante))
-        
+        vc.joshuaProjectObject = response
         show(vc, sender: self)
-        
     }
-    
 }

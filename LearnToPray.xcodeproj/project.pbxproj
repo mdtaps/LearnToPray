@@ -67,6 +67,7 @@
 		F4F718F02075D0E100099078 /* chimes.wav in Resources */ = {isa = PBXBuildFile; fileRef = F4F718EF2075D0E000099078 /* chimes.wav */; };
 		F4F718F3207B199C00099078 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F718F1207B199C00099078 /* AboutViewController.swift */; };
 		F4F718F4207B199C00099078 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F718F2207B199C00099078 /* AboutViewController.xib */; };
+		F4FC0DC420CFA95A00B2AF0D /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FC0DC320CFA95A00B2AF0D /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +158,7 @@
 		F4F718EF2075D0E000099078 /* chimes.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chimes.wav; sourceTree = "<group>"; };
 		F4F718F1207B199C00099078 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		F4F718F2207B199C00099078 /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		F4FC0DC320CFA95A00B2AF0D /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +248,7 @@
 				F407BAAA2060DDBB009BDF65 /* NextButton.swift */,
 				F4F718ED2075D03D00099078 /* Audio.swift */,
 				F41F477B20B7CD3A00BE372C /* MapPin.swift */,
+				F4FC0DC320CFA95A00B2AF0D /* Alert.swift */,
 				F45D74C1202AD53500A9C9CD /* Extensions */,
 				F4B864822022DC7400735337 /* Networking */,
 			);
@@ -697,6 +700,7 @@
 				F408DB431FDDF70300C93434 /* GuidedPrayersViewController.swift in Sources */,
 				F4E716A72032CA930066A20A /* StripeClient.swift in Sources */,
 				F407BAAB2060DDBB009BDF65 /* NextButton.swift in Sources */,
+				F4FC0DC420CFA95A00B2AF0D /* Alert.swift in Sources */,
 				F407BAA6205E429C009BDF65 /* Details+CoreDataClass.swift in Sources */,
 				F407BAA7205E429C009BDF65 /* Details+CoreDataProperties.swift in Sources */,
 				F408DB451FDDF93200C93434 /* PrayerDetailsHeaderTableViewCell.swift in Sources */,

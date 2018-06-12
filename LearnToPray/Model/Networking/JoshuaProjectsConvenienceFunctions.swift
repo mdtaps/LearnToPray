@@ -52,7 +52,6 @@ extension JoshuaProjectClient {
     
 }
 
-
 struct JoshuaProjectObject: Codable {
     
     let data: [JoshuaProjectData]?

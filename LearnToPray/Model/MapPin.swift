@@ -16,4 +16,8 @@ class MapPin: NSObject, MKAnnotation {
         self.coordinate = coordinate
         
     }
+    
+    init(latitude: Double, longitude: Double) {
+        self.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
 }

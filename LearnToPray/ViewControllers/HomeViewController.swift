@@ -59,7 +59,6 @@ extension HomeViewController {
     
     private func launchGuidedPrayer() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
         let navigationController = storyboard.instantiateViewController(withIdentifier: "NavigationController") as! UINavigationController
         
         present(navigationController, animated: true, completion: nil)
@@ -70,20 +69,13 @@ extension HomeViewController {
         activityIndicatorView.isHidden = false
         JoshuaProjectClient.shared.retreivePeopleGroupOfTheDay { (joshuaProjectResponse) in
             switch joshuaProjectResponse {
-                
             case .Failure(let failureString):
                 print(failureString)
-                let alert = UIAlertController(title: "Network Error", message: "Could not retreive People Group data", preferredStyle: .alert)
-                let dismiss = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
-                alert.addAction(dismiss)
-                
                 DispatchQueue.main.async {
-                    self.present(alert, animated: true) {
+                    self.present(Alert.NetworkFailure(), animated: true) {
                         self.activityIndicatorView.isHidden = true
                         self.activityIndicatorView.stopAnimating()
-                        
                     }
-                    
                 }
                 
             case .Success(let response):
@@ -94,5 +86,15 @@ extension HomeViewController {
                 }
             }
         }
+    }
+    
+    private func launchPeopleGroupViewController(_ response: JoshuaProjectObject) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "PeopleGroupsViewController") as? PeopleGroupsViewController else {
+                       fatalError("Check stroyboard for missing PeopleGroupsViewController")
+        }
+        
+        vc.joshuaProjectObject = response
+        present(vc, animated: true, completion: nil)
     }
 }

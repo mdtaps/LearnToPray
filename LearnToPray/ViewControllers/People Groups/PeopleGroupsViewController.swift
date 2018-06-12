@@ -16,17 +16,31 @@ class PeopleGroupsViewController: UIViewController {
     @IBOutlet weak var peopleGroupsMapView: MKMapView!
     @IBOutlet weak var peopleGroupsReligion: UILabel!
     
+    var joshuaProjectObject: JoshuaProjectObject?
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupView()
         setMapRegion()
-        
+
     }
-    
 }
 
 extension PeopleGroupsViewController {
+    private func setupView() {
+        guard let data = joshuaProjectObject?.data?.first else {
+            fatalError("Could not get data from Joshua Project Object")
+        }
+        
+        self.peopleGroupNameLabel.text = data.peopleNameInCountry
+        self.peopleGroupImage.image = UIImage(fromUrl: data.photoAddress)
+        self.peopleGroupPopulation.text = "Population: \(data.worldPopulation)"
+        self.peopleGroupsReligion.text = "Primary Religion: \(data.primaryReligion)"
+        let mapPin = MapPin(latitude: data.latitude, longitude: data.longitude)
+        self.peopleGroupsMapView.addAnnotation(mapPin)
+    }
     
-    fileprivate func setMapRegion() {
+    private func setMapRegion() {
         let span = MKCoordinateSpanMake(25, 25)
         let region = MKCoordinateRegion(center: peopleGroupsMapView.annotations.first!.coordinate, span: span)
         
@@ -34,5 +48,4 @@ extension PeopleGroupsViewController {
         peopleGroupsMapView.setRegion(region, animated: false)
         
     }
-    
 }
