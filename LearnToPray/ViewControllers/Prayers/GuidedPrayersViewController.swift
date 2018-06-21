@@ -31,22 +31,12 @@ class GuidedPrayersViewController: CoreDataViewController, PrayersListDelegate {
         if prayer.name == "People Groups" {
             //Show activity indicator while retrieving People Group data
            activityIndicator?.startAnimating()
-            activityIndicator?.isHidden = false
             JoshuaProjectClient.shared.retreivePeopleGroupOfTheDay { (joshuaProjectResponse) in
-                switch joshuaProjectResponse {
-                case .Failure(let failureString):
-                    print(failureString)
-                    DispatchQueue.main.async {
-                        self.present(Alert.NetworkFailure(), animated: true) {
-                            self.activityIndicator?.isHidden = true
-                            self.activityIndicator?.stopAnimating()
-                        }
-                    }
-        
-                case .Success(let response):
-                    DispatchQueue.main.async {
-                       self.activityIndicator?.stopAnimating()
-                        self.launchPeopleGroupViewController(response)
+                let vc = PeoplesGroups.ViewController(from: joshuaProjectResponse)
+                
+                DispatchQueue.main.async {
+                    self.present(vc, animated: true) {
+                        self.activityIndicator?.stopAnimating()
                     }
                 }
             }

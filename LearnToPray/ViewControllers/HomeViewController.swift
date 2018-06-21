@@ -66,35 +66,14 @@ extension HomeViewController {
     
     private func launchPeopleGroupPrayer() {
         activityIndicatorView.startAnimating()
-        activityIndicatorView.isHidden = false
         JoshuaProjectClient.shared.retreivePeopleGroupOfTheDay { (joshuaProjectResponse) in
-            switch joshuaProjectResponse {
-            case .Failure(let failureString):
-                print(failureString)
-                DispatchQueue.main.async {
-                    self.present(Alert.NetworkFailure(), animated: true) {
-                        self.activityIndicatorView.isHidden = true
-                        self.activityIndicatorView.stopAnimating()
-                    }
-                }
-                
-            case .Success(let response):
-                DispatchQueue.main.async {
+            let vc = PeoplesGroups.ViewController(from: joshuaProjectResponse)
+            
+            DispatchQueue.main.async {
+                self.present(vc, animated: true) {
                     self.activityIndicatorView.stopAnimating()
-                    self.launchPeopleGroupViewController(response)
-                    
                 }
             }
         }
-    }
-    
-    private func launchPeopleGroupViewController(_ response: JoshuaProjectObject) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: "PeopleGroupsViewController") as? PeopleGroupsViewController else {
-                       fatalError("Check stroyboard for missing PeopleGroupsViewController")
-        }
-        
-        vc.joshuaProjectObject = response
-        present(vc, animated: true, completion: nil)
     }
 }

@@ -26,13 +26,9 @@ extension JoshuaProjectClient {
                         completionHandler(.Success(with: joshuaProjectObject))
                         
                     }
-                    
                 }
-                
             }
-            
         }
-        
     }
     
     private func parseJoshuaProject(jsonData: Data, _ completionHandler: @escaping (Result<JoshuaProjectObject>) -> Void) {
@@ -45,34 +41,6 @@ extension JoshuaProjectClient {
             
         } catch {
             completionHandler(.Failure(with: error.localizedDescription))
-            
-        }
-        
-    }
-    
-}
-
-struct JoshuaProjectObject: Codable {
-    
-    let data: [JoshuaProjectData]?
-
-    struct JoshuaProjectData: Codable {
-        let regionName: String
-        let peopleNameInCountry: String
-        let worldPopulation: Int
-        let photoAddress: String
-        let longitude: Double
-        let latitude: Double
-        let primaryReligion: String
-        
-        enum CodingKeys: String, CodingKey {
-            case regionName = "RegionName"
-            case peopleNameInCountry = "PeopNameInCountry"
-            case worldPopulation = "WorldPopulation"
-            case photoAddress = "PhotoAddress"
-            case longitude = "Longitude"
-            case latitude = "Latitude"
-            case primaryReligion = "PrimaryReligion"
             
         }
         

@@ -48,4 +48,8 @@ extension PeopleGroupsViewController {
         peopleGroupsMapView.setRegion(region, animated: false)
         
     }
+    
+    @objc func dismissVC() {
+        dismiss(animated: true, completion: nil)
+    }
 }
