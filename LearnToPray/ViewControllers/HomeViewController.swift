@@ -27,10 +27,13 @@ class HomeViewController: UIViewController {
     @IBAction func peopleGroupTapped() {
         launchPeopleGroupPrayer()
     }
+    
+    @IBAction func settingsTapped() {
+        launchSettings()
+    }
 }
 
 extension HomeViewController {
-    
     private func launchPrayerTime() {
         func completion() {
             let prayerTimeVC = PrayerTimeViewController(nibName: "PrayerTimeViewController", bundle: nil)
@@ -75,5 +78,9 @@ extension HomeViewController {
                 }
             }
         }
+    }
+    
+    private func launchSettings() {
+        
     }
 }
