@@ -8,9 +8,9 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class MenuViewController: UIViewController {
     
-    @IBOutlet weak var settingsTableView: UITableView!
+    @IBOutlet weak var menuTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class SettingsViewController: UIViewController {
     }
 }
 
-extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
+extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         <#code#>
     }

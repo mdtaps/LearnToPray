@@ -28,8 +28,8 @@ class HomeViewController: UIViewController {
         launchPeopleGroupPrayer()
     }
     
-    @IBAction func settingsTapped() {
-        launchSettings()
+    @IBAction func menuTapped() {
+        launchMenu()
     }
 }
 
@@ -80,7 +80,7 @@ extension HomeViewController {
         }
     }
     
-    private func launchSettings() {
+    private func launchMenu() {
         
     }
 }

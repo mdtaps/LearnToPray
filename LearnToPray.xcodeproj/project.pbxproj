@@ -70,8 +70,9 @@
 		F4F718F4207B199C00099078 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F718F2207B199C00099078 /* AboutViewController.xib */; };
 		F4FC0DC420CFA95A00B2AF0D /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FC0DC320CFA95A00B2AF0D /* Alert.swift */; };
 		F4FD627A20DB8EE200258971 /* PeoplesGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD627920DB8EE200258971 /* PeoplesGroups.swift */; };
-		F4FD627C20DCCD2300258971 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4FD627B20DCCD2300258971 /* SettingsViewController.xib */; };
-		F4FD627E20DCD40900258971 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD627D20DCD40900258971 /* SettingsViewController.swift */; };
+		F4FD627C20DCCD2300258971 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4FD627B20DCCD2300258971 /* MenuViewController.xib */; };
+		F4FD627E20DCD40900258971 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD627D20DCD40900258971 /* MenuViewController.swift */; };
+		F4FD628020DCE0D700258971 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD627F20DCE0D700258971 /* Menu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,8 +166,9 @@
 		F4F718F2207B199C00099078 /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		F4FC0DC320CFA95A00B2AF0D /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		F4FD627920DB8EE200258971 /* PeoplesGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplesGroups.swift; sourceTree = "<group>"; };
-		F4FD627B20DCCD2300258971 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
-		F4FD627D20DCD40900258971 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F4FD627B20DCCD2300258971 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		F4FD627D20DCD40900258971 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		F4FD627F20DCE0D700258971 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +260,7 @@
 				F41F477B20B7CD3A00BE372C /* MapPin.swift */,
 				F4FC0DC320CFA95A00B2AF0D /* Alert.swift */,
 				F4FD627920DB8EE200258971 /* PeoplesGroups.swift */,
+				F4FD627F20DCE0D700258971 /* Menu.swift */,
 				F45D74C1202AD53500A9C9CD /* Extensions */,
 				F4B864822022DC7400735337 /* Networking */,
 			);
@@ -400,7 +403,7 @@
 				F43ED5F41FB5719F008E6078 /* Main.storyboard */,
 				F46A3AD22036C5FB00616BAF /* HomeViewController.xib */,
 				F46A3AD9203BE46800616BAF /* TimePickerViewController.xib */,
-				F4FD627B20DCCD2300258971 /* SettingsViewController.xib */,
+				F4FD627B20DCCD2300258971 /* MenuViewController.xib */,
 				F451FD0C1FFF561700540B31 /* PrayerTimeViewController.xib */,
 				F4F718F2207B199C00099078 /* AboutViewController.xib */,
 			);
@@ -412,7 +415,7 @@
 			children = (
 				F4C51EBD1FF06734007F2195 /* PrayerTimeViewController.swift */,
 				F46A3AD8203BE46800616BAF /* TimePickerViewController.swift */,
-				F4FD627D20DCD40900258971 /* SettingsViewController.swift */,
+				F4FD627D20DCD40900258971 /* MenuViewController.swift */,
 			);
 			path = PrayerTime;
 			sourceTree = "<group>";
@@ -552,7 +555,7 @@
 				F451FD0D1FFF561700540B31 /* PrayerTimeViewController.xib in Resources */,
 				F4C51EC21FF0A9D7007F2195 /* LaunchScreen.storyboard in Resources */,
 				F4A8FDC81FE0F81A0058DF97 /* PrayerList.json in Resources */,
-				F4FD627C20DCCD2300258971 /* SettingsViewController.xib in Resources */,
+				F4FD627C20DCCD2300258971 /* MenuViewController.xib in Resources */,
 				F46A3AD32036C5FB00616BAF /* HomeViewController.xib in Resources */,
 				F43ED5F61FB5719F008E6078 /* Main.storyboard in Resources */,
 				F4F718F4207B199C00099078 /* AboutViewController.xib in Resources */,
@@ -698,6 +701,7 @@
 				F4C51EB71FE63281007F2195 /* DateFunctions.swift in Sources */,
 				F4D3D4AB1FD1201D0035F860 /* PrayerData.swift in Sources */,
 				F4F718F3207B199C00099078 /* AboutViewController.swift in Sources */,
+				F4FD628020DCE0D700258971 /* Menu.swift in Sources */,
 				F49068AE206F4F9800DCF408 /* Progress.swift in Sources */,
 				F4F27A3120451BB80043CF3C /* UIView+Designable.swift in Sources */,
 				F43ED5F31FB5719F008E6078 /* PrayersListContainerViewController.swift in Sources */,
@@ -728,7 +732,7 @@
 				F4F718EE2075D03D00099078 /* Audio.swift in Sources */,
 				F4C51EB91FE78D6B007F2195 /* JoshuaProjectsConvenienceFunctions.swift in Sources */,
 				F407BAAD206B7FC8009BDF65 /* PrayerTableViewCell.swift in Sources */,
-				F4FD627E20DCD40900258971 /* SettingsViewController.swift in Sources */,
+				F4FD627E20DCD40900258971 /* MenuViewController.swift in Sources */,
 				F4C51EBF1FF06734007F2195 /* PrayerTimeViewController.swift in Sources */,
 				F4C51EB31FE50957007F2195 /* Constants.swift in Sources */,
 				F408DB4D1FDE68DA00C93434 /* PrayerDetailsViewController.swift in Sources */,
