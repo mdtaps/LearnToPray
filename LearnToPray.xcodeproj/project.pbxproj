@@ -73,6 +73,7 @@
 		F4FD627C20DCCD2300258971 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4FD627B20DCCD2300258971 /* MenuViewController.xib */; };
 		F4FD627E20DCD40900258971 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD627D20DCD40900258971 /* MenuViewController.swift */; };
 		F4FD628020DCE0D700258971 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD627F20DCE0D700258971 /* Menu.swift */; };
+		F4FD628220DEE3E500258971 /* SoloNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD628120DEE3E500258971 /* SoloNavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +170,7 @@
 		F4FD627B20DCCD2300258971 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		F4FD627D20DCD40900258971 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		F4FD627F20DCE0D700258971 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		F4FD628120DEE3E500258971 /* SoloNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoloNavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -416,6 +418,7 @@
 				F4C51EBD1FF06734007F2195 /* PrayerTimeViewController.swift */,
 				F46A3AD8203BE46800616BAF /* TimePickerViewController.swift */,
 				F4FD627D20DCD40900258971 /* MenuViewController.swift */,
+				F4FD628120DEE3E500258971 /* SoloNavigationViewController.swift */,
 			);
 			path = PrayerTime;
 			sourceTree = "<group>";
@@ -703,6 +706,7 @@
 				F4F718F3207B199C00099078 /* AboutViewController.swift in Sources */,
 				F4FD628020DCE0D700258971 /* Menu.swift in Sources */,
 				F49068AE206F4F9800DCF408 /* Progress.swift in Sources */,
+				F4FD628220DEE3E500258971 /* SoloNavigationViewController.swift in Sources */,
 				F4F27A3120451BB80043CF3C /* UIView+Designable.swift in Sources */,
 				F43ED5F31FB5719F008E6078 /* PrayersListContainerViewController.swift in Sources */,
 				F485D11A20146BB200304DBE /* PrayerTimer.swift in Sources */,

@@ -9,7 +9,9 @@
 import UIKit
 
 class AboutViewController: UIViewController {
-
+    override func viewDidLoad() {
+        self.title = "About Learn to Pray"
+    }
     
     @IBAction func contactButtonPressed(_ sender: UIButton) {
         let url = URL(string: "mailto:contactlearntopray@gmail.com")!
