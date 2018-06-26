@@ -16,7 +16,7 @@ struct MenuOption {
 
 struct MenuOptions {
     
-    var menuOptions: [MenuOption]
+    var menuOptions = [MenuOption]()
     
     init() {
         menuOptions = createMenuOptions()
@@ -25,17 +25,12 @@ struct MenuOptions {
 
 extension MenuOptions {
     func createMenuOptions() -> [MenuOption] {
-        var options = [MenuOptions]()
+        var options = [MenuOption]()
         
-        let navController = UINavigationController()
-        let aboutVC = AboutViewController(nibName: nil, bundle: nil)
-        navController.viewControllers = [aboutVC]
-        navController.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "Close",
-                                                                                 style: .done,
-                                                                                 target: aboutVC,
-                                                                                 action: #selector(aboutVC.dismissVC))
-        present(navController, animated: true, completion: nil)
-        
+        let navController = SoloNavigationViewController()
+        navController.viewControllers = [AboutViewController()]
         let aboutOption = MenuOption(title: "About", viewController: navController)
+        options.append(aboutOption)
+        return options
     }
 }

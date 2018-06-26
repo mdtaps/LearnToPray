@@ -38,7 +38,6 @@ extension HomeViewController {
         func completion() {
             let prayerTimeVC = PrayerTimeViewController(nibName: "PrayerTimeViewController", bundle: nil)
             present(prayerTimeVC, animated: true, completion: nil)
-            
         }
         
         let timePickerVC = TimePickerViewController(nibName: "TimePickerViewController", bundle: nil)
@@ -48,16 +47,9 @@ extension HomeViewController {
     }
     
     private func launchAboutVC() {
-        let navController = UINavigationController()
-        let aboutVC = AboutViewController(nibName: nil, bundle: nil)
-        aboutVC.title = "About Learn to Pray"
-        navController.viewControllers = [aboutVC]
-        navController.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "Close",
-                                                                                 style: .done,
-                                                                                 target: aboutVC,
-                                                                                 action: #selector(aboutVC.dismissVC))
+        let navController = SoloNavigationViewController()
+        navController.viewControllers = [AboutViewController()]
         present(navController, animated: true, completion: nil)
-    
     }
     
     private func launchGuidedPrayer() {
@@ -81,6 +73,7 @@ extension HomeViewController {
     }
     
     private func launchMenu() {
-        
+        let menuVC = MenuViewController()
+        present(menuVC, animated: true, completion: nil)
     }
 }

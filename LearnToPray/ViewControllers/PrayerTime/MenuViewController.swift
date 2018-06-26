@@ -14,9 +14,8 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        settingsTableView.delegate = self
-        settingsTableView.dataSource = self
+        menuTableView.delegate = self
+        menuTableView.dataSource = self
     }
     
     @IBAction func closeButtonTapped(_ sender: UIButton) {
@@ -25,16 +24,33 @@ class MenuViewController: UIViewController {
 }
 
 extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let menuCell: UITableViewCell
+        let identifier = "menuCell"
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: identifier) {
+            menuCell = cell
+        } else {
+            let cellNibName = "MenuTableViewCell"
+            let nib = Bundle.main.loadNibNamed(cellNibName, owner: self, options: nil)
+            menuCell = nib?.first! as! MenuTableViewCell
+        }
+        
+        //TODO: Write in label text
+        menuCell.textLabel?.text = "\(indexPath.row)"
+        return menuCell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        
     }
     
     

@@ -74,6 +74,8 @@
 		F4FD627E20DCD40900258971 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD627D20DCD40900258971 /* MenuViewController.swift */; };
 		F4FD628020DCE0D700258971 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD627F20DCE0D700258971 /* Menu.swift */; };
 		F4FD628220DEE3E500258971 /* SoloNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD628120DEE3E500258971 /* SoloNavigationViewController.swift */; };
+		F4FD628520E1D37200258971 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD628320E1D37200258971 /* MenuTableViewCell.swift */; };
+		F4FD628620E1D37200258971 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4FD628420E1D37200258971 /* MenuTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +173,8 @@
 		F4FD627D20DCD40900258971 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		F4FD627F20DCE0D700258971 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		F4FD628120DEE3E500258971 /* SoloNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoloNavigationViewController.swift; sourceTree = "<group>"; };
+		F4FD628320E1D37200258971 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		F4FD628420E1D37200258971 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,6 +394,15 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		F4BD015620E2018900914248 /* Menu XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				F4FD627B20DCCD2300258971 /* MenuViewController.xib */,
+				F4FD628420E1D37200258971 /* MenuTableViewCell.xib */,
+			);
+			path = "Menu XIBs";
+			sourceTree = "<group>";
+		};
 		F4C51EBC1FEB494C007F2195 /* People Groups */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,9 +418,9 @@
 				F43ED5F41FB5719F008E6078 /* Main.storyboard */,
 				F46A3AD22036C5FB00616BAF /* HomeViewController.xib */,
 				F46A3AD9203BE46800616BAF /* TimePickerViewController.xib */,
-				F4FD627B20DCCD2300258971 /* MenuViewController.xib */,
 				F451FD0C1FFF561700540B31 /* PrayerTimeViewController.xib */,
 				F4F718F2207B199C00099078 /* AboutViewController.xib */,
+				F4BD015620E2018900914248 /* Menu XIBs */,
 			);
 			path = "XIB Files";
 			sourceTree = "<group>";
@@ -419,6 +432,7 @@
 				F46A3AD8203BE46800616BAF /* TimePickerViewController.swift */,
 				F4FD627D20DCD40900258971 /* MenuViewController.swift */,
 				F4FD628120DEE3E500258971 /* SoloNavigationViewController.swift */,
+				F4FD628320E1D37200258971 /* MenuTableViewCell.swift */,
 			);
 			path = PrayerTime;
 			sourceTree = "<group>";
@@ -559,6 +573,7 @@
 				F4C51EC21FF0A9D7007F2195 /* LaunchScreen.storyboard in Resources */,
 				F4A8FDC81FE0F81A0058DF97 /* PrayerList.json in Resources */,
 				F4FD627C20DCCD2300258971 /* MenuViewController.xib in Resources */,
+				F4FD628620E1D37200258971 /* MenuTableViewCell.xib in Resources */,
 				F46A3AD32036C5FB00616BAF /* HomeViewController.xib in Resources */,
 				F43ED5F61FB5719F008E6078 /* Main.storyboard in Resources */,
 				F4F718F4207B199C00099078 /* AboutViewController.xib in Resources */,
@@ -729,6 +744,7 @@
 				F408DB451FDDF93200C93434 /* PrayerDetailsHeaderTableViewCell.swift in Sources */,
 				F41F477E20B7CE7200BE372C /* UIImage+URL.swift in Sources */,
 				F41F477C20B7CD3A00BE372C /* MapPin.swift in Sources */,
+				F4FD628520E1D37200258971 /* MenuTableViewCell.swift in Sources */,
 				F4D3D4A51FCBD1DD0035F860 /* CoreDataViewController.swift in Sources */,
 				F4A8FDC21FDE8A170058DF97 /* Category+CoreDataProperties.swift in Sources */,
 				F45D74C5202C324800A9C9CD /* KeyboardLayoutConstraint.swift in Sources */,

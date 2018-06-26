@@ -10,6 +10,7 @@ import UIKit
 
 class AboutViewController: UIViewController {
     override func viewDidLoad() {
+        super.viewDidLoad()
         self.title = "About Learn to Pray"
     }
     

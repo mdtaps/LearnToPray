@@ -22,7 +22,8 @@ class PeopleGroupsViewController: UIViewController {
         super.viewWillAppear(animated)
         setupView()
         setMapRegion()
-
+        
+        title = "People Groups"
     }
 }
 
