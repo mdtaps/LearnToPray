@@ -11,6 +11,7 @@ import UIKit
 class MenuViewController: UIViewController {
     
     @IBOutlet weak var menuTableView: UITableView!
+    lazy var menu = Menu(with: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,18 +19,14 @@ class MenuViewController: UIViewController {
         menuTableView.dataSource = self
     }
     
-    @IBAction func closeButtonTapped(_ sender: UIButton) {
+    @IBAction func backgroundTapped(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
 }
 
 extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return menu.options.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -44,15 +41,12 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
             menuCell = nib?.first! as! MenuTableViewCell
         }
         
-        //TODO: Write in label text
-        menuCell.textLabel?.text = "\(indexPath.row)"
+        menuCell.textLabel?.text = menu.options[indexPath.row].title
         return menuCell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        menu.options[indexPath.row].launcher()
     }
-    
-    
-    
 }

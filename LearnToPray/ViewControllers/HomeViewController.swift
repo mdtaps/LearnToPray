@@ -11,6 +11,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     @IBAction func guidedPrayerTapped() {
        launchGuidedPrayer()
@@ -18,10 +19,6 @@ class HomeViewController: UIViewController {
     
     @IBAction func startPrayingTapped() {
         launchPrayerTime()
-    }
-    
-    @IBAction func aboutTapped() {
-        launchAboutVC()
     }
     
     @IBAction func peopleGroupTapped() {
@@ -46,17 +43,10 @@ extension HomeViewController {
         present(timePickerVC, animated: true, completion: nil)
     }
     
-    private func launchAboutVC() {
-        let navController = SoloNavigationViewController()
-        navController.viewControllers = [AboutViewController()]
-        present(navController, animated: true, completion: nil)
-    }
-    
     private func launchGuidedPrayer() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let navigationController = storyboard.instantiateViewController(withIdentifier: "NavigationController") as! UINavigationController
-        
-        present(navigationController, animated: true, completion: nil)
+        present(appDelegate.mainNavigationController,
+                animated: true,
+                completion: nil)
     }
     
     private func launchPeopleGroupPrayer() {
@@ -74,6 +64,9 @@ extension HomeViewController {
     
     private func launchMenu() {
         let menuVC = MenuViewController()
-        present(menuVC, animated: true, completion: nil)
+        menuVC.modalPresentationStyle = .overCurrentContext
+        present(menuVC,
+                animated: true,
+                completion: nil)
     }
 }

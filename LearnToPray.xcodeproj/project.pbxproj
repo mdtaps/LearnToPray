@@ -431,8 +431,8 @@
 				F4C51EBD1FF06734007F2195 /* PrayerTimeViewController.swift */,
 				F46A3AD8203BE46800616BAF /* TimePickerViewController.swift */,
 				F4FD627D20DCD40900258971 /* MenuViewController.swift */,
-				F4FD628120DEE3E500258971 /* SoloNavigationViewController.swift */,
 				F4FD628320E1D37200258971 /* MenuTableViewCell.swift */,
+				F4FD628120DEE3E500258971 /* SoloNavigationViewController.swift */,
 			);
 			path = PrayerTime;
 			sourceTree = "<group>";

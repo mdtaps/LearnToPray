@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     let center = UNUserNotificationCenter.current()
     
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    lazy var mainNavigationController = storyboard.instantiateViewController(withIdentifier: "NavigationController") as! UINavigationController
+    
     var stack = CoreDataStack(modelName: "CoreDataModel")!
 
     func application(_ application: UIApplication,

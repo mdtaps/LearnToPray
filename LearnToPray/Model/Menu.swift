@@ -9,28 +9,52 @@
 import Foundation
 
 struct MenuOption {
-    
     let title: String
-    let viewController: UIViewController
+    let launcher: () -> ()
 }
 
-struct MenuOptions {
+struct Menu {
+    var options = [MenuOption]()
+    let viewController: UIViewController
     
-    var menuOptions = [MenuOption]()
-    
-    init() {
-        menuOptions = createMenuOptions()
+    init(with viewController: UIViewController) {
+        self.viewController = viewController
+        options = createMenuOptions()
     }
 }
 
-extension MenuOptions {
-    func createMenuOptions() -> [MenuOption] {
+extension Menu {
+    private func createMenuOptions() -> [MenuOption] {
         var options = [MenuOption]()
         
+        let contactOption = MenuOption(title: "Contact Developer",
+                                       launcher: launchContact)
+        options.append(contactOption)
+        
+        let donateOption = MenuOption(title: "Donate",
+                                      launcher: launchDonate)
+        options.append(donateOption)
+        
+        let aboutOption = MenuOption(title: "About",
+                                      launcher: launchAbout)
+        options.append(aboutOption)
+        
+        return options
+    }
+    
+    private func launchContact() {
+        let url = URL(string: "mailto:contactlearntopray@gmail.com")!
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
+    
+    private func launchDonate() {
+        let url = URL(string: "https://www.paypal.me/mdtaps")!
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
+    
+    private func launchAbout() {
         let navController = SoloNavigationViewController()
         navController.viewControllers = [AboutViewController()]
-        let aboutOption = MenuOption(title: "About", viewController: navController)
-        options.append(aboutOption)
-        return options
+        self.viewController.present(navController, animated: true, completion: nil)
     }
 }
