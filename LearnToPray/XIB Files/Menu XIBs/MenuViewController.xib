@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,26 +20,15 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKu-s9-55E">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <connections>
-                        <action selector="backgroundTapped:" destination="-1" eventType="touchUpInside" id="kdE-68-335"/>
-                    </connections>
-                </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="40" estimatedRowHeight="40" sectionHeaderHeight="28" estimatedSectionHeaderHeight="28" sectionFooterHeight="28" estimatedSectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wXq-eX-FhU">
-                    <rect key="frame" x="112" y="0.0" width="263" height="667"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aKu-s9-55E" secondAttribute="trailing" id="0WF-La-ZXt"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="wXq-eX-FhU" secondAttribute="bottom" id="271-pa-GCR"/>
-                <constraint firstItem="aKu-s9-55E" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-20" id="RzS-Jv-enr"/>
-                <constraint firstItem="aKu-s9-55E" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="To0-ym-hhT"/>
-                <constraint firstItem="wXq-eX-FhU" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.7" id="Vli-xi-1iv"/>
+                <constraint firstItem="wXq-eX-FhU" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="Vli-xi-1iv"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wXq-eX-FhU" secondAttribute="trailing" constant="0.5" id="gFc-wx-2Dq"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="aKu-s9-55E" secondAttribute="bottom" id="gS6-er-NaQ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="wXq-eX-FhU" secondAttribute="top" constant="20" id="wAD-4L-19P"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

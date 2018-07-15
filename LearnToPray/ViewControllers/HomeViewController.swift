@@ -10,6 +10,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    let menuTransitioningDelegate = MenuTransitioningDelegate()
+    
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -63,8 +65,7 @@ extension HomeViewController {
     }
     
     private func launchMenu() {
-        let menuVC = MenuViewController()
-        menuVC.modalPresentationStyle = .overCurrentContext
+        let menuVC = MenuViewController(transitioningDelegate: menuTransitioningDelegate)
         present(menuVC,
                 animated: true,
                 completion: nil)

@@ -21,11 +21,8 @@ extension UILabel {
             UIView.animate(withDuration: 0.5, animations: {
                 self.text = text
                 self.alpha = 1.0
-                
             })
-            
         }
-        
     }
     
     func createLabelOnLeft() -> UILabel {
@@ -35,7 +32,6 @@ extension UILabel {
         let label = PaddedLabel(frame: frame, sidePadding: 72)
         label.applyPrayerDetailStyling()
         return label
-        
     }
     
     func createLabelOnRight() -> UILabel {
@@ -45,7 +41,6 @@ extension UILabel {
         let label = PaddedLabel(frame: frame, sidePadding: 72)
         label.applyPrayerDetailStyling()
         return label
-        
     }
     
     func applyPrayerDetailStyling() {
@@ -53,7 +48,12 @@ extension UILabel {
         self.textAlignment = .center
         self.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.translatesAutoresizingMaskIntoConstraints = true
-        
-    }
+}
     
+    func applyMenuTableViewHeaderStyling() {
+        self.textAlignment = .center
+        self.font = UIFont.boldSystemFont(ofSize: 22.0)
+        self.backgroundColor = UIColor.black.withAlphaComponent(0.05)
+    }
+
 }

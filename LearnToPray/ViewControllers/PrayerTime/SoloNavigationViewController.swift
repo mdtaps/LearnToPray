@@ -9,7 +9,6 @@
 import UIKit
 
 class SoloNavigationViewController: UINavigationController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
