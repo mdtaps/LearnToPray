@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import MessageUI
 
 struct MenuOption {
     let title: String
     let launcher: () -> ()
 }
 
-struct Menu {
+class Menu {
     var options = [MenuOption]()
     let viewController: UIViewController
     
@@ -43,8 +44,15 @@ extension Menu {
     }
     
     private func launchContact() {
-        let url = URL(string: "mailto:contactlearntopray@gmail.com")!
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        guard viewController is MFMailComposeViewControllerDelegate else {
+            return
+        }
+        
+        let mailController = MFMailComposeViewController()
+        mailController.mailComposeDelegate = (viewController as! MFMailComposeViewControllerDelegate)
+        mailController.setToRecipients(MailComponentConstants.ToRecipients)
+        
+        viewController.present(mailController, animated: true, completion: nil)
     }
     
     private func launchDonate() {

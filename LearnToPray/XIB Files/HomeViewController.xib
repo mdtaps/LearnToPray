@@ -98,9 +98,12 @@ Pray</string>
                         <constraint firstItem="bou-zv-uy8" firstAttribute="height" secondItem="j2H-M2-biT" secondAttribute="height" multiplier="0.75" id="yBA-1V-Ay9"/>
                     </constraints>
                 </stackView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9g-CF-QhG">
-                    <rect key="frame" x="343" y="20" width="22" height="22"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9g-CF-QhG">
+                    <rect key="frame" x="343" y="25" width="22" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="22" id="EEf-HP-eQl"/>
+                        <constraint firstAttribute="height" constant="22" id="ZYa-Bu-dbh"/>
+                    </constraints>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" image="Cog"/>
                     <connections>
@@ -124,7 +127,9 @@ Pray</string>
             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="n3H-xX-4Vc" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="9Lx-cM-bxr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="A9g-CF-QhG" secondAttribute="trailing" constant="10" id="e2F-Sb-SEk"/>
                 <constraint firstItem="n3H-xX-4Vc" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="eQS-Y0-bLS"/>
+                <constraint firstItem="A9g-CF-QhG" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="nHX-il-GMT"/>
                 <constraint firstItem="Srd-hv-L1i" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" id="t4B-ii-Xt3"/>
                 <constraint firstItem="Srd-hv-L1i" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="wyI-9e-80U"/>
                 <constraint firstItem="Srd-hv-L1i" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="zhu-JV-3P1"/>

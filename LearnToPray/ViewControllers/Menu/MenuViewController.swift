@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class MenuViewController: UIViewController {
     
@@ -66,5 +67,22 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         menu.options[indexPath.row].launcher()
+    }
+}
+
+extension MenuViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        switch result {
+        case .cancelled:
+            print("Mail cancelled")
+        case .saved:
+            print("Mail saved")
+        case .sent:
+            print("Mail sent")
+        case .failed:
+            print("Mail sent failure: \(String(describing: error?.localizedDescription))")
+        }
+        
+        controller.dismiss(animated: true, completion: nil)
     }
 }
