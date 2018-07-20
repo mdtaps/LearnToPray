@@ -31,7 +31,6 @@
 		F45D74BB20244B6E00A9C9CD /* DonationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45D74B920244B6E00A9C9CD /* DonationViewController.xib */; };
 		F45D74BE202AC78400A9C9CD /* ApplePaySetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D74BD202AC78400A9C9CD /* ApplePaySetUp.swift */; };
 		F45D74C5202C324800A9C9CD /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D74C4202C324700A9C9CD /* KeyboardLayoutConstraint.swift */; };
-		F467082F210061AF002B6FED /* MailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467082E210061AF002B6FED /* MailViewController.swift */; };
 		F46A3ACF20369E5400616BAF /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46A3ACE20369E5400616BAF /* UIButtonExtensions.swift */; };
 		F46A3AD32036C5FB00616BAF /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46A3AD22036C5FB00616BAF /* HomeViewController.xib */; };
 		F46A3AD52036D0F800616BAF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46A3AD42036D0F800616BAF /* HomeViewController.swift */; };
@@ -134,7 +133,6 @@
 		F45D74B920244B6E00A9C9CD /* DonationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationViewController.xib; sourceTree = "<group>"; };
 		F45D74BD202AC78400A9C9CD /* ApplePaySetUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePaySetUp.swift; sourceTree = "<group>"; };
 		F45D74C4202C324700A9C9CD /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
-		F467082E210061AF002B6FED /* MailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailViewController.swift; sourceTree = "<group>"; };
 		F46A3ACE20369E5400616BAF /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		F46A3AD22036C5FB00616BAF /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		F46A3AD42036D0F800616BAF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -307,7 +305,6 @@
 				F4C51EBC1FEB494C007F2195 /* People Groups */,
 				F4C9D50B205E34CA0097E3F2 /* PrayerTime */,
 				F4BD015920EC3C8B00914248 /* Menu */,
-				F467082E210061AF002B6FED /* MailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -776,7 +773,6 @@
 				F4A8FDC41FDE8A170058DF97 /* Prayer+CoreDataProperties.swift in Sources */,
 				F4F718EE2075D03D00099078 /* Audio.swift in Sources */,
 				F4C51EB91FE78D6B007F2195 /* JoshuaProjectsConvenienceFunctions.swift in Sources */,
-				F467082F210061AF002B6FED /* MailViewController.swift in Sources */,
 				F407BAAD206B7FC8009BDF65 /* PrayerTableViewCell.swift in Sources */,
 				F4FD627E20DCD40900258971 /* MenuViewController.swift in Sources */,
 				F4C51EBF1FF06734007F2195 /* PrayerTimeViewController.swift in Sources */,

@@ -47,3 +47,7 @@ struct JoshuaProjectAPIConstants {
 struct MailComponentConstants {
     static let ToRecipients = ["contactlearntopray@gmail.com"]
 }
+
+struct URLConstants {
+    static let LearnToPrayAppStoreUrl = "itms-apps://itunes.apple.com/app/id1370306129"
+}

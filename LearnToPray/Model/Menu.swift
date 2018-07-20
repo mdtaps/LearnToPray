@@ -8,6 +8,7 @@
 
 import Foundation
 import MessageUI
+import StoreKit
 
 struct MenuOption {
     let title: String
@@ -40,6 +41,9 @@ extension Menu {
                                       launcher: launchAbout)
         options.append(aboutOption)
         
+        let reviewOption = MenuOption(title: "Review App", launcher: launchReviewRequest)
+        options.append(reviewOption)
+        
         return options
     }
     
@@ -63,6 +67,19 @@ extension Menu {
     private func launchAbout() {
         let navController = SoloNavigationViewController()
         navController.viewControllers = [AboutViewController()]
-        self.viewController.present(navController, animated: true, completion: nil)
+        self.viewController.present(navController,
+                                    animated: true,
+                                    completion: nil)
+    }
+    
+    private func launchReviewRequest() {
+        if #available( iOS 10.3,*){
+            SKStoreReviewController.requestReview()
+        } else {
+            let url = URL(string: URLConstants.LearnToPrayAppStoreUrl)!
+            UIApplication.shared.open(url,
+                                      options: [:],
+                                      completionHandler: nil)
+        }
     }
 }
